@@ -1,0 +1,6 @@
+framework module Pods_JQTemplate {
+  umbrella header "Pods-JQTemplate-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_JQTemplate_JQTemplateUITests {
+  umbrella header "Pods-JQTemplate-JQTemplateUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

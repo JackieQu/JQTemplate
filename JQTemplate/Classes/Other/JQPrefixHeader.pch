@@ -1,0 +1,20 @@
+//
+//  JQPrefixHeader.pch
+//  JQTemplate
+//
+//  Created by JackieQu on 2023/5/30.
+//
+
+#ifndef JQPrefixHeader_pch
+#define JQPrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "JQMacro.h"
+
+#import "UIView+Frame.h"
+#import "UIColor+Random.h"
+#import "UIColor+Hex.h"
+
+#endif /* JQPrefixHeader_pch */

@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-JQTemplate-JQTemplateUITests/Pods-JQTemplate-JQTemplateUITests-frameworks.sh
+${BUILT_PRODUCTS_DIR}/AFNetworking/AFNetworking.framework
+${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework
