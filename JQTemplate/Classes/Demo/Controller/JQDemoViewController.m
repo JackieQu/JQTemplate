@@ -7,9 +7,10 @@
 
 #import "JQDemoViewController.h"
 
-static NSString *title     = @"title";
-static NSString *className = @"className";
-static NSString *cellID    = @"identifier";
+static NSString *kRows      = @"rows";
+static NSString *kTitle     = @"title";
+static NSString *kClassName = @"className";
+static NSString *kCellID    = @"identifier";
 
 @interface JQDemoViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -35,9 +36,21 @@ static NSString *cellID    = @"identifier";
     
     if (!_dataList) {
         NSArray *arr = @[
-            @{title: @"UIView",  className: @"JQDemoViewControllerD1"},
-            @{title: @"UILabel", className: @"JQDemoViewControllerD2"},
-            @{title: @"UIImageView", className: @"JQDemoViewControllerD3"},
+            @{kTitle: @"UIView",         kRows: @[
+                @{kTitle: @"UIView",         kClassName: @"JQDemoViewControllerD1"},
+            ]},
+            @{kTitle: @"UILabel",        kRows: @[
+                @{kTitle: @"UILabel",        kClassName: @"JQDemoViewControllerD2"},
+            ]},
+            @{kTitle: @"UIImageView",    kRows: @[
+                @{kTitle: @"UIImageView",    kClassName: @"JQDemoViewControllerD3"},
+            ]},
+            @{kTitle: @"UIButton",       kRows: @[
+                @{kTitle: @"UIButton",       kClassName: @"JQDemoViewControllerD4"},
+            ]},
+            @{kTitle: @"UITextField",    kRows: @[
+                @{kTitle: @"UITextField",    kClassName: @"JQDemoViewControllerD5"},
+            ]},
         ];
         _dataList = [NSMutableArray arrayWithArray:arr];
     }
@@ -58,19 +71,34 @@ static NSString *cellID    = @"identifier";
 #pragma mark - UITableViewDataSource Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.dataList.count;
+    
+    NSDictionary *dict = self.dataList[section];
+    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
+    return rows.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellID];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:kCellID];
     if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellID];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID];
     }
     
-    NSDictionary *dict = self.dataList[indexPath.row];
-    cell.textLabel.text = [dict valueForKey:title];
+    NSDictionary *dict = self.dataList[indexPath.section];
+    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
+    cell.textLabel.text = [rows[indexPath.row] valueForKey:kTitle];
     return cell;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return self.dataList.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    
+    NSDictionary *dict = self.dataList[section];
+    NSString *title = [NSString stringWithFormat:@"%ld-%@", section + 1, [dict valueForKey:kTitle]];
+    return title;
 }
 
 #pragma mark - UITableViewDelegate Methods
@@ -78,12 +106,13 @@ static NSString *cellID    = @"identifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSDictionary *dict = self.dataList[indexPath.row];
-    NSString *clsName = [dict valueForKey:className];
+    NSDictionary *dict = self.dataList[indexPath.section];
+    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
+    NSString *clsName = [rows[indexPath.row] valueForKey:kClassName];
     Class cls = NSClassFromString(clsName);
     if (cls) {
         JQBaseViewController *vc = [[cls alloc] init];
-        vc.title = [dict valueForKey:title];
+        vc.title = [dict valueForKey:kTitle];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }

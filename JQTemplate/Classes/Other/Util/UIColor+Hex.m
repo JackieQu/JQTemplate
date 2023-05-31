@@ -91,4 +91,39 @@ CGFloat getColorComponent(NSString *colorStr, NSUInteger loc, NSUInteger len) {
             (int)((CGColorGetComponents(color.CGColor))[2] * 255.0f)];
 }
 
+#define DEFAULT_VOID_COLOR [UIColor whiteColor]
+
++ (UIColor *)colorWithNormalHexString:(NSString *)hexStr alpha:(CGFloat)alpha {
+    
+    NSString *colorStr = [[hexStr stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]] uppercaseString];
+    if ([colorStr length] < 6)
+        return DEFAULT_VOID_COLOR;
+    if ([colorStr hasPrefix:@"#"])
+        colorStr = [colorStr substringFromIndex:1];
+    if ([colorStr length] != 6)
+        return DEFAULT_VOID_COLOR;
+    
+    NSRange range;
+    range.location = 0;
+    range.length = 2;
+    NSString *rStr = [colorStr substringWithRange:range];
+    range.location = 2;
+    NSString *gStr = [colorStr substringWithRange:range];
+    range.location = 4;
+    NSString *bStr = [colorStr substringWithRange:range];
+    
+    unsigned int r, g, b;
+    [[NSScanner scannerWithString:rStr] scanHexInt:&r];
+    [[NSScanner scannerWithString:gStr] scanHexInt:&g];
+    [[NSScanner scannerWithString:bStr] scanHexInt:&b];
+    return [UIColor colorWithRed:((float) r / 255.0f)
+                           green:((float) g / 255.0f)
+                            blue:((float) b / 255.0f)
+                           alpha:alpha];
+}
+
++ (UIColor *)colorWithNormalHexString:(NSString *)hexStr {
+    return [UIColor colorWithNormalHexString:hexStr alpha:1.0];
+}
+
 @end

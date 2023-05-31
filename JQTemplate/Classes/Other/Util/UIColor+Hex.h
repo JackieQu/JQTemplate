@@ -19,6 +19,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (NSString *)hexString;
 
++ (UIColor *)colorWithNormalHexString:(NSString *)hexStr alpha:(CGFloat)alpha;
++ (UIColor *)colorWithNormalHexString:(NSString *)hexStr;
+
 @end
 
 NS_ASSUME_NONNULL_END
