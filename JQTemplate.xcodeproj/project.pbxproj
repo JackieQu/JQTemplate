@@ -10,7 +10,7 @@
 		2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */; };
 		2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6512A26F0F700A55275 /* JQBlockButton.m */; };
 		2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6542A26F2AF00A55275 /* JQDockButton.m */; };
-		2861B6582A272F3C00A55275 /* JQLoginTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6572A272F3C00A55275 /* JQLoginTextField.m */; };
+		2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6572A272F3C00A55275 /* JQIconTextField.m */; };
 		2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B65A2A27318800A55275 /* JQDemoViewControllerD5.m */; };
 		28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DE9F2A2581A700ECB80B /* Main.storyboard */; };
 		28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28F5DEA22A2581A700ECB80B /* JQTemplate.xcdatamodeld */; };
@@ -79,8 +79,8 @@
 		2861B6512A26F0F700A55275 /* JQBlockButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQBlockButton.m; sourceTree = "<group>"; };
 		2861B6532A26F2AF00A55275 /* JQDockButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDockButton.h; sourceTree = "<group>"; };
 		2861B6542A26F2AF00A55275 /* JQDockButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDockButton.m; sourceTree = "<group>"; };
-		2861B6562A272F3C00A55275 /* JQLoginTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQLoginTextField.h; sourceTree = "<group>"; };
-		2861B6572A272F3C00A55275 /* JQLoginTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQLoginTextField.m; sourceTree = "<group>"; };
+		2861B6562A272F3C00A55275 /* JQIconTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQIconTextField.h; sourceTree = "<group>"; };
+		2861B6572A272F3C00A55275 /* JQIconTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQIconTextField.m; sourceTree = "<group>"; };
 		2861B6592A27318800A55275 /* JQDemoViewControllerD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD5.h; sourceTree = "<group>"; };
 		2861B65A2A27318800A55275 /* JQDemoViewControllerD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD5.m; sourceTree = "<group>"; };
 		28F5DE932A2581A700ECB80B /* JQTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -390,8 +390,8 @@
 				2861B6512A26F0F700A55275 /* JQBlockButton.m */,
 				2861B6532A26F2AF00A55275 /* JQDockButton.h */,
 				2861B6542A26F2AF00A55275 /* JQDockButton.m */,
-				2861B6562A272F3C00A55275 /* JQLoginTextField.h */,
-				2861B6572A272F3C00A55275 /* JQLoginTextField.m */,
+				2861B6562A272F3C00A55275 /* JQIconTextField.h */,
+				2861B6572A272F3C00A55275 /* JQIconTextField.m */,
 			);
 			path = Custom;
 			sourceTree = "<group>";
@@ -800,9 +800,7 @@
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28F5DEF52A25834800ECB80B /* AppDelegate.m in Sources */,
 				28F5DEF32A25834800ECB80B /* SceneDelegate.m in Sources */,
-				2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */,
 				28F5DF092A258E2300ECB80B /* JQBaseViewController.m in Sources */,
-				2861B6582A272F3C00A55275 /* JQLoginTextField.m in Sources */,
 				28F5DF0C2A258E7D00ECB80B /* JQBaseNavigationController.m in Sources */,
 				28F5DF0F2A258E9500ECB80B /* JQBaseTabBarController.m in Sources */,
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
@@ -817,10 +815,12 @@
 				28F5DF212A2597DE00ECB80B /* JQVerticalLabel.m in Sources */,
 				2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */,
 				2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */,
+				2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */,
 				28F5DF1B2A2596C500ECB80B /* JQDemoViewControllerD1.m in Sources */,
 				28F5DF1E2A2596D400ECB80B /* JQDemoViewControllerD2.m in Sources */,
 				28F5DF362A25C5A300ECB80B /* JQDemoViewControllerD3.m in Sources */,
 				2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */,
+				2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
