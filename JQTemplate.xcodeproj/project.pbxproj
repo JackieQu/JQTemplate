@@ -12,6 +12,7 @@
 		2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6542A26F2AF00A55275 /* JQDockButton.m */; };
 		2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6572A272F3C00A55275 /* JQIconTextField.m */; };
 		2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B65A2A27318800A55275 /* JQDemoViewControllerD5.m */; };
+		2861B72F2A28846700A55275 /* JQDemoViewControllerD6.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B72E2A28846700A55275 /* JQDemoViewControllerD6.m */; };
 		28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DE9F2A2581A700ECB80B /* Main.storyboard */; };
 		28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28F5DEA22A2581A700ECB80B /* JQTemplate.xcdatamodeld */; };
 		28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DEA52A2581A900ECB80B /* Assets.xcassets */; };
@@ -83,6 +84,8 @@
 		2861B6572A272F3C00A55275 /* JQIconTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQIconTextField.m; sourceTree = "<group>"; };
 		2861B6592A27318800A55275 /* JQDemoViewControllerD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD5.h; sourceTree = "<group>"; };
 		2861B65A2A27318800A55275 /* JQDemoViewControllerD5.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD5.m; sourceTree = "<group>"; };
+		2861B72D2A28846700A55275 /* JQDemoViewControllerD6.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD6.h; sourceTree = "<group>"; };
+		2861B72E2A28846700A55275 /* JQDemoViewControllerD6.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD6.m; sourceTree = "<group>"; };
 		28F5DE932A2581A700ECB80B /* JQTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F5DEA02A2581A700ECB80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28F5DEA32A2581A700ECB80B /* JQTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JQTemplate.xcdatamodel; sourceTree = "<group>"; };
@@ -279,6 +282,8 @@
 				2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */,
 				2861B6592A27318800A55275 /* JQDemoViewControllerD5.h */,
 				2861B65A2A27318800A55275 /* JQDemoViewControllerD5.m */,
+				2861B72D2A28846700A55275 /* JQDemoViewControllerD6.h */,
+				2861B72E2A28846700A55275 /* JQDemoViewControllerD6.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -810,6 +815,7 @@
 				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
 				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
 				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
+				2861B72F2A28846700A55275 /* JQDemoViewControllerD6.m in Sources */,
 				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
 				28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */,
 				28F5DF212A2597DE00ECB80B /* JQVerticalLabel.m in Sources */,

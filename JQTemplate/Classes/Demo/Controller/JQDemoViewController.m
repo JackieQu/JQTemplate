@@ -51,6 +51,9 @@ static NSString *kCellID    = @"identifier";
             @{kTitle: @"UITextField",    kRows: @[
                 @{kTitle: @"UITextField",    kClassName: @"JQDemoViewControllerD5"},
             ]},
+            @{kTitle: @"其他常用控件",    kRows: @[
+                @{kTitle: @"其他常用控件",    kClassName: @"JQDemoViewControllerD6"},
+            ]},
         ];
         _dataList = [NSMutableArray arrayWithArray:arr];
     }
