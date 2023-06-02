@@ -54,6 +54,13 @@ static NSString *kCellID    = @"identifier";
             @{kTitle: @"其他常用控件",    kRows: @[
                 @{kTitle: @"其他常用控件",    kClassName: @"JQDemoViewControllerD6"},
             ]},
+            @{kTitle: @"简单动画",    kRows: @[
+                @{kTitle: @"自定义指示器",    kClassName: @"JQDemoViewControllerD7"},
+                @{kTitle: @"简单动画",        kClassName: @"JQDemoViewControllerD7"},
+                @{kTitle: @"基本动画",        kClassName: @"JQDemoViewControllerD7"},
+                @{kTitle: @"转场动画",        kClassName: @"JQDemoViewControllerD7"},
+                @{kTitle: @"动画应用",        kClassName: @"JQDemoViewControllerD7"},
+            ]},
         ];
         _dataList = [NSMutableArray arrayWithArray:arr];
     }
@@ -100,6 +107,10 @@ static NSString *kCellID    = @"identifier";
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
     NSDictionary *dict = self.dataList[section];
+    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
+    if (rows.count <= 1) {
+        return nil;
+    }
     NSString *title = [NSString stringWithFormat:@"%ld-%@", section + 1, [dict valueForKey:kTitle]];
     return title;
 }
@@ -115,7 +126,7 @@ static NSString *kCellID    = @"identifier";
     Class cls = NSClassFromString(clsName);
     if (cls) {
         JQBaseViewController *vc = [[cls alloc] init];
-        vc.title = [dict valueForKey:kTitle];
+        vc.title = [rows[indexPath.row] valueForKey:kTitle];
         [self.navigationController pushViewController:vc animated:YES];
     }
 }
