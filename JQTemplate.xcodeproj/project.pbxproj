@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */; };
+		2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */; };
 		2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */; };
 		2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6512A26F0F700A55275 /* JQBlockButton.m */; };
 		2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6542A26F2AF00A55275 /* JQDockButton.m */; };
@@ -16,6 +18,9 @@
 		2861B7322A297A9A00A55275 /* JQDemoViewControllerD7.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B7312A297A9A00A55275 /* JQDemoViewControllerD7.m */; };
 		2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B7342A297C1200A55275 /* JQCustomHUD.m */; };
 		2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B7372A29CD9100A55275 /* JQPopUpView.m */; };
+		2861B73B2A29E26600A55275 /* JQDemoViewControllerD8.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B73A2A29E26600A55275 /* JQDemoViewControllerD8.m */; };
+		28E6CAB22A2DB54200C20059 /* JQDemoViewControllerD9.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */; };
+		28E6CAB62A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6CAB52A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DE9F2A2581A700ECB80B /* Main.storyboard */; };
 		28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28F5DEA22A2581A700ECB80B /* JQTemplate.xcdatamodeld */; };
 		28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DEA52A2581A900ECB80B /* Assets.xcassets */; };
@@ -77,6 +82,10 @@
 		052C4E9656FE07E7287DF8C3 /* Pods-JQTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JQTemplate.release.xcconfig"; path = "Target Support Files/Pods-JQTemplate/Pods-JQTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		107CABE13A8089E309C256F7 /* Pods_JQTemplate_JQTemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JQTemplate_JQTemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FC2616650F00A662687459 /* Pods_JQTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JQTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
+		2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD10.h; sourceTree = "<group>"; };
+		2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD10.m; sourceTree = "<group>"; };
 		2861B64D2A26EF7300A55275 /* JQDemoViewControllerD4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD4.h; sourceTree = "<group>"; };
 		2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD4.m; sourceTree = "<group>"; };
 		2861B6502A26F0F700A55275 /* JQBlockButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQBlockButton.h; sourceTree = "<group>"; };
@@ -95,6 +104,13 @@
 		2861B7342A297C1200A55275 /* JQCustomHUD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCustomHUD.m; sourceTree = "<group>"; };
 		2861B7362A29CD9100A55275 /* JQPopUpView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQPopUpView.h; sourceTree = "<group>"; };
 		2861B7372A29CD9100A55275 /* JQPopUpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQPopUpView.m; sourceTree = "<group>"; };
+		2861B7392A29E26600A55275 /* JQDemoViewControllerD8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD8.h; sourceTree = "<group>"; };
+		2861B73A2A29E26600A55275 /* JQDemoViewControllerD8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD8.m; sourceTree = "<group>"; };
+		2861B73C2A29E33D00A55275 /* JQModalDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQModalDelegate.h; sourceTree = "<group>"; };
+		28E6CAB02A2DB54200C20059 /* JQDemoViewControllerD9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD9.h; sourceTree = "<group>"; };
+		28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD9.m; sourceTree = "<group>"; };
+		28E6CAB42A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
+		28E6CAB52A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		28F5DE932A2581A700ECB80B /* JQTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F5DEA02A2581A700ECB80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28F5DEA32A2581A700ECB80B /* JQTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JQTemplate.xcdatamodel; sourceTree = "<group>"; };
@@ -189,6 +205,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28E6CAB32A2DC6F300C20059 /* FDFullscreenPopGesture */ = {
+			isa = PBXGroup;
+			children = (
+				28E6CAB42A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.h */,
+				28E6CAB52A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m */,
+			);
+			path = FDFullscreenPopGesture;
+			sourceTree = "<group>";
+		};
 		28F5DE8A2A2581A700ECB80B = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +320,12 @@
 				2861B72E2A28846700A55275 /* JQDemoViewControllerD6.m */,
 				2861B7302A297A9A00A55275 /* JQDemoViewControllerD7.h */,
 				2861B7312A297A9A00A55275 /* JQDemoViewControllerD7.m */,
+				2861B7392A29E26600A55275 /* JQDemoViewControllerD8.h */,
+				2861B73A2A29E26600A55275 /* JQDemoViewControllerD8.m */,
+				28E6CAB02A2DB54200C20059 /* JQDemoViewControllerD9.h */,
+				28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */,
+				2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */,
+				2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -393,6 +424,9 @@
 				28F5DF022A258A8300ECB80B /* UIImageView+GIF.m */,
 				28F5DF042A258AA300ECB80B /* UIImage+Color.h */,
 				28F5DF052A258AA300ECB80B /* UIImage+Color.m */,
+				2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */,
+				2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */,
+				2861B73C2A29E33D00A55275 /* JQModalDelegate.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -467,6 +501,7 @@
 		28F5DEE62A25834700ECB80B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				28E6CAB32A2DC6F300C20059 /* FDFullscreenPopGesture */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -826,6 +861,7 @@
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
 				28F5DF122A25900200ECB80B /* JQHomeViewController.m in Sources */,
 				28F5DF182A25902400ECB80B /* JQProfileViewController.m in Sources */,
+				28E6CAB62A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				28F5DEFA2A2589E200ECB80B /* UIView+Frame.m in Sources */,
 				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
 				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
@@ -841,10 +877,14 @@
 				28F5DF1B2A2596C500ECB80B /* JQDemoViewControllerD1.m in Sources */,
 				28F5DF1E2A2596D400ECB80B /* JQDemoViewControllerD2.m in Sources */,
 				28F5DF362A25C5A300ECB80B /* JQDemoViewControllerD3.m in Sources */,
+				2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */,
 				2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */,
 				2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */,
 				2861B72F2A28846700A55275 /* JQDemoViewControllerD6.m in Sources */,
+				2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */,
 				2861B7322A297A9A00A55275 /* JQDemoViewControllerD7.m in Sources */,
+				2861B73B2A29E26600A55275 /* JQDemoViewControllerD8.m in Sources */,
+				28E6CAB22A2DB54200C20059 /* JQDemoViewControllerD9.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

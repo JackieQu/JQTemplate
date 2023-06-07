@@ -79,10 +79,10 @@
     
     /*
     UITextField *tf = [[UITextField alloc] initWithFrame:CGRectMake(STANDARD_MARGIN, 400, SCREEN_WIDTH - STANDARD_MARGIN * 2, 40)];
-    tf.text = @"我是文字";
+    tf.text = @"这是文字";
     tf.textColor = [UIColor orangeColor];
     tf.borderStyle = UITextBorderStyleRoundedRect;
-    tf.placeholder = @"我是占位文字";
+    tf.placeholder = @"这是占位文字";
     tf.clearsOnBeginEditing = YES;
     tf.clearButtonMode = UITextFieldViewModeWhileEditing;
     

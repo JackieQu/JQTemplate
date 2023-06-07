@@ -26,6 +26,12 @@
 
 #pragma mark - Life Cycle
 
+- (void)loadView {
+    [super loadView];
+    
+    self.view.backgroundColor = [UIColor whiteColor];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.

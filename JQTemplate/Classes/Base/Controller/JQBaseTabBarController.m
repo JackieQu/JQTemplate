@@ -42,6 +42,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    self.tabBar.backgroundColor = [UIColor whiteColor];
     self.viewControllers = self.dataList;
 //    if (self.vcArr.count >= 2) {
 //        self.selectedIndex = 1;

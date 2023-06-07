@@ -6,13 +6,14 @@
 //
 
 #import "JQDemoViewController.h"
+#import "JQModalDelegate.h"
 
 static NSString *kRows      = @"rows";
 static NSString *kTitle     = @"title";
 static NSString *kClassName = @"className";
 static NSString *kCellID    = @"identifier";
 
-@interface JQDemoViewController () <UITableViewDataSource, UITableViewDelegate>
+@interface JQDemoViewController () <UITableViewDataSource, UITableViewDelegate, JQModalDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -25,7 +26,8 @@ static NSString *kCellID    = @"identifier";
 - (UITableView *)tableView {
     
     if (!_tableView) {
-        _tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+        CGRect frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAV_HEIGHT - TAB_BAR_HEIGHT);
+        _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
     }
@@ -51,15 +53,27 @@ static NSString *kCellID    = @"identifier";
             @{kTitle: @"UITextField",    kRows: @[
                 @{kTitle: @"UITextField",    kClassName: @"JQDemoViewControllerD5"},
             ]},
-            @{kTitle: @"其他常用控件",    kRows: @[
+            @{kTitle: @"其他常用控件",      kRows: @[
                 @{kTitle: @"其他常用控件",    kClassName: @"JQDemoViewControllerD6"},
             ]},
-            @{kTitle: @"简单动画",    kRows: @[
+            @{kTitle: @"简单动画",         kRows: @[
                 @{kTitle: @"自定义指示器",    kClassName: @"JQDemoViewControllerD7"},
                 @{kTitle: @"简单动画",        kClassName: @"JQDemoViewControllerD7"},
                 @{kTitle: @"基本动画",        kClassName: @"JQDemoViewControllerD7"},
                 @{kTitle: @"转场动画",        kClassName: @"JQDemoViewControllerD7"},
                 @{kTitle: @"动画应用",        kClassName: @"JQDemoViewControllerD7"},
+            ]},
+            @{kTitle: @"视图控制器",       kRows: @[
+                @{kTitle: @"生命周期",       kClassName: @"JQBaseViewController"},
+                @{kTitle: @"模态视图",       kClassName: @"JQDemoViewControllerD8",  @"flag": @(1)},
+            ]},
+            @{kTitle: @"导航控制器",       kRows: @[
+                @{kTitle: @"导航控制器",      kClassName: @"JQDemoViewControllerD9"},
+                @{kTitle: @"自定义导航栏",    kClassName: @"JQDemoViewControllerD9"},
+            ]},
+            @{kTitle: @"整理补充",         kRows: @[
+                @{kTitle: @"UIBarButtonItem补充", kClassName: @"JQDemoViewControllerD10"},
+                @{kTitle: @"UITextField补充", kClassName: @"JQDemoViewControllerD10"},
             ]},
         ];
         _dataList = [NSMutableArray arrayWithArray:arr];
@@ -127,8 +141,25 @@ static NSString *kCellID    = @"identifier";
     if (cls) {
         JQBaseViewController *vc = [[cls alloc] init];
         vc.title = [rows[indexPath.row] valueForKey:kTitle];
-        [self.navigationController pushViewController:vc animated:YES];
+        BOOL flag = [[rows[indexPath.row] valueForKey:@"flag"] intValue] == 1;
+        if (flag) {
+            vc.modalDelegate = self;
+            vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+            [self presentViewController:vc animated:YES completion:^{
+                JQLog(@"%@", self.presentedViewController);
+                JQLog(@"%@", self.presentingViewController);
+            }];
+        } else {
+            [self.navigationController pushViewController:vc animated:YES];
+        }
     }
+}
+
+#pragma mark - JQModalDelegate Methods
+
+- (void)passObject:(NSObject *)object {
+  
+    self.title = [NSString stringWithFormat:@"%@", object];
 }
 
 @end
