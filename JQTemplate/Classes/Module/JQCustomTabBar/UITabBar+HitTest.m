@@ -38,8 +38,15 @@
         return view;
     }
     
+    if (![self canAnswerEvent:self]) {
+        return nil;
+    }
+    
     NSArray *arr = [[self.subviews reverseObjectEnumerator] allObjects];
     for (UIView *firstLayerView in arr) {
+        if (![self canAnswerEvent:firstLayerView]) {
+            continue;
+        }
         if ([firstLayerView isKindOfClass:[JQCustomTabBar class]] && !firstLayerView.superview.isHidden) {
             for (UIView *secondLayerView in firstLayerView.subviews) {
                 CGPoint transformPoint = [secondLayerView convertPoint:point fromView:firstLayerView];
@@ -50,6 +57,14 @@
         }
     }
     return nil;
+}
+
+- (BOOL)canAnswerEvent:(UIView *)view {
+    
+    if (!view.isUserInteractionEnabled || view.hidden || view.alpha <= 0.01) {
+        return NO;
+    }
+    return YES;
 }
 
 @end

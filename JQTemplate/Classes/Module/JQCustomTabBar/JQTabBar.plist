@@ -7,7 +7,7 @@
 	<key>isMarked</key>
 	<true/>
 	<key>isSpecial</key>
-	<true/>
+	<false/>
 	<key>specialIndex</key>
 	<integer>1</integer>
 	<key>selectedIndex</key>

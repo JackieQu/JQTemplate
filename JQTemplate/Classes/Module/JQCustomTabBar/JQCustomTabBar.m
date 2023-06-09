@@ -30,7 +30,7 @@
 - (UIView *)markLineView {
     
     if (!_markLineView) {
-        _markLineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ADAPT_VALUE(24), ADAPT_VALUE(2))];
+        _markLineView = [[UIView alloc] initWithFrame:CGRectMake(0, -ADAPT_VALUE(2), ADAPT_VALUE(24), ADAPT_VALUE(2))];
         _markLineView.backgroundColor = [UIColor orangeColor];
         _markLineView.centerX = self.selectedBtn.centerX;
     }

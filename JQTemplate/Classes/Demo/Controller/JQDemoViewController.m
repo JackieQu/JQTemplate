@@ -7,17 +7,15 @@
 
 #import "JQDemoViewController.h"
 #import "JQModalDelegate.h"
+#import "JQDemoTableModel.h"
 
-static NSString *kRows      = @"rows";
-static NSString *kTitle     = @"title";
-static NSString *kClassName = @"className";
 static NSString *kCellID    = @"identifier";
 
 @interface JQDemoViewController () <UITableViewDataSource, UITableViewDelegate, JQModalDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
-@property (nonatomic, strong) NSMutableArray *dataList;
+@property (nonatomic, strong) NSArray<JQDemoSectionModel *> *dataList;
 
 @end
 
@@ -34,55 +32,10 @@ static NSString *kCellID    = @"identifier";
     return _tableView;
 }
 
-- (NSMutableArray *)dataList {
+- (NSArray *)dataList {
     
     if (!_dataList) {
-        NSArray *arr = @[
-            @{kTitle: @"UIView",         kRows: @[
-                @{kTitle: @"UIView",         kClassName: @"JQDemoViewControllerD1"},
-            ]},
-            @{kTitle: @"UILabel",        kRows: @[
-                @{kTitle: @"UILabel",        kClassName: @"JQDemoViewControllerD2"},
-            ]},
-            @{kTitle: @"UIImageView",    kRows: @[
-                @{kTitle: @"UIImageView",    kClassName: @"JQDemoViewControllerD3"},
-            ]},
-            @{kTitle: @"UIButton",       kRows: @[
-                @{kTitle: @"UIButton",       kClassName: @"JQDemoViewControllerD4"},
-            ]},
-            @{kTitle: @"UITextField",    kRows: @[
-                @{kTitle: @"UITextField",    kClassName: @"JQDemoViewControllerD5"},
-            ]},
-            @{kTitle: @"其他常用控件",      kRows: @[
-                @{kTitle: @"其他常用控件",    kClassName: @"JQDemoViewControllerD6"},
-            ]},
-            @{kTitle: @"简单动画",         kRows: @[
-                @{kTitle: @"自定义指示器",    kClassName: @"JQDemoViewControllerD7"},
-                @{kTitle: @"简单动画",        kClassName: @"JQDemoViewControllerD7"},
-                @{kTitle: @"基本动画",        kClassName: @"JQDemoViewControllerD7"},
-                @{kTitle: @"转场动画",        kClassName: @"JQDemoViewControllerD7"},
-                @{kTitle: @"动画应用",        kClassName: @"JQDemoViewControllerD7"},
-            ]},
-            @{kTitle: @"视图控制器",       kRows: @[
-                @{kTitle: @"生命周期",       kClassName: @"JQBaseViewController"},
-                @{kTitle: @"模态视图",       kClassName: @"JQDemoViewControllerD8",  @"flag": @(1)},
-            ]},
-            @{kTitle: @"导航控制器",       kRows: @[
-                @{kTitle: @"导航控制器",      kClassName: @"JQDemoViewControllerD9"},
-                @{kTitle: @"自定义导航栏",    kClassName: @"JQDemoViewControllerD9"},
-            ]},
-            @{kTitle: @"整理补充",         kRows: @[
-                @{kTitle: @"UIBarButtonItem补充", kClassName: @"JQDemoViewControllerD10"},
-                @{kTitle: @"UITextField补充", kClassName: @"JQDemoViewControllerD10"},
-            ]},
-            @{kTitle: @"标签控制器",       kRows: @[
-                @{kTitle: @"标签控制器",      kClassName: @"JQDemoViewControllerD11"},
-                @{kTitle: @"Nav+TabBar",    kClassName: @"JQBaseTabBarController"},
-                @{kTitle: @"自定义标签栏",    kClassName: @"JQDemoViewControllerD11"},
-            ]},
-            
-        ];
-        _dataList = [NSMutableArray arrayWithArray:arr];
+        _dataList = [JQDemoTableModel tableModel].sections;
     }
     return _dataList;
 }
@@ -96,14 +49,18 @@ static NSString *kCellID    = @"identifier";
     [super initUI];
     
     [self.view addSubview:self.tableView];
+    
+    NSInteger lastSection = self.dataList.count - 1;
+    NSInteger lastRow = self.dataList[lastSection].rows.count - 1;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:lastSection];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark - UITableViewDataSource Methods
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSDictionary *dict = self.dataList[section];
-    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
+    NSArray<JQDemoRowModel *> *rows = self.dataList[section].rows;
     return rows.count;
 }
 
@@ -114,9 +71,9 @@ static NSString *kCellID    = @"identifier";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID];
     }
     
-    NSDictionary *dict = self.dataList[indexPath.section];
-    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
-    cell.textLabel.text = [rows[indexPath.row] valueForKey:kTitle];
+    NSArray<JQDemoRowModel *> *rows = self.dataList[indexPath.section].rows;
+    JQDemoRowModel *item = rows[indexPath.row];
+    cell.textLabel.text = item.title;
     return cell;
 }
 
@@ -126,12 +83,11 @@ static NSString *kCellID    = @"identifier";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    NSDictionary *dict = self.dataList[section];
-    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
+    NSArray<JQDemoRowModel *> *rows = self.dataList[section].rows;
     if (rows.count <= 1) {
         return nil;
     }
-    NSString *title = [NSString stringWithFormat:@"%ld-%@", section + 1, [dict valueForKey:kTitle]];
+    NSString *title = [NSString stringWithFormat:@"%ld-%@", section + 1, self.dataList[section].title];
     return title;
 }
 
@@ -140,15 +96,14 @@ static NSString *kCellID    = @"identifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    NSDictionary *dict = self.dataList[indexPath.section];
-    NSMutableArray *rows = [dict mutableArrayValueForKey:kRows];
-    NSString *clsName = [rows[indexPath.row] valueForKey:kClassName];
-    Class cls = NSClassFromString(clsName);
+    
+    NSArray<JQDemoRowModel *> *rows = self.dataList[indexPath.section].rows;
+    JQDemoRowModel *item = rows[indexPath.row];
+    Class cls = NSClassFromString(item.className);
     if (cls) {
         JQBaseViewController *vc = [[cls alloc] init];
-        vc.title = [rows[indexPath.row] valueForKey:kTitle];
-        BOOL flag = [[rows[indexPath.row] valueForKey:@"flag"] intValue] == 1;
-        if (flag) {
+        vc.title = item.title;
+        if (item.flag) {
             vc.modalDelegate = self;
             vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
             [self presentViewController:vc animated:YES completion:^{

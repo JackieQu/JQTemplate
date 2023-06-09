@@ -59,7 +59,7 @@
 
 - (void)handleAction:(JQCustomTabBar *)tabBar selectedIndex:(NSUInteger)idx {
     
-    if (idx == 1000) {
+    if (idx == kSpecialTag) {
         JQBaseViewController *vc = [[tabBar.tabBarModel.specialItem.cls alloc] init];
         [self presentViewController:vc animated:YES completion:nil];
     } else if (idx != self.selectedIndex) {

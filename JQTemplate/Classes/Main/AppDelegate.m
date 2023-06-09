@@ -16,6 +16,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     JQLogFunction
+
+//    [UIApplication sharedApplication].statusBarHidden = NO;
     
     return YES;
 }
