@@ -75,6 +75,12 @@ static NSString *kCellID    = @"identifier";
                 @{kTitle: @"UIBarButtonItem补充", kClassName: @"JQDemoViewControllerD10"},
                 @{kTitle: @"UITextField补充", kClassName: @"JQDemoViewControllerD10"},
             ]},
+            @{kTitle: @"标签控制器",       kRows: @[
+                @{kTitle: @"标签控制器",      kClassName: @"JQDemoViewControllerD11"},
+                @{kTitle: @"Nav+TabBar",    kClassName: @"JQBaseTabBarController"},
+                @{kTitle: @"自定义标签栏",    kClassName: @"JQDemoViewControllerD11"},
+            ]},
+            
         ];
         _dataList = [NSMutableArray arrayWithArray:arr];
     }

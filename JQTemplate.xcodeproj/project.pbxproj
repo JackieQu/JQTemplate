@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */; };
 		2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */; };
+		2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */; };
+		2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD2C2A3056AA001C419D /* UITabBar+Badge.m */; };
 		2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */; };
 		2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6512A26F0F700A55275 /* JQBlockButton.m */; };
 		2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6542A26F2AF00A55275 /* JQDockButton.m */; };
@@ -19,6 +21,12 @@
 		2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B7342A297C1200A55275 /* JQCustomHUD.m */; };
 		2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B7372A29CD9100A55275 /* JQPopUpView.m */; };
 		2861B73B2A29E26600A55275 /* JQDemoViewControllerD8.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B73A2A29E26600A55275 /* JQDemoViewControllerD8.m */; };
+		287A59272A3069210015C58F /* JQCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A59262A3069210015C58F /* JQCustomTabBar.m */; };
+		287A592B2A306C820015C58F /* JQTabBar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 287A592A2A306C820015C58F /* JQTabBar.plist */; };
+		287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A592D2A3075F40015C58F /* JQBaseModel.m */; };
+		287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A59302A3077A30015C58F /* JQTabBarModel.m */; };
+		28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */; };
+		28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC1072A31B50A00DA12E0 /* UITabBar+HitTest.m */; };
 		28E6CAB22A2DB54200C20059 /* JQDemoViewControllerD9.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */; };
 		28E6CAB62A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6CAB52A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DE9F2A2581A700ECB80B /* Main.storyboard */; };
@@ -86,6 +94,10 @@
 		2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD10.h; sourceTree = "<group>"; };
 		2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD10.m; sourceTree = "<group>"; };
+		2832AD282A30538A001C419D /* JQDemoViewControllerD11.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD11.h; sourceTree = "<group>"; };
+		2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD11.m; sourceTree = "<group>"; };
+		2832AD2B2A3056AA001C419D /* UITabBar+Badge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
+		2832AD2C2A3056AA001C419D /* UITabBar+Badge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
 		2861B64D2A26EF7300A55275 /* JQDemoViewControllerD4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD4.h; sourceTree = "<group>"; };
 		2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD4.m; sourceTree = "<group>"; };
 		2861B6502A26F0F700A55275 /* JQBlockButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQBlockButton.h; sourceTree = "<group>"; };
@@ -107,6 +119,17 @@
 		2861B7392A29E26600A55275 /* JQDemoViewControllerD8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD8.h; sourceTree = "<group>"; };
 		2861B73A2A29E26600A55275 /* JQDemoViewControllerD8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD8.m; sourceTree = "<group>"; };
 		2861B73C2A29E33D00A55275 /* JQModalDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQModalDelegate.h; sourceTree = "<group>"; };
+		287A59252A3069210015C58F /* JQCustomTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCustomTabBar.h; sourceTree = "<group>"; };
+		287A59262A3069210015C58F /* JQCustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCustomTabBar.m; sourceTree = "<group>"; };
+		287A592A2A306C820015C58F /* JQTabBar.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JQTabBar.plist; sourceTree = "<group>"; };
+		287A592C2A3075F40015C58F /* JQBaseModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQBaseModel.h; sourceTree = "<group>"; };
+		287A592D2A3075F40015C58F /* JQBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQBaseModel.m; sourceTree = "<group>"; };
+		287A592F2A3077A30015C58F /* JQTabBarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTabBarModel.h; sourceTree = "<group>"; };
+		287A59302A3077A30015C58F /* JQTabBarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTabBarModel.m; sourceTree = "<group>"; };
+		28ACC1032A319E6500DA12E0 /* JQTabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTabBarButton.h; sourceTree = "<group>"; };
+		28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTabBarButton.m; sourceTree = "<group>"; };
+		28ACC1062A31B50A00DA12E0 /* UITabBar+HitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+HitTest.h"; sourceTree = "<group>"; };
+		28ACC1072A31B50A00DA12E0 /* UITabBar+HitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+HitTest.m"; sourceTree = "<group>"; };
 		28E6CAB02A2DB54200C20059 /* JQDemoViewControllerD9.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD9.h; sourceTree = "<group>"; };
 		28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD9.m; sourceTree = "<group>"; };
 		28E6CAB42A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
@@ -205,6 +228,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2832AD2E2A3067F1001C419D /* JQCustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				287A59252A3069210015C58F /* JQCustomTabBar.h */,
+				287A59262A3069210015C58F /* JQCustomTabBar.m */,
+				28ACC1032A319E6500DA12E0 /* JQTabBarButton.h */,
+				28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */,
+				2861B6532A26F2AF00A55275 /* JQDockButton.h */,
+				2861B6542A26F2AF00A55275 /* JQDockButton.m */,
+				287A592A2A306C820015C58F /* JQTabBar.plist */,
+				287A592F2A3077A30015C58F /* JQTabBarModel.h */,
+				287A59302A3077A30015C58F /* JQTabBarModel.m */,
+				28ACC1062A31B50A00DA12E0 /* UITabBar+HitTest.h */,
+				28ACC1072A31B50A00DA12E0 /* UITabBar+HitTest.m */,
+			);
+			path = JQCustomTabBar;
+			sourceTree = "<group>";
+		};
 		28E6CAB32A2DC6F300C20059 /* FDFullscreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -326,6 +367,8 @@
 				28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */,
 				2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */,
 				2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */,
+				2832AD282A30538A001C419D /* JQDemoViewControllerD11.h */,
+				2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -388,6 +431,7 @@
 		28F5DEDB2A25834700ECB80B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				2832AD2E2A3067F1001C419D /* JQCustomTabBar */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -426,6 +470,8 @@
 				28F5DF052A258AA300ECB80B /* UIImage+Color.m */,
 				2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */,
 				2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */,
+				2832AD2B2A3056AA001C419D /* UITabBar+Badge.h */,
+				2832AD2C2A3056AA001C419D /* UITabBar+Badge.m */,
 				2861B73C2A29E33D00A55275 /* JQModalDelegate.h */,
 			);
 			path = Util;
@@ -438,8 +484,6 @@
 				28F5DF202A2597DE00ECB80B /* JQVerticalLabel.m */,
 				2861B6502A26F0F700A55275 /* JQBlockButton.h */,
 				2861B6512A26F0F700A55275 /* JQBlockButton.m */,
-				2861B6532A26F2AF00A55275 /* JQDockButton.h */,
-				2861B6542A26F2AF00A55275 /* JQDockButton.m */,
 				2861B6562A272F3C00A55275 /* JQIconTextField.h */,
 				2861B6572A272F3C00A55275 /* JQIconTextField.m */,
 				2861B7332A297C1200A55275 /* JQCustomHUD.h */,
@@ -552,6 +596,8 @@
 		28F5DEF02A25834700ECB80B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				287A592C2A3075F40015C58F /* JQBaseModel.h */,
+				287A592D2A3075F40015C58F /* JQBaseModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -671,7 +717,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				CLASSPREFIX = "";
+				CLASSPREFIX = JQ;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
 					28F5DE922A2581A700ECB80B = {
@@ -713,6 +759,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				28F5DEA92A2581A900ECB80B /* LaunchScreen.storyboard in Resources */,
+				287A592B2A306C820015C58F /* JQTabBar.plist in Resources */,
 				28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */,
 				28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */,
 				28F5DF302A25A40A00ECB80B /* Coca-ColaCareFontKaiTi.TTF in Resources */,
@@ -852,6 +899,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */,
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28F5DEF52A25834800ECB80B /* AppDelegate.m in Sources */,
 				28F5DEF32A25834800ECB80B /* SceneDelegate.m in Sources */,
@@ -861,9 +909,12 @@
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
 				28F5DF122A25900200ECB80B /* JQHomeViewController.m in Sources */,
 				28F5DF182A25902400ECB80B /* JQProfileViewController.m in Sources */,
+				287A59272A3069210015C58F /* JQCustomTabBar.m in Sources */,
 				28E6CAB62A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				28F5DEFA2A2589E200ECB80B /* UIView+Frame.m in Sources */,
 				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
+				28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */,
+				28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */,
 				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
 				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
 				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
@@ -871,13 +922,16 @@
 				28F5DF212A2597DE00ECB80B /* JQVerticalLabel.m in Sources */,
 				2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */,
 				2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */,
+				287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */,
 				2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */,
 				2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */,
 				2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */,
 				28F5DF1B2A2596C500ECB80B /* JQDemoViewControllerD1.m in Sources */,
+				2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */,
 				28F5DF1E2A2596D400ECB80B /* JQDemoViewControllerD2.m in Sources */,
 				28F5DF362A25C5A300ECB80B /* JQDemoViewControllerD3.m in Sources */,
 				2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */,
+				2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */,
 				2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */,
 				2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */,
 				2861B72F2A28846700A55275 /* JQDemoViewControllerD6.m in Sources */,

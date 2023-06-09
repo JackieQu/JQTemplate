@@ -8,6 +8,8 @@ target 'JQTemplate' do
   # Pods for JQTemplate
   pod 'AFNetworking', '~> 4.0'
   pod 'SDWebImage', '~> 5.0'
+  pod 'MJExtension'
+  pod 'MJRefresh'
 
   target 'JQTemplateTests' do
     inherit! :search_paths

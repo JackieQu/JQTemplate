@@ -7,7 +7,7 @@
 
 #import "JQDockButton.h"
 
-static const CGFloat kScale = 0.7;
+static const CGFloat kScale = 0.618;
 
 @implementation JQDockButton
 

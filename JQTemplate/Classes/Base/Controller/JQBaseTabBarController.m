@@ -8,55 +8,71 @@
 #import "JQBaseTabBarController.h"
 #import "JQBaseViewController.h"
 #import "JQBaseNavigationController.h"
+#import "JQCustomTabBar.h"
 
-@interface JQBaseTabBarController ()
+@interface JQBaseTabBarController () <JQCustomTabBarDelegate>
 
-@property (nonatomic, strong) NSArray *dataList;
+@property (nonatomic, strong) JQCustomTabBar *customTabBar;
 
 @end
 
 @implementation JQBaseTabBarController
 
-- (NSArray *)dataList {
+- (JQCustomTabBar *)customTabBar {
     
-    if (!_dataList) {
-        NSMutableArray *tmpArr = [NSMutableArray array];
-        NSArray *titleArr = @[@"演示", @"首页", @"我的"];
-        NSArray *clsNameArr = @[@"JQDemoViewController", @"JQHomeViewController", @"JQProfileViewController"];
-        for (NSUInteger i = 0; i < clsNameArr.count; i ++) {
-            NSString *clsName = clsNameArr[i];
-            Class cls = NSClassFromString(clsName);
-            if (cls) {
-                JQBaseViewController *vc = [[cls alloc] init];
-                vc.title = titleArr[i];
-                JQBaseNavigationController *navVC = [[JQBaseNavigationController alloc] initWithRootViewController:vc];
-                [tmpArr addObject:navVC];
-            }
-        }
-        _dataList = tmpArr;
+    if (!_customTabBar) {
+        _customTabBar = [[JQCustomTabBar alloc] initWithFrame:self.tabBar.bounds];
+        __weak typeof(self) weakSelf = self;
+        _customTabBar.block = ^(JQCustomTabBar * _Nonnull tabBar, JQDockButtonType type) {
+            [weakSelf handleAction:tabBar selectedIndex:type];
+        };
+        _customTabBar.delegate = self;
     }
-    return _dataList;;
+    return _customTabBar;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
+    UITabBar *appearance = [UITabBar appearance];
+    appearance.backgroundImage = [UIImage new];
+    appearance.shadowImage = [UIImage new];
+    
+    NSMutableArray *viewControllers = self.customTabBar.tabBarModel.availableItems;
+    for (NSUInteger i = 0; i < viewControllers.count; i ++) {
+        JQTabBarItemModel *item = viewControllers[i];
+        JQBaseViewController *vc = [[item.cls alloc] init];
+        vc.title = item.title;
+        JQBaseNavigationController *navVC = [[JQBaseNavigationController alloc] initWithRootViewController:vc];
+        [viewControllers replaceObjectAtIndex:i withObject:navVC];
+    }
+    self.viewControllers = viewControllers;
+    self.selectedIndex = self.customTabBar.tabBarModel.selectedIndex;
+
+    self.tabBar.translucent = NO;
     self.tabBar.backgroundColor = [UIColor whiteColor];
-    self.viewControllers = self.dataList;
-//    if (self.vcArr.count >= 2) {
-//        self.selectedIndex = 1;
-//    }
+    self.tabBar.barTintColor = self.customTabBar.backgroundColor;
+    [self.tabBar addSubview:self.customTabBar];
+//    [self setValue:self.customTabBar forKey:@"tabBar"];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void)handleAction:(JQCustomTabBar *)tabBar selectedIndex:(NSUInteger)idx {
+    
+    if (idx == 1000) {
+        JQBaseViewController *vc = [[tabBar.tabBarModel.specialItem.cls alloc] init];
+        [self presentViewController:vc animated:YES completion:nil];
+    } else if (idx != self.selectedIndex) {
+        self.selectedIndex = idx;
+    }
 }
-*/
+
+#pragma mark - JQCustomTabBarDelegate
+
+- (void)tabBar:(JQCustomTabBar *)tabBar selectedAtIndex:(JQDockButtonType)type {
+    
+    [self handleAction:tabBar selectedIndex:type];
+}
+
 
 @end

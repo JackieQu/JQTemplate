@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>isAnimated</key>
+	<true/>
+	<key>isMarked</key>
+	<true/>
+	<key>isSpecial</key>
+	<true/>
+	<key>specialIndex</key>
+	<integer>1</integer>
+	<key>selectedIndex</key>
+	<integer>0</integer>
+	<key>items</key>
+	<array>
+		<dict>
+			<key>isHidden</key>
+			<false/>
+			<key>className</key>
+			<string>JQDemoViewController</string>
+			<key>title</key>
+			<string>演示</string>
+			<key>imageNormal</key>
+			<string>tab_3</string>
+			<key>imageSelected</key>
+			<string>tab_3_s</string>
+		</dict>
+		<dict>
+			<key>isHidden</key>
+			<false/>
+			<key>className</key>
+			<string>JQHomeViewController</string>
+			<key>title</key>
+			<string>首页</string>
+			<key>imageNormal</key>
+			<string>tab_0</string>
+			<key>imageSelected</key>
+			<string>tab_0_s</string>
+		</dict>
+		<dict>
+			<key>isHidden</key>
+			<false/>
+			<key>className</key>
+			<string>JQProfileViewController</string>
+			<key>title</key>
+			<string>我的</string>
+			<key>imageNormal</key>
+			<string>tab_2</string>
+			<key>imageSelected</key>
+			<string>tab_2_s</string>
+		</dict>
+	</array>
+</dict>
+</plist>
