@@ -303,6 +303,45 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>UIScrollView</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>UIScrollView</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD14</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>图片轮播</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD14</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>图片缩放</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD14_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>UIScrollView复用</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD14_3</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

@@ -47,12 +47,12 @@
 
 - (void)leftClickAction {
     
-    NSLog(@"%s",__FUNCTION__);
+    JQLog(@"%s",__FUNCTION__);
 }
 
 - (void)rightClickAction {
     
-    NSLog(@"%s",__FUNCTION__);
+    JQLog(@"%s",__FUNCTION__);
 }
 
 @end

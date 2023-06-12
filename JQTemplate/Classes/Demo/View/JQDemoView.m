@@ -31,10 +31,10 @@
     UITouch *touch = [touches anyObject];
     
     CGPoint currentPoint = [touch locationInView:touch.view];
-    NSLog(@"currentPoint: %@", NSStringFromCGPoint(currentPoint));
+    JQLog(@"currentPoint: %@", NSStringFromCGPoint(currentPoint));
     
     CGPoint previousPoint = [touch previousLocationInView:touch.view];
-    NSLog(@"previousPoint: %@", NSStringFromCGPoint(previousPoint));
+    JQLog(@"previousPoint: %@", NSStringFromCGPoint(previousPoint));
 
     CGFloat x = currentPoint.x - previousPoint.x;
     CGFloat y = currentPoint.y - previousPoint.y;

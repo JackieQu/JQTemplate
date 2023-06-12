@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */; };
+		281D254F2A37079E0058FF7D /* test_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254A2A37079D0058FF7D /* test_02.jpg */; };
+		281D25502A37079E0058FF7D /* test_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254B2A37079D0058FF7D /* test_03.jpg */; };
+		281D25512A37079E0058FF7D /* test_04.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254C2A37079D0058FF7D /* test_04.jpg */; };
+		281D25522A37079E0058FF7D /* test_01.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254D2A37079D0058FF7D /* test_01.jpg */; };
+		281D25532A37079E0058FF7D /* test_05.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254E2A37079E0058FF7D /* test_05.jpg */; };
+		281D25562A370BA50058FF7D /* JQDemoViewControllerD14_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25552A370BA50058FF7D /* JQDemoViewControllerD14_2.m */; };
+		281D25592A370BD90058FF7D /* JQDemoViewControllerD14_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25582A370BD90058FF7D /* JQDemoViewControllerD14_3.m */; };
 		2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */; };
 		2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */; };
 		2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */; };
@@ -98,6 +106,17 @@
 		052C4E9656FE07E7287DF8C3 /* Pods-JQTemplate.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JQTemplate.release.xcconfig"; path = "Target Support Files/Pods-JQTemplate/Pods-JQTemplate.release.xcconfig"; sourceTree = "<group>"; };
 		107CABE13A8089E309C256F7 /* Pods_JQTemplate_JQTemplateUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JQTemplate_JQTemplateUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		12FC2616650F00A662687459 /* Pods_JQTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JQTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		281D25472A36FE090058FF7D /* JQDemoViewControllerD14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD14.h; sourceTree = "<group>"; };
+		281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD14.m; sourceTree = "<group>"; };
+		281D254A2A37079D0058FF7D /* test_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_02.jpg; sourceTree = "<group>"; };
+		281D254B2A37079D0058FF7D /* test_03.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_03.jpg; sourceTree = "<group>"; };
+		281D254C2A37079D0058FF7D /* test_04.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_04.jpg; sourceTree = "<group>"; };
+		281D254D2A37079D0058FF7D /* test_01.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_01.jpg; sourceTree = "<group>"; };
+		281D254E2A37079E0058FF7D /* test_05.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_05.jpg; sourceTree = "<group>"; };
+		281D25542A370BA50058FF7D /* JQDemoViewControllerD14_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD14_2.h; sourceTree = "<group>"; };
+		281D25552A370BA50058FF7D /* JQDemoViewControllerD14_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD14_2.m; sourceTree = "<group>"; };
+		281D25572A370BD90058FF7D /* JQDemoViewControllerD14_3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD14_3.h; sourceTree = "<group>"; };
+		281D25582A370BD90058FF7D /* JQDemoViewControllerD14_3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD14_3.m; sourceTree = "<group>"; };
 		2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD10.h; sourceTree = "<group>"; };
@@ -396,6 +415,12 @@
 				28ACC10F2A32F4E500DA12E0 /* JQDemoViewControllerD12.m */,
 				28DB78BD2A36C228001D2D07 /* JQDemoViewControllerD13.h */,
 				28DB78BE2A36C228001D2D07 /* JQDemoViewControllerD13.m */,
+				281D25472A36FE090058FF7D /* JQDemoViewControllerD14.h */,
+				281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */,
+				281D25542A370BA50058FF7D /* JQDemoViewControllerD14_2.h */,
+				281D25552A370BA50058FF7D /* JQDemoViewControllerD14_2.m */,
+				281D25572A370BD90058FF7D /* JQDemoViewControllerD14_3.h */,
+				281D25582A370BD90058FF7D /* JQDemoViewControllerD14_3.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -660,6 +685,11 @@
 				28F5DF3B2A25D72F00ECB80B /* test_image.png */,
 				28F5DF3C2A25D72F00ECB80B /* test_image.jpg */,
 				28F5DF392A25D5FD00ECB80B /* test_image.data */,
+				281D254D2A37079D0058FF7D /* test_01.jpg */,
+				281D254A2A37079D0058FF7D /* test_02.jpg */,
+				281D254B2A37079D0058FF7D /* test_03.jpg */,
+				281D254C2A37079D0058FF7D /* test_04.jpg */,
+				281D254E2A37079E0058FF7D /* test_05.jpg */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -801,9 +831,12 @@
 				28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */,
 				28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */,
 				28F5DF302A25A40A00ECB80B /* Coca-ColaCareFontKaiTi.TTF in Resources */,
+				281D25512A37079E0058FF7D /* test_04.jpg in Resources */,
 				28F5DF2F2A25A40A00ECB80B /* Coca-ColaCareFont-TextRegular.TTF in Resources */,
 				28F5DF322A25A40A00ECB80B /* Coca-ColaCareFont-TextLight.TTF in Resources */,
+				281D254F2A37079E0058FF7D /* test_02.jpg in Resources */,
 				28F5DF2E2A25A40A00ECB80B /* Coca-ColaCareFont-TextMedium.TTF in Resources */,
+				281D25532A37079E0058FF7D /* test_05.jpg in Resources */,
 				28F5DF332A25A40A00ECB80B /* Coca-ColaCareFont-TextBold.TTF in Resources */,
 				28F5DF312A25A40A00ECB80B /* Coca-ColaCareFont-TextBlack.TTF in Resources */,
 				28F5DF382A25CC8A00ECB80B /* lotus.gif in Resources */,
@@ -811,6 +844,8 @@
 				28F5DF3D2A25D72F00ECB80B /* test_image.png in Resources */,
 				28F5DF3A2A25D5FE00ECB80B /* test_image.data in Resources */,
 				28ACC10D2A32EABE00DA12E0 /* JQDemoTable.plist in Resources */,
+				281D25502A37079E0058FF7D /* test_03.jpg in Resources */,
+				281D25522A37079E0058FF7D /* test_01.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -952,6 +987,7 @@
 				28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */,
 				28F5DF0F2A258E9500ECB80B /* JQBaseTabBarController.m in Sources */,
 				28ACC10B2A32D65800DA12E0 /* JQDemoTableModel.m in Sources */,
+				281D25592A370BD90058FF7D /* JQDemoViewControllerD14_3.m in Sources */,
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
 				28F5DF122A25900200ECB80B /* JQHomeViewController.m in Sources */,
 				28F5DF182A25902400ECB80B /* JQProfileViewController.m in Sources */,
@@ -966,7 +1002,9 @@
 				28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */,
 				28F5DF212A2597DE00ECB80B /* JQVerticalLabel.m in Sources */,
 				2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */,
+				281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */,
 				2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */,
+				281D25562A370BA50058FF7D /* JQDemoViewControllerD14_2.m in Sources */,
 				2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */,
 				2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */,
 				2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */,
