@@ -272,6 +272,37 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>手势</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>触摸事件</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD13</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>摇一摇</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD13</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>UIGestureRecognizer</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD13</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

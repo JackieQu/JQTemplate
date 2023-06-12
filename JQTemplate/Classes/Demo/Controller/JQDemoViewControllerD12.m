@@ -7,8 +7,9 @@
 
 #import "JQDemoViewControllerD12.h"
 #import "AppDelegate.h"
+#import "JQAlertView.h"
 
-@interface JQDemoViewControllerD12 ()
+@interface JQDemoViewControllerD12 () <JQAlertViewDelegate>
 
 @end
 
@@ -40,6 +41,7 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     
+    /*
     NSURL *url = [NSURL URLWithString:@"http://www.baidu.com"];
     // http: https: ftp: // safiri
     // sms: // 发短信
@@ -48,6 +50,11 @@
     if ([[UIApplication sharedApplication] canOpenURL:url]) {
         [[UIApplication sharedApplication] openURL:url options:@{} completionHandler:nil];
     }
+     */
+    
+    JQAlertView *alertView = [[JQAlertView alloc] initWithFrame:CGRectMake(0, 0, 300, 200)];
+    alertView.delegate = self;
+    [alertView show];
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -56,6 +63,13 @@
 
 - (UIStatusBarStyle)preferredStatusBarStyle {
     return UIStatusBarStyleLightContent;
+}
+
+#pragma mark - JQAlertViewDelegate Methods
+
+- (void)alertView:(JQAlertView *)alertView selectedAtIndex:(NSUInteger)index {
+    
+    JQLog(@"%@", @(index));
 }
 
 @end
