@@ -57,10 +57,4 @@
     [self.tabBar hideBedgeAtIndex:4];
 }
 
-- (void)viewWillLayoutSubviews {
-    [super viewWillLayoutSubviews];
-    
-    JQLogFunction
-}
-
 @end

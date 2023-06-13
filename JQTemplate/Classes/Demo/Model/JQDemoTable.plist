@@ -342,6 +342,21 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>UITextView</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>UITextView</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD15</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

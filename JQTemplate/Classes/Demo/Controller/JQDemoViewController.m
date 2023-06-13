@@ -83,10 +83,10 @@ static NSString *kCellID    = @"identifier";
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
     
-    NSArray<JQDemoRowModel *> *rows = self.dataList[section].rows;
-    if (rows.count <= 1) {
-        return nil;
-    }
+//    NSArray<JQDemoRowModel *> *rows = self.dataList[section].rows;
+//    if (rows.count <= 1) {
+//        return nil;
+//    }
     NSString *title = [NSString stringWithFormat:@"%ld-%@", section + 1, self.dataList[section].title];
     return title;
 }
