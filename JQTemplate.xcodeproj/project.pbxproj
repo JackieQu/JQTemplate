@@ -17,6 +17,17 @@
 		281D25592A370BD90058FF7D /* JQDemoViewControllerD14_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25582A370BD90058FF7D /* JQDemoViewControllerD14_3.m */; };
 		281D255C2A37FFF10058FF7D /* JQDemoViewControllerD15.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D255B2A37FFF10058FF7D /* JQDemoViewControllerD15.m */; };
 		281D255F2A3803510058FF7D /* JQTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D255E2A3803510058FF7D /* JQTextView.m */; };
+		281D25622A380CA40058FF7D /* JQDemoViewControllerD16.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25612A380CA40058FF7D /* JQDemoViewControllerD16.m */; };
+		281D25662A3812410058FF7D /* JQCarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25652A3812410058FF7D /* JQCarViewController.m */; };
+		281D25692A38125A0058FF7D /* JQCarGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25682A38125A0058FF7D /* JQCarGroupModel.m */; };
+		281D256D2A38130F0058FF7D /* cars_incomplete.plist in Resources */ = {isa = PBXBuildFile; fileRef = 281D256C2A38130F0058FF7D /* cars_incomplete.plist */; };
+		281D256F2A38182F0058FF7D /* cars_complete.plist in Resources */ = {isa = PBXBuildFile; fileRef = 281D256E2A38182F0058FF7D /* cars_complete.plist */; };
+		281D25732A38317B0058FF7D /* JQIndustryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25722A38317B0058FF7D /* JQIndustryViewController.m */; };
+		281D25762A3831970058FF7D /* JQIndustryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25752A3831970058FF7D /* JQIndustryModel.m */; };
+		281D25782A3831CA0058FF7D /* industries.plist in Resources */ = {isa = PBXBuildFile; fileRef = 281D25772A3831CA0058FF7D /* industries.plist */; };
+		281D257C2A383B310058FF7D /* JQWeChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D257B2A383B310058FF7D /* JQWeChatModel.m */; };
+		281D257F2A383B3F0058FF7D /* JQWeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D257E2A383B3F0058FF7D /* JQWeChatViewController.m */; };
+		281D25812A383B510058FF7D /* wechat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 281D25802A383B510058FF7D /* wechat.plist */; };
 		2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */; };
 		2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */; };
 		2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */; };
@@ -47,6 +58,9 @@
 		28DB78C82A36EB56001D2D07 /* JQAssistiveButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78C72A36EB56001D2D07 /* JQAssistiveButton.m */; };
 		28E6CAB22A2DB54200C20059 /* JQDemoViewControllerD9.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */; };
 		28E6CAB62A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 28E6CAB52A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m */; };
+		28EB202E2A38403B008AA0A0 /* JQBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB202D2A38403B008AA0A0 /* JQBaseTableViewController.m */; };
+		28EB20312A384352008AA0A0 /* JQDemoViewControllerD17.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB20302A384352008AA0A0 /* JQDemoViewControllerD17.m */; };
+		28EB20332A384455008AA0A0 /* contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28EB20322A384455008AA0A0 /* contacts.plist */; };
 		28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DE9F2A2581A700ECB80B /* Main.storyboard */; };
 		28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28F5DEA22A2581A700ECB80B /* JQTemplate.xcdatamodeld */; };
 		28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DEA52A2581A900ECB80B /* Assets.xcassets */; };
@@ -123,6 +137,24 @@
 		281D255B2A37FFF10058FF7D /* JQDemoViewControllerD15.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD15.m; sourceTree = "<group>"; };
 		281D255D2A3803510058FF7D /* JQTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTextView.h; sourceTree = "<group>"; };
 		281D255E2A3803510058FF7D /* JQTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTextView.m; sourceTree = "<group>"; };
+		281D25602A380CA40058FF7D /* JQDemoViewControllerD16.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD16.h; sourceTree = "<group>"; };
+		281D25612A380CA40058FF7D /* JQDemoViewControllerD16.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD16.m; sourceTree = "<group>"; };
+		281D25642A3812410058FF7D /* JQCarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCarViewController.h; sourceTree = "<group>"; };
+		281D25652A3812410058FF7D /* JQCarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCarViewController.m; sourceTree = "<group>"; };
+		281D25672A38125A0058FF7D /* JQCarGroupModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCarGroupModel.h; sourceTree = "<group>"; };
+		281D25682A38125A0058FF7D /* JQCarGroupModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCarGroupModel.m; sourceTree = "<group>"; };
+		281D256C2A38130F0058FF7D /* cars_incomplete.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cars_incomplete.plist; sourceTree = "<group>"; };
+		281D256E2A38182F0058FF7D /* cars_complete.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cars_complete.plist; sourceTree = "<group>"; };
+		281D25712A38317B0058FF7D /* JQIndustryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQIndustryViewController.h; sourceTree = "<group>"; };
+		281D25722A38317B0058FF7D /* JQIndustryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQIndustryViewController.m; sourceTree = "<group>"; };
+		281D25742A3831970058FF7D /* JQIndustryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQIndustryModel.h; sourceTree = "<group>"; };
+		281D25752A3831970058FF7D /* JQIndustryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQIndustryModel.m; sourceTree = "<group>"; };
+		281D25772A3831CA0058FF7D /* industries.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = industries.plist; sourceTree = "<group>"; };
+		281D257A2A383B310058FF7D /* JQWeChatModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQWeChatModel.h; sourceTree = "<group>"; };
+		281D257B2A383B310058FF7D /* JQWeChatModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQWeChatModel.m; sourceTree = "<group>"; };
+		281D257D2A383B3F0058FF7D /* JQWeChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQWeChatViewController.h; sourceTree = "<group>"; };
+		281D257E2A383B3F0058FF7D /* JQWeChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQWeChatViewController.m; sourceTree = "<group>"; };
+		281D25802A383B510058FF7D /* wechat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wechat.plist; sourceTree = "<group>"; };
 		2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD10.h; sourceTree = "<group>"; };
@@ -182,6 +214,11 @@
 		28E6CAB12A2DB54200C20059 /* JQDemoViewControllerD9.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD9.m; sourceTree = "<group>"; };
 		28E6CAB42A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		28E6CAB52A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
+		28EB202C2A38403B008AA0A0 /* JQBaseTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQBaseTableViewController.h; sourceTree = "<group>"; };
+		28EB202D2A38403B008AA0A0 /* JQBaseTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQBaseTableViewController.m; sourceTree = "<group>"; };
+		28EB202F2A384352008AA0A0 /* JQDemoViewControllerD17.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD17.h; sourceTree = "<group>"; };
+		28EB20302A384352008AA0A0 /* JQDemoViewControllerD17.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD17.m; sourceTree = "<group>"; };
+		28EB20322A384455008AA0A0 /* contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = contacts.plist; sourceTree = "<group>"; };
 		28F5DE932A2581A700ECB80B /* JQTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F5DEA02A2581A700ECB80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28F5DEA32A2581A700ECB80B /* JQTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JQTemplate.xcdatamodel; sourceTree = "<group>"; };
@@ -276,6 +313,43 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		281D25632A38120C0058FF7D /* JQCar */ = {
+			isa = PBXGroup;
+			children = (
+				281D25642A3812410058FF7D /* JQCarViewController.h */,
+				281D25652A3812410058FF7D /* JQCarViewController.m */,
+				281D25672A38125A0058FF7D /* JQCarGroupModel.h */,
+				281D25682A38125A0058FF7D /* JQCarGroupModel.m */,
+				281D256C2A38130F0058FF7D /* cars_incomplete.plist */,
+				281D256E2A38182F0058FF7D /* cars_complete.plist */,
+			);
+			path = JQCar;
+			sourceTree = "<group>";
+		};
+		281D25702A381C3A0058FF7D /* JQIndustry */ = {
+			isa = PBXGroup;
+			children = (
+				281D25712A38317B0058FF7D /* JQIndustryViewController.h */,
+				281D25722A38317B0058FF7D /* JQIndustryViewController.m */,
+				281D25742A3831970058FF7D /* JQIndustryModel.h */,
+				281D25752A3831970058FF7D /* JQIndustryModel.m */,
+				281D25772A3831CA0058FF7D /* industries.plist */,
+			);
+			path = JQIndustry;
+			sourceTree = "<group>";
+		};
+		281D25792A383B1B0058FF7D /* JQWeChat */ = {
+			isa = PBXGroup;
+			children = (
+				281D257D2A383B3F0058FF7D /* JQWeChatViewController.h */,
+				281D257E2A383B3F0058FF7D /* JQWeChatViewController.m */,
+				281D257A2A383B310058FF7D /* JQWeChatModel.h */,
+				281D257B2A383B310058FF7D /* JQWeChatModel.m */,
+				281D25802A383B510058FF7D /* wechat.plist */,
+			);
+			path = JQWeChat;
+			sourceTree = "<group>";
+		};
 		2832AD2E2A3067F1001C419D /* JQCustomTabBar */ = {
 			isa = PBXGroup;
 			children = (
@@ -429,6 +503,10 @@
 				281D25582A370BD90058FF7D /* JQDemoViewControllerD14_3.m */,
 				281D255A2A37FFF10058FF7D /* JQDemoViewControllerD15.h */,
 				281D255B2A37FFF10058FF7D /* JQDemoViewControllerD15.m */,
+				281D25602A380CA40058FF7D /* JQDemoViewControllerD16.h */,
+				281D25612A380CA40058FF7D /* JQDemoViewControllerD16.m */,
+				28EB202F2A384352008AA0A0 /* JQDemoViewControllerD17.h */,
+				28EB20302A384352008AA0A0 /* JQDemoViewControllerD17.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -439,6 +517,7 @@
 				28ACC10C2A32EABE00DA12E0 /* JQDemoTable.plist */,
 				28ACC1092A32D65800DA12E0 /* JQDemoTableModel.h */,
 				28ACC10A2A32D65800DA12E0 /* JQDemoTableModel.m */,
+				28EB20322A384455008AA0A0 /* contacts.plist */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -496,6 +575,9 @@
 		28F5DEDB2A25834700ECB80B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				281D25792A383B1B0058FF7D /* JQWeChat */,
+				281D25702A381C3A0058FF7D /* JQIndustry */,
+				281D25632A38120C0058FF7D /* JQCar */,
 				2832AD2E2A3067F1001C419D /* JQCustomTabBar */,
 			);
 			path = Module;
@@ -662,6 +744,8 @@
 				28F5DF0B2A258E7D00ECB80B /* JQBaseNavigationController.m */,
 				28F5DF0D2A258E9500ECB80B /* JQBaseTabBarController.h */,
 				28F5DF0E2A258E9500ECB80B /* JQBaseTabBarController.m */,
+				28EB202C2A38403B008AA0A0 /* JQBaseTableViewController.h */,
+				28EB202D2A38403B008AA0A0 /* JQBaseTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -838,15 +922,18 @@
 			files = (
 				28F5DEA92A2581A900ECB80B /* LaunchScreen.storyboard in Resources */,
 				287A592B2A306C820015C58F /* JQTabBar.plist in Resources */,
+				281D25812A383B510058FF7D /* wechat.plist in Resources */,
 				28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */,
 				28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */,
 				28F5DF302A25A40A00ECB80B /* Coca-ColaCareFontKaiTi.TTF in Resources */,
 				281D25512A37079E0058FF7D /* test_04.jpg in Resources */,
 				28F5DF2F2A25A40A00ECB80B /* Coca-ColaCareFont-TextRegular.TTF in Resources */,
 				28F5DF322A25A40A00ECB80B /* Coca-ColaCareFont-TextLight.TTF in Resources */,
+				281D256F2A38182F0058FF7D /* cars_complete.plist in Resources */,
 				281D254F2A37079E0058FF7D /* test_02.jpg in Resources */,
 				28F5DF2E2A25A40A00ECB80B /* Coca-ColaCareFont-TextMedium.TTF in Resources */,
 				281D25532A37079E0058FF7D /* test_05.jpg in Resources */,
+				281D256D2A38130F0058FF7D /* cars_incomplete.plist in Resources */,
 				28F5DF332A25A40A00ECB80B /* Coca-ColaCareFont-TextBold.TTF in Resources */,
 				28F5DF312A25A40A00ECB80B /* Coca-ColaCareFont-TextBlack.TTF in Resources */,
 				28F5DF382A25CC8A00ECB80B /* lotus.gif in Resources */,
@@ -854,8 +941,10 @@
 				28F5DF3D2A25D72F00ECB80B /* test_image.png in Resources */,
 				28F5DF3A2A25D5FE00ECB80B /* test_image.data in Resources */,
 				28ACC10D2A32EABE00DA12E0 /* JQDemoTable.plist in Resources */,
+				281D25782A3831CA0058FF7D /* industries.plist in Resources */,
 				281D25502A37079E0058FF7D /* test_03.jpg in Resources */,
 				281D25522A37079E0058FF7D /* test_01.jpg in Resources */,
+				28EB20332A384455008AA0A0 /* contacts.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -985,6 +1074,7 @@
 			files = (
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
+				281D257C2A383B310058FF7D /* JQWeChatModel.m in Sources */,
 				28F5DEF52A25834800ECB80B /* AppDelegate.m in Sources */,
 				28F5DEF32A25834800ECB80B /* SceneDelegate.m in Sources */,
 				28DB78C82A36EB56001D2D07 /* JQAssistiveButton.m in Sources */,
@@ -992,9 +1082,14 @@
 				28F5DF0C2A258E7D00ECB80B /* JQBaseNavigationController.m in Sources */,
 				287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */,
 				287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */,
+				281D25762A3831970058FF7D /* JQIndustryModel.m in Sources */,
+				28EB202E2A38403B008AA0A0 /* JQBaseTableViewController.m in Sources */,
 				28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */,
+				281D25622A380CA40058FF7D /* JQDemoViewControllerD16.m in Sources */,
+				281D25692A38125A0058FF7D /* JQCarGroupModel.m in Sources */,
 				287A59272A3069210015C58F /* JQCustomTabBar.m in Sources */,
 				28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */,
+				281D25732A38317B0058FF7D /* JQIndustryViewController.m in Sources */,
 				28F5DF0F2A258E9500ECB80B /* JQBaseTabBarController.m in Sources */,
 				28ACC10B2A32D65800DA12E0 /* JQDemoTableModel.m in Sources */,
 				281D25592A370BD90058FF7D /* JQDemoViewControllerD14_3.m in Sources */,
@@ -1006,7 +1101,9 @@
 				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
 				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
 				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
+				281D25662A3812410058FF7D /* JQCarViewController.m in Sources */,
 				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
+				28EB20312A384352008AA0A0 /* JQDemoViewControllerD17.m in Sources */,
 				2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */,
 				2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */,
 				28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */,
@@ -1018,6 +1115,7 @@
 				2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */,
 				2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */,
 				2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */,
+				281D257F2A383B3F0058FF7D /* JQWeChatViewController.m in Sources */,
 				28F5DF1B2A2596C500ECB80B /* JQDemoViewControllerD1.m in Sources */,
 				28F5DF1E2A2596D400ECB80B /* JQDemoViewControllerD2.m in Sources */,
 				281D255C2A37FFF10058FF7D /* JQDemoViewControllerD15.m in Sources */,

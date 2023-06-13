@@ -90,12 +90,12 @@
     
     if (self.scrollView.contentOffset.x > self.scrollView.bounds.size.width) {
         _currentPage = (_currentPage + 1) % _totalPage;
-        NSLog(@"向左滑");
+        JQLog(@"向左滑");
     }
     
     if (self.scrollView.contentOffset.x < self.scrollView.bounds.size.width) {
         _currentPage = (_currentPage - 1 + _totalPage) % _totalPage;
-        NSLog(@"向右滑");
+        JQLog(@"向右滑");
     }
     
     [self cofigImage];

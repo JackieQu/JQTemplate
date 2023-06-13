@@ -357,6 +357,76 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>UITableView</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>UITableView</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD16</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>TEST</string>
+					<key>className</key>
+					<string>JQCarViewController</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>TEST2</string>
+					<key>className</key>
+					<string>JQIndustryViewController</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>TEST3</string>
+					<key>className</key>
+					<string>JQWeChatViewController</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>UITableViewController</string>
+					<key>className</key>
+					<string>JQBaseTableViewController</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>单元格</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>删除移动单元格</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD17</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>批量操作单元格</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD17</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
