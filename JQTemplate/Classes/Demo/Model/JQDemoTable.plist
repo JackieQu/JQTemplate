@@ -427,6 +427,52 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>自定义单元格</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>自定义单元格</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD18</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>自定义单元格</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD18</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>UISearchController</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>NSPredicate</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD19</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>UISearchController</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD19</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

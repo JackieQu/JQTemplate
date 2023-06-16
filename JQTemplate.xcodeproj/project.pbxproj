@@ -46,6 +46,7 @@
 		287A592B2A306C820015C58F /* JQTabBar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 287A592A2A306C820015C58F /* JQTabBar.plist */; };
 		287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A592D2A3075F40015C58F /* JQBaseModel.m */; };
 		287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A59302A3077A30015C58F /* JQTabBarModel.m */; };
+		2887A9262A3853B8007A9D76 /* JQDemoViewControllerD19_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2887A9252A3853B8007A9D76 /* JQDemoViewControllerD19_2.m */; };
 		28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */; };
 		28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC1072A31B50A00DA12E0 /* UITabBar+HitTest.m */; };
 		28ACC10B2A32D65800DA12E0 /* JQDemoTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC10A2A32D65800DA12E0 /* JQDemoTableModel.m */; };
@@ -61,6 +62,9 @@
 		28EB202E2A38403B008AA0A0 /* JQBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB202D2A38403B008AA0A0 /* JQBaseTableViewController.m */; };
 		28EB20312A384352008AA0A0 /* JQDemoViewControllerD17.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB20302A384352008AA0A0 /* JQDemoViewControllerD17.m */; };
 		28EB20332A384455008AA0A0 /* contacts.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28EB20322A384455008AA0A0 /* contacts.plist */; };
+		28EB20362A384C13008AA0A0 /* JQDemoViewControllerD18.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB20352A384C13008AA0A0 /* JQDemoViewControllerD18.m */; };
+		28EB20392A384C20008AA0A0 /* JQDemoViewControllerD19.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB20382A384C20008AA0A0 /* JQDemoViewControllerD19.m */; };
+		28EB203C2A384EF9008AA0A0 /* JQPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28EB203B2A384EF9008AA0A0 /* JQPersonModel.m */; };
 		28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DE9F2A2581A700ECB80B /* Main.storyboard */; };
 		28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 28F5DEA22A2581A700ECB80B /* JQTemplate.xcdatamodeld */; };
 		28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28F5DEA52A2581A900ECB80B /* Assets.xcassets */; };
@@ -191,6 +195,8 @@
 		287A592D2A3075F40015C58F /* JQBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQBaseModel.m; sourceTree = "<group>"; };
 		287A592F2A3077A30015C58F /* JQTabBarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTabBarModel.h; sourceTree = "<group>"; };
 		287A59302A3077A30015C58F /* JQTabBarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTabBarModel.m; sourceTree = "<group>"; };
+		2887A9242A3853B8007A9D76 /* JQDemoViewControllerD19_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD19_2.h; sourceTree = "<group>"; };
+		2887A9252A3853B8007A9D76 /* JQDemoViewControllerD19_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD19_2.m; sourceTree = "<group>"; };
 		28ACC1032A319E6500DA12E0 /* JQTabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTabBarButton.h; sourceTree = "<group>"; };
 		28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTabBarButton.m; sourceTree = "<group>"; };
 		28ACC1062A31B50A00DA12E0 /* UITabBar+HitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+HitTest.h"; sourceTree = "<group>"; };
@@ -219,6 +225,12 @@
 		28EB202F2A384352008AA0A0 /* JQDemoViewControllerD17.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD17.h; sourceTree = "<group>"; };
 		28EB20302A384352008AA0A0 /* JQDemoViewControllerD17.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD17.m; sourceTree = "<group>"; };
 		28EB20322A384455008AA0A0 /* contacts.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = contacts.plist; sourceTree = "<group>"; };
+		28EB20342A384C13008AA0A0 /* JQDemoViewControllerD18.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD18.h; sourceTree = "<group>"; };
+		28EB20352A384C13008AA0A0 /* JQDemoViewControllerD18.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD18.m; sourceTree = "<group>"; };
+		28EB20372A384C20008AA0A0 /* JQDemoViewControllerD19.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD19.h; sourceTree = "<group>"; };
+		28EB20382A384C20008AA0A0 /* JQDemoViewControllerD19.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD19.m; sourceTree = "<group>"; };
+		28EB203A2A384EF9008AA0A0 /* JQPersonModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQPersonModel.h; sourceTree = "<group>"; };
+		28EB203B2A384EF9008AA0A0 /* JQPersonModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQPersonModel.m; sourceTree = "<group>"; };
 		28F5DE932A2581A700ECB80B /* JQTemplate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JQTemplate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28F5DEA02A2581A700ECB80B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		28F5DEA32A2581A700ECB80B /* JQTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JQTemplate.xcdatamodel; sourceTree = "<group>"; };
@@ -507,6 +519,12 @@
 				281D25612A380CA40058FF7D /* JQDemoViewControllerD16.m */,
 				28EB202F2A384352008AA0A0 /* JQDemoViewControllerD17.h */,
 				28EB20302A384352008AA0A0 /* JQDemoViewControllerD17.m */,
+				28EB20342A384C13008AA0A0 /* JQDemoViewControllerD18.h */,
+				28EB20352A384C13008AA0A0 /* JQDemoViewControllerD18.m */,
+				28EB20372A384C20008AA0A0 /* JQDemoViewControllerD19.h */,
+				28EB20382A384C20008AA0A0 /* JQDemoViewControllerD19.m */,
+				2887A9242A3853B8007A9D76 /* JQDemoViewControllerD19_2.h */,
+				2887A9252A3853B8007A9D76 /* JQDemoViewControllerD19_2.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -518,6 +536,8 @@
 				28ACC1092A32D65800DA12E0 /* JQDemoTableModel.h */,
 				28ACC10A2A32D65800DA12E0 /* JQDemoTableModel.m */,
 				28EB20322A384455008AA0A0 /* contacts.plist */,
+				28EB203A2A384EF9008AA0A0 /* JQPersonModel.h */,
+				28EB203B2A384EF9008AA0A0 /* JQPersonModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1090,6 +1110,7 @@
 				287A59272A3069210015C58F /* JQCustomTabBar.m in Sources */,
 				28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */,
 				281D25732A38317B0058FF7D /* JQIndustryViewController.m in Sources */,
+				28EB20362A384C13008AA0A0 /* JQDemoViewControllerD18.m in Sources */,
 				28F5DF0F2A258E9500ECB80B /* JQBaseTabBarController.m in Sources */,
 				28ACC10B2A32D65800DA12E0 /* JQDemoTableModel.m in Sources */,
 				281D25592A370BD90058FF7D /* JQDemoViewControllerD14_3.m in Sources */,
@@ -1111,10 +1132,12 @@
 				2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */,
 				281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */,
 				2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */,
+				28EB20392A384C20008AA0A0 /* JQDemoViewControllerD19.m in Sources */,
 				281D25562A370BA50058FF7D /* JQDemoViewControllerD14_2.m in Sources */,
 				2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */,
 				2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */,
 				2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */,
+				28EB203C2A384EF9008AA0A0 /* JQPersonModel.m in Sources */,
 				281D257F2A383B3F0058FF7D /* JQWeChatViewController.m in Sources */,
 				28F5DF1B2A2596C500ECB80B /* JQDemoViewControllerD1.m in Sources */,
 				28F5DF1E2A2596D400ECB80B /* JQDemoViewControllerD2.m in Sources */,
@@ -1132,6 +1155,7 @@
 				2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */,
 				2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */,
 				28DB78BF2A36C228001D2D07 /* JQDemoViewControllerD13.m in Sources */,
+				2887A9262A3853B8007A9D76 /* JQDemoViewControllerD19_2.m in Sources */,
 				28ACC1102A32F4E500DA12E0 /* JQDemoViewControllerD12.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

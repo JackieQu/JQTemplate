@@ -96,6 +96,7 @@ static NSString *kCellID    = @"identifier";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    [tableView setUserInteractionEnabled:NO];
     
     NSArray<JQDemoRowModel *> *rows = self.dataList[indexPath.section].rows;
     JQDemoRowModel *item = rows[indexPath.row];
@@ -114,6 +115,8 @@ static NSString *kCellID    = @"identifier";
             [self.navigationController pushViewController:vc animated:YES];
         }
     }
+    
+    [tableView setUserInteractionEnabled:YES];
 }
 
 #pragma mark - JQModalDelegate Methods
