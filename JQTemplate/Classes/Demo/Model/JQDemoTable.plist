@@ -473,6 +473,21 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>微博</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>微博</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD20</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
