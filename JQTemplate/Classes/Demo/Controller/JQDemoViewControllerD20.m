@@ -6,7 +6,7 @@
 //
 
 #import "JQDemoViewControllerD20.h"
-#import "JQWeiboModel.h"
+#import "JQWeiboCell.h"
 
 static NSString *identifier = @"JQWeiboCell";
 static NSString *estimateHeightIdentifier = @"JQWeiboCellEstimateHeightCell";
@@ -24,7 +24,12 @@ static NSString *estimateHeightIdentifier = @"JQWeiboCellEstimateHeightCell";
     
     if (!_dataList) {
         _dataList = [NSMutableArray array];
-        _dataList = [NSMutableArray arrayWithArray:[JQWeiboModel loadWeiboData]];
+        NSArray *weiboList = [JQWeiboModel loadWeiboData];
+        for (JQWeiboModel *weibo in weiboList) {
+            JQWeiboFrame *frame = [[JQWeiboFrame alloc] init];
+            frame.weibo = weibo;
+            [_dataList addObject:frame];
+        }
     }
     return _dataList;
 }
@@ -33,17 +38,48 @@ static NSString *estimateHeightIdentifier = @"JQWeiboCellEstimateHeightCell";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:identifier];
+    [self.tableView registerClass:[JQWeiboCell class] forCellReuseIdentifier:identifier];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    return self.dataList.count;
 }
-*/
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    JQWeiboCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
+    cell.weiboFrame = self.dataList[indexPath.row];
+    return cell;
+    
+    /*
+     预估行高
+     
+    QPWeiBoEstimateHeightCell * cell = [tableView dequeueReusableCellWithIdentifier:testIdentifier];
+    
+    CGFloat height = [cell bindDataWithWeiBoModel:self.testDataList[indexPath.row]];
+    
+    if (!self.cellHeightDict[indexPath]) {
+        
+//        [self.cellHeightDict setObject:@(height) forKey:indexPath];
+        
+        // 或者用字面量写法
+        self.cellHeightDict[indexPath] = @(height);
+    }
+    return cell;
+     */
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    JQWeiboFrame *weiboFrame = self.dataList[indexPath.row];
+    return weiboFrame.cellHeight;
+    
+    /*
+     预估行高
+     
+    return [self.cellHeightDict[indexPath] doubleValue];
+     */
+}
 
 @end

@@ -62,6 +62,8 @@
 		28C2F4812A4831320079E678 /* weibo.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28C2F4802A4831320079E678 /* weibo.plist */; };
 		28C2F4842A4831920079E678 /* JQWeiboModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C2F4832A4831920079E678 /* JQWeiboModel.m */; };
 		28C2F4872A4834000079E678 /* NSString+TimeFormat.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C2F4862A4834000079E678 /* NSString+TimeFormat.m */; };
+		28C2F48A2A4987670079E678 /* JQWeiboCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C2F4892A4987670079E678 /* JQWeiboCell.m */; };
+		28C2F48D2A4988880079E678 /* JQWeiboFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C2F48C2A4988880079E678 /* JQWeiboFrame.m */; };
 		28DB78BC2A36AE09001D2D07 /* JQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BB2A36AE09001D2D07 /* JQAlertView.m */; };
 		28DB78BF2A36C228001D2D07 /* JQDemoViewControllerD13.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BE2A36C228001D2D07 /* JQDemoViewControllerD13.m */; };
 		28DB78C22A36C3F8001D2D07 /* JQDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78C12A36C3F8001D2D07 /* JQDemoView.m */; };
@@ -233,6 +235,10 @@
 		28C2F4832A4831920079E678 /* JQWeiboModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQWeiboModel.m; sourceTree = "<group>"; };
 		28C2F4852A4834000079E678 /* NSString+TimeFormat.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+TimeFormat.h"; sourceTree = "<group>"; };
 		28C2F4862A4834000079E678 /* NSString+TimeFormat.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+TimeFormat.m"; sourceTree = "<group>"; };
+		28C2F4882A4987670079E678 /* JQWeiboCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQWeiboCell.h; sourceTree = "<group>"; };
+		28C2F4892A4987670079E678 /* JQWeiboCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQWeiboCell.m; sourceTree = "<group>"; };
+		28C2F48B2A4988880079E678 /* JQWeiboFrame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQWeiboFrame.h; sourceTree = "<group>"; };
+		28C2F48C2A4988880079E678 /* JQWeiboFrame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQWeiboFrame.m; sourceTree = "<group>"; };
 		28DB78BA2A36AE09001D2D07 /* JQAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQAlertView.h; sourceTree = "<group>"; };
 		28DB78BB2A36AE09001D2D07 /* JQAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQAlertView.m; sourceTree = "<group>"; };
 		28DB78BD2A36C228001D2D07 /* JQDemoViewControllerD13.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD13.h; sourceTree = "<group>"; };
@@ -425,6 +431,10 @@
 				28C2F4802A4831320079E678 /* weibo.plist */,
 				28C2F4822A4831920079E678 /* JQWeiboModel.h */,
 				28C2F4832A4831920079E678 /* JQWeiboModel.m */,
+				28C2F48B2A4988880079E678 /* JQWeiboFrame.h */,
+				28C2F48C2A4988880079E678 /* JQWeiboFrame.m */,
+				28C2F4882A4987670079E678 /* JQWeiboCell.h */,
+				28C2F4892A4987670079E678 /* JQWeiboCell.m */,
 			);
 			path = JQWeibo;
 			sourceTree = "<group>";
@@ -1179,6 +1189,7 @@
 				28F5DF0F2A258E9500ECB80B /* JQBaseTabBarController.m in Sources */,
 				28ACC10B2A32D65800DA12E0 /* JQDemoTableModel.m in Sources */,
 				281D25592A370BD90058FF7D /* JQDemoViewControllerD14_3.m in Sources */,
+				28C2F48A2A4987670079E678 /* JQWeiboCell.m in Sources */,
 				28BE96472A3C3C50008F65A4 /* JQMessageModel.m in Sources */,
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
 				28F5DF122A25900200ECB80B /* JQHomeViewController.m in Sources */,
@@ -1193,6 +1204,7 @@
 				281D25662A3812410058FF7D /* JQCarViewController.m in Sources */,
 				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
 				28EB20312A384352008AA0A0 /* JQDemoViewControllerD17.m in Sources */,
+				28C2F48D2A4988880079E678 /* JQWeiboFrame.m in Sources */,
 				2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */,
 				2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */,
 				28F5DEA42A2581A700ECB80B /* JQTemplate.xcdatamodeld in Sources */,
