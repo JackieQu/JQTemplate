@@ -488,6 +488,37 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>UICollectionView</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>UICollectionView</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD21</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>蘑菇街</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD21_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>Nav+TableView</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD21</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

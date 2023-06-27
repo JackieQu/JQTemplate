@@ -1,14 +1,17 @@
 //
-//  JQWeiboCell.m
+//  JQWeiboEstimateHeightCell.m
 //  JQTemplate
 //
-//  Created by JackieQu on 2023/6/26.
+//  Created by JackieQu on 2023/6/27.
 //
 
-#import "JQWeiboCell.h"
-#import "JQImageListView.h"
+#import "JQWeiboEstimateHeightCell.h"
 
-@interface JQWeiboCell ()
+static CGFloat kFontSize = 16;
+static CGFloat kMargin = 10;
+static CGFloat kIconW = 50;
+
+@interface JQWeiboEstimateHeightCell ()
 
 @property (nonatomic, strong) UIImageView *iconView;
 
@@ -18,11 +21,33 @@
 
 @property (nonatomic, strong) UILabel *titleLabel;
 
-@property (nonatomic, strong) JQImageListView *imageListView;
-
 @end
 
-@implementation JQWeiboCell
+@implementation JQWeiboEstimateHeightCell
+
+- (CGFloat)cellHeightAfterBindData:(JQWeiboModel *)weibo {
+    
+    _iconView.frame = CGRectMake(kMargin, kMargin, kIconW, kIconW);
+    _iconView.image = [UIImage imageNamed:weibo.icon];
+    
+    CGFloat nameW = SCREEN_WIDTH - CGRectGetMaxX(_iconView.frame) - kMargin * 2;
+    CGFloat nameX = CGRectGetMaxX(_iconView.frame) + kMargin;
+    _nameLabel.frame = CGRectMake(nameX, kMargin, nameW, kFontSize);
+    _nameLabel.text = weibo.name;
+    
+    CGFloat subY = CGRectGetMaxY(_nameLabel.frame) + kMargin;
+    _subLabel.frame = CGRectMake(nameX, subY, nameW, 12);
+    _subLabel.text = [NSString stringWithFormat:@"%@ 来自 %@",weibo.timer,weibo.from];
+    
+    CGFloat titleW = SCREEN_WIDTH - kMargin * 2;
+    CGFloat titleY = CGRectGetMaxY(_iconView.frame) + kMargin;
+    _titleLabel.frame = CGRectMake(kMargin, titleY, titleW, 0);
+    _titleLabel.text = weibo.title;
+    [_titleLabel sizeToFit];
+    
+    CGFloat cellHeight = CGRectGetMaxY(_titleLabel.frame) + kMargin;
+    return cellHeight;
+}
 
 - (UIImageView *)iconView {
     
@@ -62,14 +87,6 @@
     return _titleLabel;
 }
 
-- (JQImageListView *)imageListView {
-
-    if (!_imageListView) {
-        _imageListView = [[JQImageListView alloc] init];
-    }
-    return _imageListView;
-}
-
 - (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -77,31 +94,8 @@
         [self.contentView addSubview:self.nameLabel];
         [self.contentView addSubview:self.subLabel];
         [self.contentView addSubview:self.titleLabel];
-        [self.contentView addSubview:self.imageListView];
     }
     return self;
-}
-
-- (void)setWeiboFrame:(JQWeiboFrame *)weiboFrame {
-    
-    _weiboFrame = weiboFrame;
-    
-    JQWeiboModel *obj = weiboFrame.weibo;
-    
-    _iconView.image = [UIImage imageNamed:obj.icon];
-    _iconView.frame = weiboFrame.iconFrame;
-    
-    _nameLabel.text = obj.name;
-    _nameLabel.frame = weiboFrame.nameFrame;
-    
-    _subLabel.text = [NSString stringWithFormat:@"%@ 来自 %@",obj.timer,obj.from];
-    _subLabel.frame = weiboFrame.subFrame;
- 
-    _titleLabel.text = obj.title;
-    _titleLabel.frame = weiboFrame.titleFrame;
-    
-    _imageListView.frame = weiboFrame.imageListViewFrame;
-    _imageListView.weiboFrame = weiboFrame;
 }
 
 @end
