@@ -29,7 +29,7 @@
     self.navigationBar.titleTextAttributes = @{
         NSForegroundColorAttributeName : [UIColor whiteColor],
         NSFontAttributeName : [UIFont systemFontOfSize:17.0]
-    };;
+    };
     
     UINavigationBar *appearance = [UINavigationBar appearance];
     appearance.layer.shadowColor = self.navigationBar.layer.shadowColor;

@@ -513,7 +513,38 @@
 					<key>title</key>
 					<string>Nav+TableView</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD21</string>
+					<string>JQDemoViewControllerD21_3</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>UICollectionViewLayout</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>图片轮播UICollectionView</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD22</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>线性布局</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD22_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>瀑布流</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD22_3</string>
 					<key>flag</key>
 					<false/>
 				</dict>
