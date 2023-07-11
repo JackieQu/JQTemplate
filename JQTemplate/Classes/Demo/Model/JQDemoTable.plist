@@ -550,6 +550,45 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>UIPickerView&amp;绘图</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>UIPickerView</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD23</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>城市选择器</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD23_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>时间选择器</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD23_3</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>绘图</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD23_3</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

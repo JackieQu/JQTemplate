@@ -50,6 +50,10 @@
 		289A77AD2A5D1D5E00EA1DE1 /* JQWaterfallLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A77AC2A5D1D5E00EA1DE1 /* JQWaterfallLayout.m */; };
 		289A77B02A5D1F9D00EA1DE1 /* JQLabelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A77AF2A5D1F9D00EA1DE1 /* JQLabelCell.m */; };
 		289A77B32A5D203400EA1DE1 /* JQDemoViewControllerD22_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A77B22A5D203400EA1DE1 /* JQDemoViewControllerD22_3.m */; };
+		289A77B62A5D302800EA1DE1 /* JQDemoViewControllerD23.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A77B52A5D302700EA1DE1 /* JQDemoViewControllerD23.m */; };
+		289A77B82A5D390100EA1DE1 /* cities.plist in Resources */ = {isa = PBXBuildFile; fileRef = 289A77B72A5D390100EA1DE1 /* cities.plist */; };
+		289A77BB2A5D396900EA1DE1 /* JQCityModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A77BA2A5D396800EA1DE1 /* JQCityModel.m */; };
+		289A77BE2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A77BD2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m */; };
 		28A5DEF82A5BECB90042C893 /* JQDemoViewControllerD22.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A5DEF72A5BECB90042C893 /* JQDemoViewControllerD22.m */; };
 		28A5DEFB2A5BF60B0042C893 /* JQCollectionLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A5DEFA2A5BF60B0042C893 /* JQCollectionLayout.m */; };
 		28A5DEFE2A5BF6D20042C893 /* JQCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A5DEFD2A5BF6D20042C893 /* JQCollectionView.m */; };
@@ -232,6 +236,13 @@
 		289A77AF2A5D1F9D00EA1DE1 /* JQLabelCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQLabelCell.m; sourceTree = "<group>"; };
 		289A77B12A5D203400EA1DE1 /* JQDemoViewControllerD22_3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD22_3.h; sourceTree = "<group>"; };
 		289A77B22A5D203400EA1DE1 /* JQDemoViewControllerD22_3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD22_3.m; sourceTree = "<group>"; };
+		289A77B42A5D302700EA1DE1 /* JQDemoViewControllerD23.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD23.h; sourceTree = "<group>"; };
+		289A77B52A5D302700EA1DE1 /* JQDemoViewControllerD23.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD23.m; sourceTree = "<group>"; };
+		289A77B72A5D390100EA1DE1 /* cities.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = cities.plist; sourceTree = "<group>"; };
+		289A77B92A5D396800EA1DE1 /* JQCityModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCityModel.h; sourceTree = "<group>"; };
+		289A77BA2A5D396800EA1DE1 /* JQCityModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCityModel.m; sourceTree = "<group>"; };
+		289A77BC2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD23_2.h; sourceTree = "<group>"; };
+		289A77BD2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD23_2.m; sourceTree = "<group>"; };
 		28A5DEF62A5BECB90042C893 /* JQDemoViewControllerD22.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD22.h; sourceTree = "<group>"; };
 		28A5DEF72A5BECB90042C893 /* JQDemoViewControllerD22.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD22.m; sourceTree = "<group>"; };
 		28A5DEF92A5BF60B0042C893 /* JQCollectionLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCollectionLayout.h; sourceTree = "<group>"; };
@@ -664,6 +675,10 @@
 				28A5DF032A5BFBB40042C893 /* JQDemoViewControllerD22_2.m */,
 				289A77B12A5D203400EA1DE1 /* JQDemoViewControllerD22_3.h */,
 				289A77B22A5D203400EA1DE1 /* JQDemoViewControllerD22_3.m */,
+				289A77B42A5D302700EA1DE1 /* JQDemoViewControllerD23.h */,
+				289A77B52A5D302700EA1DE1 /* JQDemoViewControllerD23.m */,
+				289A77BC2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.h */,
+				289A77BD2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -680,6 +695,9 @@
 				28BE964B2A3C3E52008F65A4 /* messages.plist */,
 				28BE96452A3C3C50008F65A4 /* JQMessageModel.h */,
 				28BE96462A3C3C50008F65A4 /* JQMessageModel.m */,
+				289A77B72A5D390100EA1DE1 /* cities.plist */,
+				289A77B92A5D396800EA1DE1 /* JQCityModel.h */,
+				289A77BA2A5D396800EA1DE1 /* JQCityModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1128,6 +1146,7 @@
 				28ACC10D2A32EABE00DA12E0 /* JQDemoTable.plist in Resources */,
 				281D25782A3831CA0058FF7D /* industries.plist in Resources */,
 				281D25502A37079E0058FF7D /* test_03.jpg in Resources */,
+				289A77B82A5D390100EA1DE1 /* cities.plist in Resources */,
 				281D25522A37079E0058FF7D /* test_01.jpg in Resources */,
 				28EB20332A384455008AA0A0 /* contacts.plist in Resources */,
 			);
@@ -1271,12 +1290,14 @@
 				28F5DF0C2A258E7D00ECB80B /* JQBaseNavigationController.m in Sources */,
 				287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */,
 				287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */,
+				289A77B62A5D302800EA1DE1 /* JQDemoViewControllerD23.m in Sources */,
 				28C2F4902A4AB2250079E678 /* JQImageListView.m in Sources */,
 				281D25762A3831970058FF7D /* JQIndustryModel.m in Sources */,
 				28C2F49C2A4AD43D0079E678 /* JQGoodsModel.m in Sources */,
 				28EB202E2A38403B008AA0A0 /* JQBaseTableViewController.m in Sources */,
 				28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */,
 				28C2F47F2A4830400079E678 /* JQDemoViewControllerD20.m in Sources */,
+				289A77BB2A5D396900EA1DE1 /* JQCityModel.m in Sources */,
 				281D25622A380CA40058FF7D /* JQDemoViewControllerD16.m in Sources */,
 				281D25692A38125A0058FF7D /* JQCarGroupModel.m in Sources */,
 				28BE964A2A3C3CA7008F65A4 /* JQMessageCell.m in Sources */,
@@ -1302,6 +1323,7 @@
 				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
 				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
 				281D25662A3812410058FF7D /* JQCarViewController.m in Sources */,
+				289A77BE2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m in Sources */,
 				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
 				28EB20312A384352008AA0A0 /* JQDemoViewControllerD17.m in Sources */,
 				28C2F48D2A4988880079E678 /* JQWeiboFrame.m in Sources */,
