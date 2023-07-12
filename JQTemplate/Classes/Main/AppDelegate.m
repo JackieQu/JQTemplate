@@ -6,6 +6,7 @@
 //
 
 #import "AppDelegate.h"
+#import <IQKeyboardManager/IQKeyboardManager.h>
 
 @interface AppDelegate ()
 
@@ -18,6 +19,8 @@
     JQLogFunction
 
 //    [UIApplication sharedApplication].statusBarHidden = NO;
+    
+    [IQKeyboardManager sharedManager].enable = YES;
     
     return YES;
 }

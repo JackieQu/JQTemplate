@@ -10,7 +10,8 @@ target 'JQTemplate' do
   pod 'SDWebImage', '~> 5.0'
   pod 'MJExtension'
   pod 'MJRefresh'
-
+  pod 'IQKeyboardManager'
+  
   target 'JQTemplateTests' do
     inherit! :search_paths
     # Pods for testing

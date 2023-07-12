@@ -59,7 +59,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [super viewWillDisappear:animated];
+    [super viewWillAppear:animated];
     
     [self.pickerView selectRow:0 inComponent:0 animated:YES];
     [self.pickerView selectRow:1 inComponent:1 animated:YES];
