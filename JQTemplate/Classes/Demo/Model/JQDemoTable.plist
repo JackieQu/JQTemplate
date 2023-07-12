@@ -589,6 +589,37 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>绘图进阶</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>统计图</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD24</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>图片操作</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD24_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>画板</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD24_3</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

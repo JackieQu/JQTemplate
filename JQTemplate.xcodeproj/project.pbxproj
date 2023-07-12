@@ -70,6 +70,9 @@
 		28BA29592A5E88AD00688C3F /* JQLineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA29582A5E88AD00688C3F /* JQLineView.m */; };
 		28BA295C2A5E8BEF00688C3F /* JQShapeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA295B2A5E8BEF00688C3F /* JQShapeView.m */; };
 		28BA295F2A5E8D8200688C3F /* JQImageTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA295E2A5E8D8200688C3F /* JQImageTextView.m */; };
+		28BA29622A5E948C00688C3F /* JQHistogramView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA29612A5E948C00688C3F /* JQHistogramView.m */; };
+		28BA29652A5E949A00688C3F /* JQPieView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA29642A5E949A00688C3F /* JQPieView.m */; };
+		28BA29682A5E952100688C3F /* JQDemoViewControllerD24.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BA29672A5E952100688C3F /* JQDemoViewControllerD24.m */; };
 		28BE96472A3C3C50008F65A4 /* JQMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE96462A3C3C50008F65A4 /* JQMessageModel.m */; };
 		28BE964A2A3C3CA7008F65A4 /* JQMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28BE96492A3C3CA7008F65A4 /* JQMessageCell.m */; };
 		28BE964C2A3C3E52008F65A4 /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28BE964B2A3C3E52008F65A4 /* messages.plist */; };
@@ -279,6 +282,12 @@
 		28BA295B2A5E8BEF00688C3F /* JQShapeView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQShapeView.m; sourceTree = "<group>"; };
 		28BA295D2A5E8D8200688C3F /* JQImageTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQImageTextView.h; sourceTree = "<group>"; };
 		28BA295E2A5E8D8200688C3F /* JQImageTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQImageTextView.m; sourceTree = "<group>"; };
+		28BA29602A5E948C00688C3F /* JQHistogramView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQHistogramView.h; sourceTree = "<group>"; };
+		28BA29612A5E948C00688C3F /* JQHistogramView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQHistogramView.m; sourceTree = "<group>"; };
+		28BA29632A5E949A00688C3F /* JQPieView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQPieView.h; sourceTree = "<group>"; };
+		28BA29642A5E949A00688C3F /* JQPieView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQPieView.m; sourceTree = "<group>"; };
+		28BA29662A5E952100688C3F /* JQDemoViewControllerD24.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD24.h; sourceTree = "<group>"; };
+		28BA29672A5E952100688C3F /* JQDemoViewControllerD24.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD24.m; sourceTree = "<group>"; };
 		28BE96452A3C3C50008F65A4 /* JQMessageModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQMessageModel.h; sourceTree = "<group>"; };
 		28BE96462A3C3C50008F65A4 /* JQMessageModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQMessageModel.m; sourceTree = "<group>"; };
 		28BE96482A3C3CA7008F65A4 /* JQMessageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQMessageCell.h; sourceTree = "<group>"; };
@@ -696,6 +705,8 @@
 				289A77BD2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m */,
 				28BA29512A5E4DA000688C3F /* JQDemoViewControllerD23_3.h */,
 				28BA29522A5E4DA000688C3F /* JQDemoViewControllerD23_3.m */,
+				28BA29662A5E952100688C3F /* JQDemoViewControllerD24.h */,
+				28BA29672A5E952100688C3F /* JQDemoViewControllerD24.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -746,6 +757,10 @@
 				28BA295B2A5E8BEF00688C3F /* JQShapeView.m */,
 				28BA295D2A5E8D8200688C3F /* JQImageTextView.h */,
 				28BA295E2A5E8D8200688C3F /* JQImageTextView.m */,
+				28BA29602A5E948C00688C3F /* JQHistogramView.h */,
+				28BA29612A5E948C00688C3F /* JQHistogramView.m */,
+				28BA29632A5E949A00688C3F /* JQPieView.h */,
+				28BA29642A5E949A00688C3F /* JQPieView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1325,6 +1340,7 @@
 				28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */,
 				28C2F47F2A4830400079E678 /* JQDemoViewControllerD20.m in Sources */,
 				289A77BB2A5D396900EA1DE1 /* JQCityModel.m in Sources */,
+				28BA29682A5E952100688C3F /* JQDemoViewControllerD24.m in Sources */,
 				281D25622A380CA40058FF7D /* JQDemoViewControllerD16.m in Sources */,
 				281D25692A38125A0058FF7D /* JQCarGroupModel.m in Sources */,
 				28BE964A2A3C3CA7008F65A4 /* JQMessageCell.m in Sources */,
@@ -1351,10 +1367,12 @@
 				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
 				281D25662A3812410058FF7D /* JQCarViewController.m in Sources */,
 				289A77BE2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m in Sources */,
+				28BA29652A5E949A00688C3F /* JQPieView.m in Sources */,
 				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
 				28EB20312A384352008AA0A0 /* JQDemoViewControllerD17.m in Sources */,
 				28C2F48D2A4988880079E678 /* JQWeiboFrame.m in Sources */,
 				2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */,
+				28BA29622A5E948C00688C3F /* JQHistogramView.m in Sources */,
 				28C2F49F2A4AD7410079E678 /* JQGoodsCell.m in Sources */,
 				2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */,
 				289A77B32A5D203400EA1DE1 /* JQDemoViewControllerD22_3.m in Sources */,
