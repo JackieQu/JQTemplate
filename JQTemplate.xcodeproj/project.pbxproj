@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		28055C392A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C382A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m */; };
+		28055C3C2A5FEC640082D8E9 /* JQDemoViewControllerD25.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C3B2A5FEC640082D8E9 /* JQDemoViewControllerD25.m */; };
 		281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */; };
 		281D254F2A37079E0058FF7D /* test_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254A2A37079D0058FF7D /* test_02.jpg */; };
 		281D25502A37079E0058FF7D /* test_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254B2A37079D0058FF7D /* test_03.jpg */; };
@@ -173,6 +174,8 @@
 		12FC2616650F00A662687459 /* Pods_JQTemplateTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JQTemplateTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		28055C372A5FD5570082D8E9 /* JQDemoViewControllerD24_3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD24_3.h; sourceTree = "<group>"; };
 		28055C382A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD24_3.m; sourceTree = "<group>"; };
+		28055C3A2A5FEC640082D8E9 /* JQDemoViewControllerD25.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD25.h; sourceTree = "<group>"; };
+		28055C3B2A5FEC640082D8E9 /* JQDemoViewControllerD25.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD25.m; sourceTree = "<group>"; };
 		281D25472A36FE090058FF7D /* JQDemoViewControllerD14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD14.h; sourceTree = "<group>"; };
 		281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD14.m; sourceTree = "<group>"; };
 		281D254A2A37079D0058FF7D /* test_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_02.jpg; sourceTree = "<group>"; };
@@ -723,6 +726,8 @@
 				28E370202A5FC8A400F23623 /* JQDemoViewControllerD24_2.m */,
 				28055C372A5FD5570082D8E9 /* JQDemoViewControllerD24_3.h */,
 				28055C382A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m */,
+				28055C3A2A5FEC640082D8E9 /* JQDemoViewControllerD25.h */,
+				28055C3B2A5FEC640082D8E9 /* JQDemoViewControllerD25.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1376,6 +1381,7 @@
 				281D25592A370BD90058FF7D /* JQDemoViewControllerD14_3.m in Sources */,
 				28C2F48A2A4987670079E678 /* JQWeiboCell.m in Sources */,
 				28BE96472A3C3C50008F65A4 /* JQMessageModel.m in Sources */,
+				28055C3C2A5FEC640082D8E9 /* JQDemoViewControllerD25.m in Sources */,
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
 				28F5DF122A25900200ECB80B /* JQHomeViewController.m in Sources */,
 				28C2F4872A4834000079E678 /* NSString+TimeFormat.m in Sources */,

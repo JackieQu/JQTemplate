@@ -620,6 +620,61 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>核心动画</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>CALayer</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD25</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>CABasicAnimation</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD25</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>CAKeyframeAnimation</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD25</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>CATransition</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD25</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>CAAnimationGroup</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD25</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>CADisplayLink</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD25</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
