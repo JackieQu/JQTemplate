@@ -43,5 +43,7 @@
 	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>App需要您的同意，才能添加图片至相册</string>
 </dict>
 </plist>
