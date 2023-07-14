@@ -675,6 +675,52 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>UI部分应用</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>级联菜单</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD26</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>图标抖动</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD26</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>NSThread&amp;GCD</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>NSThread</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD27</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>GCD</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD27</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

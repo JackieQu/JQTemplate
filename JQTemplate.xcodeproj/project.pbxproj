@@ -10,6 +10,10 @@
 		28055C392A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C382A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m */; };
 		28055C3C2A5FEC640082D8E9 /* JQDemoViewControllerD25.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C3B2A5FEC640082D8E9 /* JQDemoViewControllerD25.m */; };
 		28055C3F2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C3E2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.m */; };
+		28055C412A6115690082D8E9 /* categories.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28055C402A6115690082D8E9 /* categories.plist */; };
+		28055C442A6115990082D8E9 /* JQCategoryModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C432A6115990082D8E9 /* JQCategoryModel.m */; };
+		28055C472A6116710082D8E9 /* JQDemoViewControllerD26.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C462A6116710082D8E9 /* JQDemoViewControllerD26.m */; };
+		28055C4A2A6121CE0082D8E9 /* JQDemoViewControllerD27.m in Sources */ = {isa = PBXBuildFile; fileRef = 28055C492A6121CE0082D8E9 /* JQDemoViewControllerD27.m */; };
 		281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */; };
 		281D254F2A37079E0058FF7D /* test_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254A2A37079D0058FF7D /* test_02.jpg */; };
 		281D25502A37079E0058FF7D /* test_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254B2A37079D0058FF7D /* test_03.jpg */; };
@@ -179,6 +183,13 @@
 		28055C3B2A5FEC640082D8E9 /* JQDemoViewControllerD25.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD25.m; sourceTree = "<group>"; };
 		28055C3D2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD25_2.h; sourceTree = "<group>"; };
 		28055C3E2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD25_2.m; sourceTree = "<group>"; };
+		28055C402A6115690082D8E9 /* categories.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = categories.plist; sourceTree = "<group>"; };
+		28055C422A6115990082D8E9 /* JQCategoryModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCategoryModel.h; sourceTree = "<group>"; };
+		28055C432A6115990082D8E9 /* JQCategoryModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCategoryModel.m; sourceTree = "<group>"; };
+		28055C452A6116710082D8E9 /* JQDemoViewControllerD26.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD26.h; sourceTree = "<group>"; };
+		28055C462A6116710082D8E9 /* JQDemoViewControllerD26.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD26.m; sourceTree = "<group>"; };
+		28055C482A6121CE0082D8E9 /* JQDemoViewControllerD27.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD27.h; sourceTree = "<group>"; };
+		28055C492A6121CE0082D8E9 /* JQDemoViewControllerD27.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD27.m; sourceTree = "<group>"; };
 		281D25472A36FE090058FF7D /* JQDemoViewControllerD14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD14.h; sourceTree = "<group>"; };
 		281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD14.m; sourceTree = "<group>"; };
 		281D254A2A37079D0058FF7D /* test_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_02.jpg; sourceTree = "<group>"; };
@@ -733,6 +744,10 @@
 				28055C3B2A5FEC640082D8E9 /* JQDemoViewControllerD25.m */,
 				28055C3D2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.h */,
 				28055C3E2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.m */,
+				28055C452A6116710082D8E9 /* JQDemoViewControllerD26.h */,
+				28055C462A6116710082D8E9 /* JQDemoViewControllerD26.m */,
+				28055C482A6121CE0082D8E9 /* JQDemoViewControllerD27.h */,
+				28055C492A6121CE0082D8E9 /* JQDemoViewControllerD27.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -752,6 +767,9 @@
 				289A77B72A5D390100EA1DE1 /* cities.plist */,
 				289A77B92A5D396800EA1DE1 /* JQCityModel.h */,
 				289A77BA2A5D396800EA1DE1 /* JQCityModel.m */,
+				28055C402A6115690082D8E9 /* categories.plist */,
+				28055C422A6115990082D8E9 /* JQCategoryModel.h */,
+				28055C432A6115990082D8E9 /* JQCategoryModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1195,6 +1213,7 @@
 				28F5DEA12A2581A700ECB80B /* Main.storyboard in Resources */,
 				28F5DEA62A2581A900ECB80B /* Assets.xcassets in Resources */,
 				28F5DF302A25A40A00ECB80B /* Coca-ColaCareFontKaiTi.TTF in Resources */,
+				28055C412A6115690082D8E9 /* categories.plist in Resources */,
 				281D25512A37079E0058FF7D /* test_04.jpg in Resources */,
 				28F5DF2F2A25A40A00ECB80B /* Coca-ColaCareFont-TextRegular.TTF in Resources */,
 				28BE964C2A3C3E52008F65A4 /* messages.plist in Resources */,
@@ -1346,6 +1365,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28055C472A6116710082D8E9 /* JQDemoViewControllerD26.m in Sources */,
 				28C2F4932A4ABE8F0079E678 /* JQWeiboEstimateHeightCell.m in Sources */,
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
@@ -1396,6 +1416,7 @@
 				28F5DEFA2A2589E200ECB80B /* UIView+Frame.m in Sources */,
 				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
 				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
+				28055C442A6115990082D8E9 /* JQCategoryModel.m in Sources */,
 				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
 				281D25662A3812410058FF7D /* JQCarViewController.m in Sources */,
 				289A77BE2A5D3D9F00EA1DE1 /* JQDemoViewControllerD23_2.m in Sources */,
@@ -1446,6 +1467,7 @@
 				28E6CAB22A2DB54200C20059 /* JQDemoViewControllerD9.m in Sources */,
 				2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */,
 				289A77B02A5D1F9D00EA1DE1 /* JQLabelCell.m in Sources */,
+				28055C4A2A6121CE0082D8E9 /* JQDemoViewControllerD27.m in Sources */,
 				2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */,
 				28DB78BF2A36C228001D2D07 /* JQDemoViewControllerD13.m in Sources */,
 				28A5DF072A5BFC190042C893 /* JQLineLayout.m in Sources */,
