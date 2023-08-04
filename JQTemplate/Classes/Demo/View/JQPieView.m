@@ -18,7 +18,7 @@
         total += [numberList[i] integerValue];
     }
     
-    NSMutableArray * percentageList = [NSMutableArray array];
+    NSMutableArray *percentageList = [NSMutableArray array];
     
     for (NSInteger i = 0; i < numberList.count; i ++) {
         

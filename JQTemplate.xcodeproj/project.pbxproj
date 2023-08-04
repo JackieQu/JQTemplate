@@ -35,6 +35,7 @@
 		281D257C2A383B310058FF7D /* JQWeChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D257B2A383B310058FF7D /* JQWeChatModel.m */; };
 		281D257F2A383B3F0058FF7D /* JQWeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D257E2A383B3F0058FF7D /* JQWeChatViewController.m */; };
 		281D25812A383B510058FF7D /* wechat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 281D25802A383B510058FF7D /* wechat.plist */; };
+		281E32C42A7CC33800A282CC /* JQDemoViewControllerD28.m in Sources */ = {isa = PBXBuildFile; fileRef = 281E32C32A7CC33700A282CC /* JQDemoViewControllerD28.m */; };
 		2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */; };
 		2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */; };
 		2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */; };
@@ -223,6 +224,8 @@
 		281D257D2A383B3F0058FF7D /* JQWeChatViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQWeChatViewController.h; sourceTree = "<group>"; };
 		281D257E2A383B3F0058FF7D /* JQWeChatViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQWeChatViewController.m; sourceTree = "<group>"; };
 		281D25802A383B510058FF7D /* wechat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wechat.plist; sourceTree = "<group>"; };
+		281E32C22A7CC33700A282CC /* JQDemoViewControllerD28.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD28.h; sourceTree = "<group>"; };
+		281E32C32A7CC33700A282CC /* JQDemoViewControllerD28.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD28.m; sourceTree = "<group>"; };
 		2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD10.h; sourceTree = "<group>"; };
@@ -748,6 +751,8 @@
 				28055C462A6116710082D8E9 /* JQDemoViewControllerD26.m */,
 				28055C482A6121CE0082D8E9 /* JQDemoViewControllerD27.h */,
 				28055C492A6121CE0082D8E9 /* JQDemoViewControllerD27.m */,
+				281E32C22A7CC33700A282CC /* JQDemoViewControllerD28.h */,
+				281E32C32A7CC33700A282CC /* JQDemoViewControllerD28.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1450,6 +1455,7 @@
 				28055C3F2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.m in Sources */,
 				28F5DF1E2A2596D400ECB80B /* JQDemoViewControllerD2.m in Sources */,
 				281D255C2A37FFF10058FF7D /* JQDemoViewControllerD15.m in Sources */,
+				281E32C42A7CC33800A282CC /* JQDemoViewControllerD28.m in Sources */,
 				28F5DF362A25C5A300ECB80B /* JQDemoViewControllerD3.m in Sources */,
 				2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */,
 				28BA29532A5E4DA100688C3F /* JQDemoViewControllerD23_3.m in Sources */,

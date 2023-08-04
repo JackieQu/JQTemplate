@@ -43,7 +43,7 @@
 
 - (void)drawBezierLine {
     
-    UIBezierPath * path = [UIBezierPath bezierPath];
+    UIBezierPath *path = [UIBezierPath bezierPath];
     
     [path moveToPoint:CGPointMake(50, 50)];
     
@@ -57,7 +57,7 @@
     
     [path stroke];
     
-//    UIBezierPath * path2 = [UIBezierPath bezierPath];
+//    UIBezierPath *path2 = [UIBezierPath bezierPath];
 //
 //    [path2 moveToPoint:CGPointMake(100, 200)];
 //

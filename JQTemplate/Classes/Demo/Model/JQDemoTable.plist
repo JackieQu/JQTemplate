@@ -721,6 +721,37 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>NSOperation</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>NSOperation</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD28</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>NSOperation线程通信</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD28</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>美团列表图片下载</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD18</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

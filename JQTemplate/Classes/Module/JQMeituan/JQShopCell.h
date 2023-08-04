@@ -14,6 +14,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, strong) JQShopModel *shop;
 
+@property (nonatomic, strong) UIImageView *iconView;
+
 @end
 
 NS_ASSUME_NONNULL_END

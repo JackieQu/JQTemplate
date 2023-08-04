@@ -11,8 +11,6 @@ static CGFloat kMargin = 10;
 
 @interface JQShopCell ()
 
-@property (nonatomic, strong) UIImageView *iconView;
-
 @property (nonatomic, strong) UILabel *nameLabel;
 
 @property (nonatomic, strong) UILabel *descLabel;
@@ -126,6 +124,5 @@ static CGFloat kMargin = 10;
     self.marketLabel.frame = CGRectMake(width - kMargin - 100, CGRectGetMaxY(self.descLabel.frame), 100, 12);
     self.priceLabel.frame = CGRectMake(CGRectGetMinX(self.nameLabel.frame), CGRectGetMaxY(self.descLabel.frame), CGRectGetMinX(self.marketLabel.frame) - CGRectGetMaxX(self.iconView.frame) - kMargin * 2, 17);
 }
-
 
 @end

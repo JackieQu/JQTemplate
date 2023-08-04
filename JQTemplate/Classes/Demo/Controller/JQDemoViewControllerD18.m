@@ -5,11 +5,27 @@
 //  Created by JackieQu on 2023/6/13.
 //
 
+/*
+ 1. sudo apachectl start    开启 apache 服务器
+ 
+ 2. sudo apachectl -v       查看 apache 服务器版本
+ 
+ 3. sudo vi /etc/apache2/httpd.conf
+ 
+    将 LoadModule php7_module 注释取消保存
+ 
+ 4. open /Library/WebServer/Documents
+ 
+    打开资源路径，添加图片，模拟从服务器获取图片资源
+ */
+
 #import "JQDemoViewControllerD18.h"
 #import "JQMessageModel.h"
 #import "JQMessageCell.h"
 #import "JQShopModel.h"
 #import "JQShopCell.h"
+
+static NSString *baseUrl = @"http://127.0.0.1/images/";
 
 static NSString *identifier = @"cellID";
 
@@ -19,9 +35,19 @@ static NSString *identifier = @"cellID";
 
 @property (nonatomic, strong) NSArray *dataList;
 
+@property (nonatomic, strong) NSOperationQueue *queue;
+
 @end
 
 @implementation JQDemoViewControllerD18
+
+- (NSOperationQueue *)queue {
+    
+    if (!_queue) {
+        _queue = [[NSOperationQueue alloc] init];
+    }
+    return _queue;
+}
 
 -(UITableView *)tableView {
     
@@ -81,7 +107,38 @@ static NSString *identifier = @"cellID";
      */
     
     JQShopCell *cell = [tableView dequeueReusableCellWithIdentifier:identifier];
-    cell.shop = self.dataList[indexPath.row];
+    JQShopModel *shop = self.dataList[indexPath.row];
+    cell.shop = shop;
+    
+    // 为了避免重复加载的问题，创建了一个 downloadImage，属于数据源，当 tableView 滚动时给 cell 的数据赋值
+    if (shop.downloadedImage) {
+        // 如下载过，直接从内存中获取图片
+        cell.iconView.image = shop.downloadedImage;
+    } else {
+        // 如未下载，先设置默认图片，再开启异步线程
+        cell.iconView.image = [UIImage imageNamed:@"defaultImage"];
+        NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
+            // 模拟网络延时
+            [NSThread sleepForTimeInterval:2];
+            // 通过 url 获取网络数据
+//            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",baseUrl,shop.shop_image]]];
+            NSData *data = [NSData dataWithContentsOfURL:[NSURL URLWithString:@"https://s.cn.bing.net/th?id=OHR.GothicRuins_ZH-CN8317467997_UHD.jpg"]];
+            // 将数据转为图片
+            UIImage *image = [UIImage imageWithData:data];
+            if (image) {
+                // 通知 model，将图片赋值给 downloadImage，以便下次从内存获取
+                shop.downloadedImage = image;
+                // 获取主队列，更新 UI
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    // 刷新当前单元格
+                    [self.tableView reloadRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationNone];
+                }];
+            }
+        }];
+        // 将请求加入全局队列
+        [self.queue addOperation:op];
+    }
+
     return cell;
 }
 

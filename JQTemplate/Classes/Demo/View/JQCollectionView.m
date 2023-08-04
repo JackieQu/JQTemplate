@@ -67,7 +67,7 @@ static NSString *identifier = @"JQImageCell";
         
         // 设置当前 index 为 1000
         self.index = 1000;
-        NSIndexPath * indexPath = [NSIndexPath indexPathForRow:self.index inSection:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:self.index inSection:0];
         // 跳转到当前索引
         [self scrollToItemAtIndexPath:indexPath atScrollPosition:UICollectionViewScrollPositionNone animated:YES];
     }

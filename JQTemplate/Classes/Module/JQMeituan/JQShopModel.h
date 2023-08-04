@@ -11,6 +11,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JQShopModel : NSObject
 
+@property (nonatomic, strong) UIImage *downloadedImage;
+
 @property (nonatomic, copy) NSString *shop_image;
 
 @property (nonatomic, copy) NSString *shop_name;
