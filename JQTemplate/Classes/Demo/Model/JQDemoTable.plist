@@ -752,6 +752,69 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>SDWebImage</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>无沙盒图片下载</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD29</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>沙盒</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD29</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>有沙盒图片下载</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD29</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>NSCache</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD29</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>NSCache图片下载</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD29</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>SDWebImage图片下载</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD29</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>加载网络GIF</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD29</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

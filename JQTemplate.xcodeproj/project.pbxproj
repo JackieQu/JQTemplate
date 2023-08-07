@@ -36,6 +36,7 @@
 		281D257F2A383B3F0058FF7D /* JQWeChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D257E2A383B3F0058FF7D /* JQWeChatViewController.m */; };
 		281D25812A383B510058FF7D /* wechat.plist in Resources */ = {isa = PBXBuildFile; fileRef = 281D25802A383B510058FF7D /* wechat.plist */; };
 		281E32C42A7CC33800A282CC /* JQDemoViewControllerD28.m in Sources */ = {isa = PBXBuildFile; fileRef = 281E32C32A7CC33700A282CC /* JQDemoViewControllerD28.m */; };
+		281E32C72A80E2BC00A282CC /* JQDemoViewControllerD29.m in Sources */ = {isa = PBXBuildFile; fileRef = 281E32C62A80E2BC00A282CC /* JQDemoViewControllerD29.m */; };
 		2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */; };
 		2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */; };
 		2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */; };
@@ -226,6 +227,8 @@
 		281D25802A383B510058FF7D /* wechat.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = wechat.plist; sourceTree = "<group>"; };
 		281E32C22A7CC33700A282CC /* JQDemoViewControllerD28.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD28.h; sourceTree = "<group>"; };
 		281E32C32A7CC33700A282CC /* JQDemoViewControllerD28.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD28.m; sourceTree = "<group>"; };
+		281E32C52A80E2BC00A282CC /* JQDemoViewControllerD29.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD29.h; sourceTree = "<group>"; };
+		281E32C62A80E2BC00A282CC /* JQDemoViewControllerD29.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD29.m; sourceTree = "<group>"; };
 		2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
 		2832AD252A30312C001C419D /* JQDemoViewControllerD10.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD10.h; sourceTree = "<group>"; };
@@ -753,6 +756,8 @@
 				28055C492A6121CE0082D8E9 /* JQDemoViewControllerD27.m */,
 				281E32C22A7CC33700A282CC /* JQDemoViewControllerD28.h */,
 				281E32C32A7CC33700A282CC /* JQDemoViewControllerD28.m */,
+				281E32C52A80E2BC00A282CC /* JQDemoViewControllerD29.h */,
+				281E32C62A80E2BC00A282CC /* JQDemoViewControllerD29.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1372,6 +1377,7 @@
 			files = (
 				28055C472A6116710082D8E9 /* JQDemoViewControllerD26.m in Sources */,
 				28C2F4932A4ABE8F0079E678 /* JQWeiboEstimateHeightCell.m in Sources */,
+				281E32C72A80E2BC00A282CC /* JQDemoViewControllerD29.m in Sources */,
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
 				28A5DF042A5BFBB40042C893 /* JQDemoViewControllerD22_2.m in Sources */,
