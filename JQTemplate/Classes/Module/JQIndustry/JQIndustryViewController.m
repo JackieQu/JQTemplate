@@ -8,7 +8,7 @@
 #import "JQIndustryViewController.h"
 #import "JQIndustryModel.h"
 
-@interface JQIndustryViewController () <UITableViewDataSource,UITableViewDelegate>
+@interface JQIndustryViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 

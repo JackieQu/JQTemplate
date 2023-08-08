@@ -777,7 +777,7 @@
 					<key>title</key>
 					<string>有沙盒图片下载</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD29</string>
+					<string>JQDemoViewControllerD29_2</string>
 					<key>flag</key>
 					<false/>
 				</dict>
@@ -785,7 +785,7 @@
 					<key>title</key>
 					<string>NSCache</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD29</string>
+					<string>JQDemoViewControllerD29_3</string>
 					<key>flag</key>
 					<false/>
 				</dict>
@@ -793,7 +793,7 @@
 					<key>title</key>
 					<string>NSCache图片下载</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD29</string>
+					<string>JQDemoViewControllerD29_3</string>
 					<key>flag</key>
 					<false/>
 				</dict>
@@ -801,7 +801,7 @@
 					<key>title</key>
 					<string>SDWebImage图片下载</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD29</string>
+					<string>JQDemoViewControllerD29_4</string>
 					<key>flag</key>
 					<false/>
 				</dict>
@@ -809,7 +809,7 @@
 					<key>title</key>
 					<string>加载网络GIF</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD29</string>
+					<string>JQDemoViewControllerD29_4</string>
 					<key>flag</key>
 					<false/>
 				</dict>

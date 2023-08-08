@@ -1,5 +1,5 @@
 //
-//  JQDemoViewControllerD19.m
+//  JQDemoViewControllerD29_2.m
 //  JQTemplate
 //
 //  Created by JackieQu on 2023/6/13.
@@ -19,7 +19,7 @@
     打开资源路径，添加图片，模拟从服务器获取图片资源
  */
 
-#import "JQDemoViewControllerD29.h"
+#import "JQDemoViewControllerD29_2.h"
 #import "JQShopModel.h"
 #import "JQShopCell.h"
 
@@ -27,7 +27,7 @@ static NSString *baseUrl = @"http://127.0.0.1/images/";
 
 static NSString *identifier = @"cellID";
 
-@interface JQDemoViewControllerD29 () <UITableViewDataSource, UITableViewDelegate>
+@interface JQDemoViewControllerD29_2 () <UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -43,7 +43,7 @@ static NSString *identifier = @"cellID";
 
 @end
 
-@implementation JQDemoViewControllerD29
+@implementation JQDemoViewControllerD29_2
 
 - (NSMutableDictionary *)imageCache {
     
@@ -96,8 +96,6 @@ static NSString *identifier = @"cellID";
     // Do any additional setup after loading the view.
     
     [self.view addSubview:self.tableView];
-    
-    [self setUserDefaults];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -142,9 +140,22 @@ static NSString *identifier = @"cellID";
         // 如下载过，直接从内存中获取图片
         cell.iconView.image = self.imageCache[shop.shop_image];
     } else {
-        // 如未下载，先设置默认图片，再下载
-        cell.iconView.image = [UIImage imageNamed:@"defaultImage"];
-        [self downloadImage:indexPath];
+        // 从本地缓存获取图片
+        UIImage *image = [UIImage imageWithContentsOfFile:[self pathInCache:shop.shop_image]];
+        if (image) {
+            dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+            dispatch_async(queue, ^{
+//                如本地存在，将图片放入内存中
+                [self.imageCache setObject:image forKey:shop.shop_image];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    cell.iconView.image = image;
+                });
+            });
+        } else {
+            // 如不存在，先设置默认图片，再下载
+            cell.iconView.image = [UIImage imageNamed:@"defaultImage"];
+            [self downloadImage:indexPath];
+        }
     }
 
     return cell;
@@ -172,6 +183,8 @@ static NSString *identifier = @"cellID";
             if (image) {
                 // 将 image 作为 value，url 作为 key
                 [self.imageCache setObject:image forKey:shop.shop_image];
+                // 将 image 存入沙盒
+                [data writeToFile:[self pathInCache:shop.shop_image] atomically:YES];
                 // 获取主队列，更新 UI
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     // 刷新当前单元格
@@ -188,44 +201,14 @@ static NSString *identifier = @"cellID";
     }
 }
 
-/*
- 默认情况下，每个沙盒文件有 3 个文件夹：Documents、Library 和 tmp。因为应用的沙盒机制，应用只能在几个目下读写文件
- 
- Documents：苹果建议将程序中建立的或在程序中浏览过的文件数据保存在该目录下，iTunes 备份和恢复时会包括此目录，如果保存了下载的数据，程序提交会被直接拒绝
- Library：存储程序的默认设置或者其他状态信息
- Library/Caches：存放缓存文件，iTunes 不会备份此目录，此目录下的文件不会在应用退出时删除
- Library/Preferences：偏好设置文件
- tmp：提供一个即时创建临时文件的空间，在手机重启时，会丢弃所有 tmp 文件
- */
-
-- (void)setUserDefaults {
+- (NSString *)pathInCache:(NSString *)url {
     
-    // 在模拟器上，沙盒目录是变化的，所以每次都次都要打印
-//    NSString *path = NSHomeDirectory();
-//    NSLog(@"%@",path);
-    
-    // 获取沙盒目录的方法
+    // 获取沙盒路径
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    // 追加文件名
-    path = [path stringByAppendingPathComponent:@"data.plist"];
-    NSArray *array = @[@1,@2,@3,@4,@5];
-    [array writeToFile:path atomically:YES];
+    // 获取 url 的最后一项路径和 path 拼接
+    path = [path stringByAppendingPathComponent:[url lastPathComponent]];
     NSLog(@"%@",path);
-    
-    // 偏好设置、用户信息、是否推送、是否支持 3G
-    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
-    
-//    // 存储偏好数据
-//    [data setObject:@"JackieQu" forKey:@"username"];
-//    [data setObject:@"20" forKey:@"age"];
-//    [data setInteger:185 forKey:@"height"];
-//    // 马上存入本地
-//    [data synchronize];
-    
-    // 从本地获取
-    NSLog(@"%@",[data objectForKey:@"username"]);
-    [data removeObjectForKey:@"age"];
-    NSLog(@"%@",[data objectForKey:@"age"]);
+    return path;
 }
 
 @end

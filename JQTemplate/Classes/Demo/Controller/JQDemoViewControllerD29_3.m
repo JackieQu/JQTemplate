@@ -1,25 +1,11 @@
 //
-//  JQDemoViewControllerD19.m
+//  JQDemoViewControllerD29_3.m
 //  JQTemplate
 //
-//  Created by JackieQu on 2023/6/13.
+//  Created by JackieQu on 2023/8/8.
 //
 
-/*
- 1. sudo apachectl start    开启 apache 服务器
- 
- 2. sudo apachectl -v       查看 apache 服务器版本
- 
- 3. sudo vi /etc/apache2/httpd.conf
- 
-    将 LoadModule php7_module 注释取消保存
- 
- 4. open /Library/WebServer/Documents
- 
-    打开资源路径，添加图片，模拟从服务器获取图片资源
- */
-
-#import "JQDemoViewControllerD29.h"
+#import "JQDemoViewControllerD29_3.h"
 #import "JQShopModel.h"
 #import "JQShopCell.h"
 
@@ -27,7 +13,7 @@ static NSString *baseUrl = @"http://127.0.0.1/images/";
 
 static NSString *identifier = @"cellID";
 
-@interface JQDemoViewControllerD29 () <UITableViewDataSource, UITableViewDelegate>
+@interface JQDemoViewControllerD29_3 () <NSCacheDelegate, UITableViewDataSource, UITableViewDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -36,27 +22,28 @@ static NSString *identifier = @"cellID";
 @property (nonatomic, strong) NSOperationQueue *queue;
 
 // 网络请求缓冲池
-@property (nonatomic, strong) NSMutableDictionary *operationCache;
+@property (nonatomic, strong) NSCache *operationCache;
 
 // 图片缓冲池
-@property (nonatomic, strong) NSMutableDictionary *imageCache;
+@property (nonatomic, strong) NSCache *imageCache;
 
 @end
 
-@implementation JQDemoViewControllerD29
+@implementation JQDemoViewControllerD29_3
 
-- (NSMutableDictionary *)imageCache {
+- (NSCache *)imageCache {
     
     if (!_imageCache) {
-        _imageCache = [NSMutableDictionary dictionary];
+        _imageCache = [[NSCache alloc] init];
+        _imageCache.countLimit = 5;
     }
     return _imageCache;
 }
 
-- (NSMutableDictionary *)operationCache {
+- (NSCache *)operationCache {
     
     if (!_operationCache) {
-        _operationCache = [NSMutableDictionary dictionary];
+        _operationCache = [[NSCache alloc] init];
     }
     return _operationCache;
 }
@@ -95,9 +82,20 @@ static NSString *identifier = @"cellID";
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self.view addSubview:self.tableView];
+    // 系统用于缓存的类
+    NSCache *cache = [[NSCache alloc] init];
+    // 设置缓存大小 totalCostLimit
+    // 设置缓存数量，先缓存的会先被清除
+    cache.countLimit = 5;
+    cache.delegate = self;
+    for (NSInteger i = 0; i < 20; i ++) {
+        [cache setObject:[NSString stringWithFormat:@"cache - %@",@(i)] forKey:@(i)];
+    }
+    for (NSInteger i = 0; i < 20; i ++) {
+        NSLog(@"%@",[cache objectForKey:@(i)]);
+    }
     
-    [self setUserDefaults];
+    [self.view addSubview:self.tableView];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -140,11 +138,24 @@ static NSString *identifier = @"cellID";
     // 为了避免重复加载的问题，创建了一个 downloadImage，属于数据源，当 tableView 滚动时给 cell 的数据赋值
     if ([self.imageCache objectForKey:shop.shop_image]) {
         // 如下载过，直接从内存中获取图片
-        cell.iconView.image = self.imageCache[shop.shop_image];
+        cell.iconView.image = [self.imageCache objectForKey:shop.shop_image];
     } else {
-        // 如未下载，先设置默认图片，再下载
-        cell.iconView.image = [UIImage imageNamed:@"defaultImage"];
-        [self downloadImage:indexPath];
+        // 从本地缓存获取图片
+        UIImage *image = [UIImage imageWithContentsOfFile:[self pathInCache:shop.shop_image]];
+        if (image) {
+            dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+            dispatch_async(queue, ^{
+//                如本地存在，将图片放入内存中
+                [self.imageCache setObject:image forKey:shop.shop_image];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    cell.iconView.image = image;
+                });
+            });
+        } else {
+            // 如不存在，先设置默认图片，再下载
+            cell.iconView.image = [UIImage imageNamed:@"defaultImage"];
+            [self downloadImage:indexPath];
+        }
     }
 
     return cell;
@@ -170,8 +181,12 @@ static NSString *identifier = @"cellID";
             // 将数据转为图片
             UIImage *image = [UIImage imageWithData:data];
             if (image) {
+                // 将当前操作从操作缓存池中删除
+                [self.operationCache removeObjectForKey:shop.shop_image];
                 // 将 image 作为 value，url 作为 key
                 [self.imageCache setObject:image forKey:shop.shop_image];
+                // 将 image 存入沙盒
+                [data writeToFile:[self pathInCache:shop.shop_image] atomically:YES];
                 // 获取主队列，更新 UI
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                     // 刷新当前单元格
@@ -188,44 +203,27 @@ static NSString *identifier = @"cellID";
     }
 }
 
-/*
- 默认情况下，每个沙盒文件有 3 个文件夹：Documents、Library 和 tmp。因为应用的沙盒机制，应用只能在几个目下读写文件
- 
- Documents：苹果建议将程序中建立的或在程序中浏览过的文件数据保存在该目录下，iTunes 备份和恢复时会包括此目录，如果保存了下载的数据，程序提交会被直接拒绝
- Library：存储程序的默认设置或者其他状态信息
- Library/Caches：存放缓存文件，iTunes 不会备份此目录，此目录下的文件不会在应用退出时删除
- Library/Preferences：偏好设置文件
- tmp：提供一个即时创建临时文件的空间，在手机重启时，会丢弃所有 tmp 文件
- */
-
-- (void)setUserDefaults {
+- (NSString *)pathInCache:(NSString *)url {
     
-    // 在模拟器上，沙盒目录是变化的，所以每次都次都要打印
-//    NSString *path = NSHomeDirectory();
-//    NSLog(@"%@",path);
-    
-    // 获取沙盒目录的方法
+    // 获取沙盒路径
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
-    // 追加文件名
-    path = [path stringByAppendingPathComponent:@"data.plist"];
-    NSArray *array = @[@1,@2,@3,@4,@5];
-    [array writeToFile:path atomically:YES];
+    // 获取 url 的最后一项路径和 path 拼接
+    path = [path stringByAppendingPathComponent:[url lastPathComponent]];
     NSLog(@"%@",path);
+    return path;
+}
+
+/*
+ 将要被清除的对象，如需要存储该对象，可以在此操作（存入数据库等）
+ 会在缓存对象将要被清理的时候调用，如：
+ 1. 手动删除对象 - (void)removeObjectForKey:(id)key;
+ 2. 缓存超出了 NSCache 的属性限制（countLimit 和 totalCostLimit）
+ 3. 进入后台
+ 4. 收到内存警告
+ */
+- (void)cache:(NSCache *)cache willEvictObject:(id)obj {
     
-    // 偏好设置、用户信息、是否推送、是否支持 3G
-    NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
-    
-//    // 存储偏好数据
-//    [data setObject:@"JackieQu" forKey:@"username"];
-//    [data setObject:@"20" forKey:@"age"];
-//    [data setInteger:185 forKey:@"height"];
-//    // 马上存入本地
-//    [data synchronize];
-    
-    // 从本地获取
-    NSLog(@"%@",[data objectForKey:@"username"]);
-    [data removeObjectForKey:@"age"];
-    NSLog(@"%@",[data objectForKey:@"age"]);
+    NSLog(@"willEvictObject - %@",obj);
 }
 
 @end
