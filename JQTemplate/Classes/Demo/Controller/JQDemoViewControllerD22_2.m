@@ -12,7 +12,7 @@ static NSString *identifier = @"cellID";
 
 @interface JQDemoViewControllerD22_2 () <UICollectionViewDataSource>
 
-@property (nonatomic, strong) UICollectionView * collectionView;
+@property (nonatomic, strong) UICollectionView *collectionView;
 
 @end
 
@@ -22,7 +22,7 @@ static NSString *identifier = @"cellID";
     
     if (!_collectionView) {
         
-         JQLineLayout * layout = [[JQLineLayout alloc] init];
+         JQLineLayout *layout = [[JQLineLayout alloc] init];
         
         _collectionView = [[UICollectionView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.width * 0.618) collectionViewLayout:layout];
         _collectionView.dataSource = self;

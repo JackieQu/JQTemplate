@@ -83,7 +83,7 @@ static NSString *identifier = @"cellID";
 
 //- (CGSize)collectionView:(UICollectionView *)collectionView layout:(UICollectionViewLayout *)collectionViewLayout sizeForItemAtIndexPath:(NSIndexPath *)indexPath {
 //
-//    NSValue * value = self.dataList[indexPath.row];
+//    NSValue *value = self.dataList[indexPath.row];
 //
 //    NSLog(@"%@",NSStringFromCGSize([value CGSizeValue]));
 //

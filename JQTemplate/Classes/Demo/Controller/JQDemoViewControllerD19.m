@@ -123,7 +123,7 @@
     // 创建用于显示搜索结果的视图控制器
     SearchResultsViewController *resultsVC = [[SearchResultsViewController alloc] initWithStyle:UITableViewStylePlain];
     // 初始化 UISearchController
-     UISearchController * searchController = [[UISearchController alloc] initWithSearchResultsController:resultsVC];
+     UISearchController *searchController = [[UISearchController alloc] initWithSearchResultsController:resultsVC];
     // 设置代理
     searchController.searchResultsUpdater = self;
     // 页面跳转

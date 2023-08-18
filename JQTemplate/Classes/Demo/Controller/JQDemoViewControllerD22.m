@@ -23,7 +23,7 @@
         _dataList = [NSMutableArray array];
         for (NSInteger i = 1; i < 6; i ++) {
             
-            NSString * imageName = [NSString stringWithFormat:@"test_%02ld.jpg", i];
+            NSString *imageName = [NSString stringWithFormat:@"test_%02ld.jpg", i];
             [_dataList addObject:imageName];
         }
     }

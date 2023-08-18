@@ -13,7 +13,7 @@
     
     NSString *path = [[NSBundle mainBundle] pathForResource:@"meituan" ofType:@"plist"];
     NSArray *dataList = [NSArray arrayWithContentsOfFile:path];
-    NSMutableArray * shopList = [NSMutableArray array];
+    NSMutableArray *shopList = [NSMutableArray array];
     for (NSDictionary *dict in dataList) {
         JQShopModel *shop = [[JQShopModel alloc] init];
         [shop setValuesForKeysWithDictionary:dict];

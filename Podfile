@@ -12,6 +12,9 @@ target 'JQTemplate' do
   pod 'MJRefresh'
   pod 'IQKeyboardManager'
   
+  pod 'SSKeychain'
+  pod 'SSZipArchive'
+  
   target 'JQTemplateTests' do
     inherit! :search_paths
     # Pods for testing

@@ -30,7 +30,7 @@
 - (NSMutableArray *)dataList {
     
     if (!_dataList) {
-        NSString * path = [[NSBundle mainBundle] pathForResource:@"contacts" ofType:@"plist"];
+        NSString *path = [[NSBundle mainBundle] pathForResource:@"contacts" ofType:@"plist"];
         _dataList = [NSMutableArray arrayWithContentsOfFile:path];
     }
     return _dataList;
