@@ -38,7 +38,7 @@
     
     AFURLSessionManager *manager = [[AFURLSessionManager alloc] initWithSessionConfiguration:configuration];
     
-    NSURL *url = [NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     

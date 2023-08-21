@@ -17,4 +17,7 @@
 #import "UIColor+Random.h"
 #import "UIColor+Hex.h"
 
+#import "JQAPIConfig.h"
+#import "JQHUDHelper.h"
+
 #endif /* JQPrefixHeader_pch */

@@ -7,7 +7,7 @@
 
 #import "JQDemoViewControllerD32.h"
 
-@interface JQDemoViewControllerD32 ()
+@interface JQDemoViewControllerD32 () <NSURLSessionDataDelegate>
 
 @end
 
@@ -52,7 +52,7 @@
 
 - (void)downloadTest {
     
-    NSURL *url = [NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]];
+    NSURL *url = [NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]];
     
     NSURLSession *session = [NSURLSession sharedSession];
     

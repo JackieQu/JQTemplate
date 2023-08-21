@@ -8,6 +8,9 @@
 #import "JQDemoViewControllerD30.h"
 #import "Reachability.h"
 #import "JSONKit.h"
+
+#import <WebKit/WebKit.h>
+
 /*
  target -> Build Phases -> Compile Sources
  若项目为 ARC 模式，则需为非 ARC 模式的文件加入 -fno-objc-arc
@@ -20,16 +23,16 @@
 
 @property (nonatomic, strong) NSMutableData *data;
 
-@property (nonatomic, strong) UIWebView *webView;
+@property (nonatomic, strong) WKWebView *webView;
 
 @end
 
 @implementation JQDemoViewControllerD30
 
-- (UIWebView *)webView {
+- (WKWebView *)webView {
     
     if (!_webView) {
-        _webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
+        _webView = [[WKWebView alloc] initWithFrame:self.view.bounds];
     }
     return _webView;
 }

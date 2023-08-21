@@ -12,6 +12,9 @@ target 'JQTemplate' do
   pod 'MJRefresh'
   pod 'IQKeyboardManager'
   
+  pod 'MBProgressHUD', '~> 1.2.0'
+  pod 'SVProgressHUD'
+  
   pod 'SSKeychain'
   pod 'SSZipArchive'
   

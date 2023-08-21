@@ -33,7 +33,7 @@
     NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration] delegate:self delegateQueue:[[NSOperationQueue alloc] init]];
     
     // 测试文件，用视频文件更容易看出效果
-    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:[NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    NSURLSessionDownloadTask *task = [session downloadTaskWithURL:[NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
     
     [task resume];
 }
@@ -79,7 +79,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     
     self.session = session;
     
-    self.task = [session downloadTaskWithURL:[NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]]];
+    self.task = [session downloadTaskWithURL:[NSURL URLWithString:[@"http://127.0.0.1/周传雄-有没有一首歌会让你想起我.mp3" stringByAddingPercentEncodingWithAllowedCharacters:[NSCharacterSet URLQueryAllowedCharacterSet]]]];
 
     [self.task resume];
 }

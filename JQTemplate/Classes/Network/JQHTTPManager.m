@@ -114,7 +114,7 @@
 
 - (void)showAlert {
     
-    JQLog(@"error");
+    [JQHUDHelper showErrorMessage:@"error"];
 }
 
 @end
