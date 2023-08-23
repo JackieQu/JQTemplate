@@ -66,4 +66,26 @@
     [(AppDelegate *)UIApplication.sharedApplication.delegate saveContext];
 }
 
+- (void)scene:(UIScene *)scene openURLContexts:(NSSet<UIOpenURLContext *> *)URLContexts {
+    
+    JQLog(@"%@", URLContexts);
+    
+    for (UIOpenURLContext *urlContext in URLContexts) {
+        
+        JQBaseTabBarController *rootVC = (JQBaseTabBarController *)self.window.rootViewController;
+        // 防止第一次进入不返回至主控制器
+        [rootVC.viewControllers.firstObject popToRootViewControllerAnimated:YES];
+        
+        NSURL *url = urlContext.URL;
+        if ([url.scheme isEqualToString:@"WeChat"]) {
+            if ([url.host isEqualToString:@"moment"]) {
+                NSLog(@"分享到微信朋友圈：%@", url.query);
+            } else if ([url.host isEqualToString:@"friend"]) {
+                NSLog(@"分享给微信好友：%@", url.query);
+            }
+        }
+        break;
+    }
+}
+
 @end

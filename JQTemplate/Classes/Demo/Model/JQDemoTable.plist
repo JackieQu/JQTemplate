@@ -986,6 +986,52 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>屏幕适配</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>约束应用</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD35</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>约束动画</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD35</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>Masonry</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD35_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>友盟</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>友盟社会化分享</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD36</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

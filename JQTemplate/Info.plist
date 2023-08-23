@@ -2,6 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>WeChat</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Coca-ColaCareFontKaiTi.TTF</string>
+		<string>Coca-ColaCareFont-TextRegular.TTF</string>
+		<string>Coca-ColaCareFont-TextLight.TTF</string>
+		<string>Coca-ColaCareFont-TextMedium.TTF</string>
+		<string>Coca-ColaCareFont-TextBold.TTF</string>
+		<string>Coca-ColaCareFont-TextBlack.TTF</string>
+	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
 		<key>UIApplicationSupportsMultipleScenes</key>
@@ -25,25 +50,11 @@
 	<array>
 		<string>remote-notification</string>
 	</array>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Coca-ColaCareFontKaiTi.TTF</string>
-		<string>Coca-ColaCareFont-TextRegular.TTF</string>
-		<string>Coca-ColaCareFont-TextLight.TTF</string>
-		<string>Coca-ColaCareFont-TextMedium.TTF</string>
-		<string>Coca-ColaCareFont-TextBold.TTF</string>
-		<string>Coca-ColaCareFont-TextBlack.TTF</string>
-	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>UIStatusBarHidden</key>
-	<true/>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<true/>
-	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>App需要您的同意，才能添加图片至相册</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>DingTalk</string>
+	</array>
 </dict>
 </plist>

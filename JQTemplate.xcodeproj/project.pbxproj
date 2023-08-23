@@ -127,6 +127,9 @@
 		28C2F49F2A4AD7410079E678 /* JQGoodsCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C2F49E2A4AD7410079E678 /* JQGoodsCell.m */; };
 		28C2F4A22A4AD7BA0079E678 /* JQDemoViewControllerD21_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C2F4A12A4AD7BA0079E678 /* JQDemoViewControllerD21_2.m */; };
 		28C2F4AE2A57E6D80079E678 /* JQDemoViewControllerD21_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 28C2F4AD2A57E6D80079E678 /* JQDemoViewControllerD21_3.m */; };
+		28CD34412A944E2100815E1A /* JQDemoViewControllerD35.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD34402A944E2100815E1A /* JQDemoViewControllerD35.m */; };
+		28CD34442A95D21300815E1A /* JQDemoViewControllerD35_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD34432A95D21300815E1A /* JQDemoViewControllerD35_2.m */; };
+		28CD34472A95F76D00815E1A /* JQDemoViewControllerD36.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD34462A95F76D00815E1A /* JQDemoViewControllerD36.m */; };
 		28DB78BC2A36AE09001D2D07 /* JQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BB2A36AE09001D2D07 /* JQAlertView.m */; };
 		28DB78BF2A36C228001D2D07 /* JQDemoViewControllerD13.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BE2A36C228001D2D07 /* JQDemoViewControllerD13.m */; };
 		28DB78C22A36C3F8001D2D07 /* JQDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78C12A36C3F8001D2D07 /* JQDemoView.m */; };
@@ -430,6 +433,12 @@
 		28C2F4A12A4AD7BA0079E678 /* JQDemoViewControllerD21_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD21_2.m; sourceTree = "<group>"; };
 		28C2F4AC2A57E6D80079E678 /* JQDemoViewControllerD21_3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD21_3.h; sourceTree = "<group>"; };
 		28C2F4AD2A57E6D80079E678 /* JQDemoViewControllerD21_3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD21_3.m; sourceTree = "<group>"; };
+		28CD343F2A944E2100815E1A /* JQDemoViewControllerD35.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD35.h; sourceTree = "<group>"; };
+		28CD34402A944E2100815E1A /* JQDemoViewControllerD35.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD35.m; sourceTree = "<group>"; };
+		28CD34422A95D21300815E1A /* JQDemoViewControllerD35_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD35_2.h; sourceTree = "<group>"; };
+		28CD34432A95D21300815E1A /* JQDemoViewControllerD35_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD35_2.m; sourceTree = "<group>"; };
+		28CD34452A95F76D00815E1A /* JQDemoViewControllerD36.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD36.h; sourceTree = "<group>"; };
+		28CD34462A95F76D00815E1A /* JQDemoViewControllerD36.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD36.m; sourceTree = "<group>"; };
 		28DB78BA2A36AE09001D2D07 /* JQAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQAlertView.h; sourceTree = "<group>"; };
 		28DB78BB2A36AE09001D2D07 /* JQAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQAlertView.m; sourceTree = "<group>"; };
 		28DB78BD2A36C228001D2D07 /* JQDemoViewControllerD13.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD13.h; sourceTree = "<group>"; };
@@ -900,6 +909,12 @@
 				28B2506D2A933D2E00456DDD /* JQDemoViewControllerD33_4.m */,
 				28B2506F2A934B2300456DDD /* JQDemoViewControllerD34.h */,
 				28B250702A934B2300456DDD /* JQDemoViewControllerD34.m */,
+				28CD343F2A944E2100815E1A /* JQDemoViewControllerD35.h */,
+				28CD34402A944E2100815E1A /* JQDemoViewControllerD35.m */,
+				28CD34422A95D21300815E1A /* JQDemoViewControllerD35_2.h */,
+				28CD34432A95D21300815E1A /* JQDemoViewControllerD35_2.m */,
+				28CD34452A95F76D00815E1A /* JQDemoViewControllerD36.h */,
+				28CD34462A95F76D00815E1A /* JQDemoViewControllerD36.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1282,6 +1297,7 @@
 				28F5DE902A2581A700ECB80B /* Frameworks */,
 				28F5DE912A2581A700ECB80B /* Resources */,
 				45CFA33107D58E77B73B082C /* [CP] Embed Pods Frameworks */,
+				1F71991E56B806BA7275CACA /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1320,6 +1336,7 @@
 				28F5DEB82A2581A900ECB80B /* Frameworks */,
 				28F5DEB92A2581A900ECB80B /* Resources */,
 				F7ECD23B1D62D34EE02C8C09 /* [CP] Embed Pods Frameworks */,
+				E299E75EDD7154B3C61542D3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -1453,6 +1470,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1F71991E56B806BA7275CACA /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JQTemplate/Pods-JQTemplate-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JQTemplate/Pods-JQTemplate-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JQTemplate/Pods-JQTemplate-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		45CFA33107D58E77B73B082C /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -1512,6 +1546,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E299E75EDD7154B3C61542D3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JQTemplate-JQTemplateUITests/Pods-JQTemplate-JQTemplateUITests-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-JQTemplate-JQTemplateUITests/Pods-JQTemplate-JQTemplateUITests-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-JQTemplate-JQTemplateUITests/Pods-JQTemplate-JQTemplateUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F7ECD23B1D62D34EE02C8C09 /* [CP] Embed Pods Frameworks */ = {
@@ -1625,6 +1676,7 @@
 				28EB20392A384C20008AA0A0 /* JQDemoViewControllerD19.m in Sources */,
 				281D25562A370BA50058FF7D /* JQDemoViewControllerD14_2.m in Sources */,
 				2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */,
+				28CD34442A95D21300815E1A /* JQDemoViewControllerD35_2.m in Sources */,
 				2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */,
 				2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */,
 				28B2505F2A930BF200456DDD /* JQElmSupportModel.m in Sources */,
@@ -1657,6 +1709,7 @@
 				28A5DF012A5BF83F0042C893 /* JQImageCell.m in Sources */,
 				28B250622A930C3300456DDD /* JQElmShopCell.m in Sources */,
 				281F0F732A9355CB007BA9A7 /* NSURL+Param.m in Sources */,
+				28CD34412A944E2100815E1A /* JQDemoViewControllerD35.m in Sources */,
 				28B2506B2A932F5D00456DDD /* MJExtensionConfig.m in Sources */,
 				28E370212A5FC8A500F23623 /* JQDemoViewControllerD24_2.m in Sources */,
 				2861B73B2A29E26600A55275 /* JQDemoViewControllerD8.m in Sources */,
@@ -1672,6 +1725,7 @@
 				28B2505C2A930BB700456DDD /* JQElmShopModel.m in Sources */,
 				28A5DEF82A5BECB90042C893 /* JQDemoViewControllerD22.m in Sources */,
 				28ACC1102A32F4E500DA12E0 /* JQDemoViewControllerD12.m in Sources */,
+				28CD34472A95F76D00815E1A /* JQDemoViewControllerD36.m in Sources */,
 				28C2F4842A4831920079E678 /* JQWeiboModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1852,9 +1906,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JQTemplate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JQKit;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App需要您的同意，才能添加图片至相册";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -1884,9 +1940,11 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = JQTemplate/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = JQKit;
+				INFOPLIST_KEY_NSPhotoLibraryAddUsageDescription = "App需要您的同意，才能添加图片至相册";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
