@@ -19,6 +19,8 @@ target 'JQTemplate' do
   pod 'SSKeychain'
   pod 'SSZipArchive'
   
+  pod 'MMDrawerController', '~> 0.5.7'
+  
   pod 'UMCommon'    # 必须集成
   pod 'UMDevice'    # 必须集成
   # pod <友盟+SDK名> 按需复制相应SDK名称代码

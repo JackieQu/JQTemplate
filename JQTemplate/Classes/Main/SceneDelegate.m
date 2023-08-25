@@ -9,6 +9,9 @@
 #import "AppDelegate.h"
 #import "JQBaseTabBarController.h"
 
+#import <MMDrawerController/MMDrawerController.h>
+#import <MMDrawerController/MMDrawerVisualState.h>
+
 #import <UMShare/UMShare.h>
 
 @interface SceneDelegate ()
@@ -27,7 +30,36 @@
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = windowScene.coordinateSpace.bounds;
-    self.window.rootViewController = [[JQBaseTabBarController alloc] init];
+//    self.window.rootViewController = [[JQBaseTabBarController alloc] init];
+    
+    UIViewController *centerVC = [[NSClassFromString(@"JQDemoViewControllerD39") alloc] init];
+    centerVC.title = @"首页";
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:centerVC];
+    UIViewController *leftVC = [[NSClassFromString(@"JQDemoViewControllerD39_2") alloc] init];
+    UIViewController *rightVC = [[UIViewController alloc] init];
+    rightVC.view.backgroundColor = [UIColor randomColor];
+    MMDrawerController *drawerVC = [[MMDrawerController alloc] initWithCenterViewController:navC leftDrawerViewController:leftVC rightDrawerViewController:rightVC];
+    // 打开抽屉的手势
+    drawerVC.openDrawerGestureModeMask = MMOpenDrawerGestureModeAll;
+    // 关闭抽屉的手势
+    drawerVC.closeDrawerGestureModeMask = MMCloseDrawerGestureModeAll;
+    // 设置抽屉的阴影
+    drawerVC.showsShadow = NO;
+    // 设置抽屉的状态栏
+    drawerVC.showsStatusBarBackgroundView = NO;
+    // 设置抽屉的宽度
+    drawerVC.maximumLeftDrawerWidth = 200;
+    drawerVC.maximumRightDrawerWidth = 100;
+    // 设置抽屉的效果
+    [drawerVC setDrawerVisualStateBlock:^(MMDrawerController *drawerController, MMDrawerSide drawerSide, CGFloat percentVisible) {
+        MMDrawerControllerDrawerVisualStateBlock block;
+        block = [MMDrawerVisualState slideVisualStateBlock];
+        if (block) {
+            block(drawerController, drawerSide, percentVisible);
+        }
+    }];
+    self.window.rootViewController = drawerVC;
+    
     [self.window makeKeyAndVisible];
 }
 

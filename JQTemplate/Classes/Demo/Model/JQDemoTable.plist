@@ -1125,6 +1125,37 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>抽屉效果</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>抽屉效果</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD39</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>侧拉菜单</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD39</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>网易新闻效果</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD39</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
