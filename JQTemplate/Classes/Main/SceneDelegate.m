@@ -11,6 +11,7 @@
 
 #import <MMDrawerController/MMDrawerController.h>
 #import <MMDrawerController/MMDrawerVisualState.h>
+#import <RESideMenu/RESideMenu.h>
 
 #import <UMShare/UMShare.h>
 
@@ -30,8 +31,9 @@
     UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = windowScene.coordinateSpace.bounds;
-//    self.window.rootViewController = [[JQBaseTabBarController alloc] init];
+    self.window.rootViewController = [[JQBaseTabBarController alloc] init];
     
+    /*
     UIViewController *centerVC = [[NSClassFromString(@"JQDemoViewControllerD39") alloc] init];
     centerVC.title = @"首页";
     UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:centerVC];
@@ -59,6 +61,28 @@
         }
     }];
     self.window.rootViewController = drawerVC;
+     */
+    
+    /*
+    UIViewController *rootVC = [[NSClassFromString(@"JQDemoViewControllerD39_3") alloc] init];
+    UINavigationController *navVC = [[UINavigationController alloc] initWithRootViewController:rootVC];
+    UIViewController *leftMenuVC = [[NSClassFromString(@"JQDemoViewControllerD39_4") alloc] init];
+    
+    // 创建侧拉菜单
+    RESideMenu *sideMenu = [[RESideMenu alloc] initWithContentViewController:navVC leftMenuViewController:leftMenuVC rightMenuViewController:nil];
+    sideMenu.backgroundImage = [UIImage imageNamed:@"bg_stars"];
+    sideMenu.scaleBackgroundImageView = [UIImage imageNamed:@"bg_stars"];
+    sideMenu.menuPreferredStatusBarStyle = 1; //
+    sideMenu.contentViewShadowColor = [UIColor blackColor];
+    sideMenu.contentViewShadowOffset = CGSizeMake(0, 0);
+    sideMenu.contentViewShadowOpacity = 0.5;
+    sideMenu.contentViewShadowEnabled = YES;
+    sideMenu.contentViewShadowRadius = 10;
+    sideMenu.contentViewScaleValue = 0.8;
+    sideMenu.panGestureEnabled = YES;
+    sideMenu.panFromEdge = YES;
+    self.window.rootViewController = sideMenu;
+     */
     
     [self.window makeKeyAndVisible];
 }

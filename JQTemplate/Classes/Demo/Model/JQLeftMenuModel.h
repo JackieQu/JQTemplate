@@ -11,6 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JQLeftMenuModel : NSObject
 
+@property (nonatomic, copy) NSString *target;
+@property (nonatomic, copy) NSString *title;
+
 @property (nonatomic, copy) NSString *icon;
 
 @property (nonatomic, copy) NSString *name;

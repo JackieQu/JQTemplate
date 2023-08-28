@@ -1096,37 +1096,6 @@
 		</dict>
 		<dict>
 			<key>title</key>
-			<string>地图2</string>
-			<key>rows</key>
-			<array>
-				<dict>
-					<key>title</key>
-					<string>添加大头针</string>
-					<key>className</key>
-					<string>JQDemoViewControllerD37</string>
-					<key>flag</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>title</key>
-					<string>自定义大头针</string>
-					<key>className</key>
-					<string>JQDemoViewControllerD37</string>
-					<key>flag</key>
-					<false/>
-				</dict>
-				<dict>
-					<key>title</key>
-					<string>导航</string>
-					<key>className</key>
-					<string>JQDemoViewControllerD38</string>
-					<key>flag</key>
-					<false/>
-				</dict>
-			</array>
-		</dict>
-		<dict>
-			<key>title</key>
 			<string>抽屉效果</string>
 			<key>rows</key>
 			<array>
@@ -1142,7 +1111,7 @@
 					<key>title</key>
 					<string>侧拉菜单</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD39</string>
+					<string>JQDemoViewControllerD39_3</string>
 					<key>flag</key>
 					<false/>
 				</dict>
@@ -1150,7 +1119,38 @@
 					<key>title</key>
 					<string>网易新闻效果</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD39</string>
+					<string>JQDemoViewControllerD39_5</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>数据库</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>原生sqlite</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD40</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>FMDB使用</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD40</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>FMDB使用&amp;多线程</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD40</string>
 					<key>flag</key>
 					<false/>
 				</dict>
