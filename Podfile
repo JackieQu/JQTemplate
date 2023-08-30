@@ -22,6 +22,8 @@ target 'JQTemplate' do
   pod 'MMDrawerController', '~> 0.5.7'
   pod 'RESideMenu', '~> 4.0.7'
   
+  pod 'FMDB'
+  
   pod 'UMCommon'    # 必须集成
   pod 'UMDevice'    # 必须集成
   # pod <友盟+SDK名> 按需复制相应SDK名称代码
