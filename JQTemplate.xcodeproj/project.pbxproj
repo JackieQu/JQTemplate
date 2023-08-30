@@ -20,6 +20,11 @@
 		280717102A9F0D0C0081FA4F /* JQSqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807170F2A9F0D0C0081FA4F /* JQSqliteHelper.m */; };
 		280717132A9F13F30081FA4F /* JQFMDBHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717122A9F13F30081FA4F /* JQFMDBHelper.m */; };
 		280717162A9F1B880081FA4F /* JQDemoViewControllerD40_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717152A9F1B880081FA4F /* JQDemoViewControllerD40_2.m */; };
+		280717192A9F30BF0081FA4F /* JQTemplate.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 280717172A9F30BF0081FA4F /* JQTemplate.xcdatamodeld */; };
+		2807173A2A9F3AE70081FA4F /* JQBookModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717342A9F3AE70081FA4F /* JQBookModel+CoreDataClass.m */; };
+		2807173B2A9F3AE70081FA4F /* JQBookModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717352A9F3AE70081FA4F /* JQBookModel+CoreDataProperties.m */; };
+		2807173C2A9F3AE70081FA4F /* JQReaderModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717382A9F3AE70081FA4F /* JQReaderModel+CoreDataClass.m */; };
+		2807173D2A9F3AE70081FA4F /* JQReaderModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717392A9F3AE70081FA4F /* JQReaderModel+CoreDataProperties.m */; };
 		281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */; };
 		281D254F2A37079E0058FF7D /* test_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254A2A37079D0058FF7D /* test_02.jpg */; };
 		281D25502A37079E0058FF7D /* test_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254B2A37079D0058FF7D /* test_03.jpg */; };
@@ -250,6 +255,15 @@
 		280717122A9F13F30081FA4F /* JQFMDBHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQFMDBHelper.m; sourceTree = "<group>"; };
 		280717142A9F1B880081FA4F /* JQDemoViewControllerD40_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD40_2.h; sourceTree = "<group>"; };
 		280717152A9F1B880081FA4F /* JQDemoViewControllerD40_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD40_2.m; sourceTree = "<group>"; };
+		280717182A9F30BF0081FA4F /* JQTemplate.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = JQTemplate.xcdatamodel; sourceTree = "<group>"; };
+		280717322A9F3AE70081FA4F /* JQBookModel+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JQBookModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		280717332A9F3AE70081FA4F /* JQBookModel+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JQBookModel+CoreDataClass.h"; sourceTree = "<group>"; };
+		280717342A9F3AE70081FA4F /* JQBookModel+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JQBookModel+CoreDataClass.m"; sourceTree = "<group>"; };
+		280717352A9F3AE70081FA4F /* JQBookModel+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JQBookModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		280717362A9F3AE70081FA4F /* JQReaderModel+CoreDataProperties.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JQReaderModel+CoreDataProperties.h"; sourceTree = "<group>"; };
+		280717372A9F3AE70081FA4F /* JQReaderModel+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JQReaderModel+CoreDataClass.h"; sourceTree = "<group>"; };
+		280717382A9F3AE70081FA4F /* JQReaderModel+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JQReaderModel+CoreDataClass.m"; sourceTree = "<group>"; };
+		280717392A9F3AE70081FA4F /* JQReaderModel+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JQReaderModel+CoreDataProperties.m"; sourceTree = "<group>"; };
 		281D25472A36FE090058FF7D /* JQDemoViewControllerD14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD14.h; sourceTree = "<group>"; };
 		281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD14.m; sourceTree = "<group>"; };
 		281D254A2A37079D0058FF7D /* test_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_02.jpg; sourceTree = "<group>"; };
@@ -799,6 +813,7 @@
 				28F5DE9F2A2581A700ECB80B /* Main.storyboard */,
 				28F5DEA52A2581A900ECB80B /* Assets.xcassets */,
 				28F5DEAA2A2581A900ECB80B /* Info.plist */,
+				280717172A9F30BF0081FA4F /* JQTemplate.xcdatamodeld */,
 			);
 			path = JQTemplate;
 			sourceTree = "<group>";
@@ -998,6 +1013,14 @@
 		28F5DED32A25834700ECB80B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				280717322A9F3AE70081FA4F /* JQBookModel+CoreDataProperties.h */,
+				280717352A9F3AE70081FA4F /* JQBookModel+CoreDataProperties.m */,
+				280717332A9F3AE70081FA4F /* JQBookModel+CoreDataClass.h */,
+				280717342A9F3AE70081FA4F /* JQBookModel+CoreDataClass.m */,
+				280717362A9F3AE70081FA4F /* JQReaderModel+CoreDataProperties.h */,
+				280717392A9F3AE70081FA4F /* JQReaderModel+CoreDataProperties.m */,
+				280717372A9F3AE70081FA4F /* JQReaderModel+CoreDataClass.h */,
+				280717382A9F3AE70081FA4F /* JQReaderModel+CoreDataClass.m */,
 				28ACC10C2A32EABE00DA12E0 /* JQDemoTable.plist */,
 				28ACC1092A32D65800DA12E0 /* JQDemoTableModel.h */,
 				28ACC10A2A32D65800DA12E0 /* JQDemoTableModel.m */,
@@ -1688,6 +1711,7 @@
 				282C07A92A989C9500123B18 /* JQDemoViewControllerD39_3.m in Sources */,
 				281E32C72A80E2BC00A282CC /* JQDemoViewControllerD29.m in Sources */,
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
+				2807173B2A9F3AE70081FA4F /* JQBookModel+CoreDataProperties.m in Sources */,
 				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
 				28A5DF042A5BFBB40042C893 /* JQDemoViewControllerD22_2.m in Sources */,
 				281D257C2A383B310058FF7D /* JQWeChatModel.m in Sources */,
@@ -1706,11 +1730,13 @@
 				28BA29562A5E7B8700688C3F /* JQProgressView.m in Sources */,
 				289A77B62A5D302800EA1DE1 /* JQDemoViewControllerD23.m in Sources */,
 				28C2F4902A4AB2250079E678 /* JQImageListView.m in Sources */,
+				2807173D2A9F3AE70081FA4F /* JQReaderModel+CoreDataProperties.m in Sources */,
 				281D25762A3831970058FF7D /* JQIndustryModel.m in Sources */,
 				28E370242A5FCFF000F23623 /* JQDrawPath.m in Sources */,
 				28919F3A2A9C3279006835D1 /* JQDemoViewControllerD39_4.m in Sources */,
 				28C2F49C2A4AD43D0079E678 /* JQGoodsModel.m in Sources */,
 				28EB202E2A38403B008AA0A0 /* JQBaseTableViewController.m in Sources */,
+				2807173C2A9F3AE70081FA4F /* JQReaderModel+CoreDataClass.m in Sources */,
 				28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */,
 				28C2F47F2A4830400079E678 /* JQDemoViewControllerD20.m in Sources */,
 				289A77BB2A5D396900EA1DE1 /* JQCityModel.m in Sources */,
@@ -1789,9 +1815,11 @@
 				28E370272A5FD18500F23623 /* JQDrawView.m in Sources */,
 				28BA29592A5E88AD00688C3F /* JQLineView.m in Sources */,
 				28F5DF1B2A2596C500ECB80B /* JQDemoViewControllerD1.m in Sources */,
+				2807173A2A9F3AE70081FA4F /* JQBookModel+CoreDataClass.m in Sources */,
 				28C2F4A22A4AD7BA0079E678 /* JQDemoViewControllerD21_2.m in Sources */,
 				28055C3F2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.m in Sources */,
 				285F40A52A838A7D0051DE68 /* JSONKit.m in Sources */,
+				280717192A9F30BF0081FA4F /* JQTemplate.xcdatamodeld in Sources */,
 				282FB9462A8F38F600EB3F45 /* JQHTTPManager.m in Sources */,
 				28A2B8AF2A85CF4A007324DD /* JQDemoViewControllerD33.m in Sources */,
 				289A1B7E2A9C3A3E009FAE0D /* JQDemoViewControllerD39_5.m in Sources */,
@@ -2180,6 +2208,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		280717172A9F30BF0081FA4F /* JQTemplate.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				280717182A9F30BF0081FA4F /* JQTemplate.xcdatamodel */,
+			);
+			currentVersion = 280717182A9F30BF0081FA4F /* JQTemplate.xcdatamodel */;
+			path = JQTemplate.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 28F5DE8B2A2581A700ECB80B /* Project object */;
 }
