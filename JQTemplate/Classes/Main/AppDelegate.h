@@ -14,6 +14,8 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+@property (nonatomic, copy) void(^receivedWithEventBlock) (UIEvent *event);
+
 - (void)saveContext;
 
 @end

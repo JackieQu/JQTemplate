@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>会呼吸的痛</string>
+		<key>filename</key>
+		<string>会呼吸的痛.mp3</string>
+		<key>singer</key>
+		<string>梁静茹</string>
+		<key>singerIcon</key>
+		<string>liangjingru.jpg</string>
+		<key>album</key>
+		<string>崇拜</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>终于等到你</string>
+		<key>filename</key>
+		<string>终于等到你.mp3</string>
+		<key>singer</key>
+		<string>张靓颖</string>
+		<key>singerIcon</key>
+		<string>zhangliangying.jpg</string>
+		<key>album</key>
+		<string>第七感</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>北京北京</string>
+		<key>filename</key>
+		<string>北京北京.mp3</string>
+		<key>singer</key>
+		<string>汪峰</string>
+		<key>singerIcon</key>
+		<string>wangfeng.jpg</string>
+		<key>album</key>
+		<string>勇敢的心</string>
+	</dict>
+</array>
+</plist>

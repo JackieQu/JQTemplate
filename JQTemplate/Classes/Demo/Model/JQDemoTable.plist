@@ -1171,9 +1171,64 @@
 				</dict>
 				<dict>
 					<key>title</key>
-					<string>CoreData</string>
+					<string>MVC示例</string>
 					<key>className</key>
-					<string>JQDemoViewControllerD41</string>
+					<string>JQDemoViewControllerD41_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>MVVM示例</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD41_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>音频</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>播放音效</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD42</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>播放本地音乐</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD42</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>播放本地音乐封装</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD42_2</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>播放网络音乐</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD42_3</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>录音</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD42_4</string>
 					<key>flag</key>
 					<false/>
 				</dict>

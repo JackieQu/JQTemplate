@@ -26,6 +26,7 @@
 		280717642AA16EE90081FA4F /* JQBookModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 2807175E2AA16EE90081FA4F /* JQBookModel+CoreDataProperties.m */; };
 		280717652AA16EE90081FA4F /* JQReaderModel+CoreDataClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717612AA16EE90081FA4F /* JQReaderModel+CoreDataClass.m */; };
 		280717662AA16EE90081FA4F /* JQReaderModel+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717622AA16EE90081FA4F /* JQReaderModel+CoreDataProperties.m */; };
+		280717692AA183190081FA4F /* JQDemoViewControllerD41_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 280717682AA183190081FA4F /* JQDemoViewControllerD41_2.m */; };
 		281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */ = {isa = PBXBuildFile; fileRef = 281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */; };
 		281D254F2A37079E0058FF7D /* test_02.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254A2A37079D0058FF7D /* test_02.jpg */; };
 		281D25502A37079E0058FF7D /* test_03.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 281D254B2A37079D0058FF7D /* test_03.jpg */; };
@@ -70,6 +71,9 @@
 		2832AD272A30312C001C419D /* JQDemoViewControllerD10.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD262A30312C001C419D /* JQDemoViewControllerD10.m */; };
 		2832AD2A2A30538A001C419D /* JQDemoViewControllerD11.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */; };
 		2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */ = {isa = PBXBuildFile; fileRef = 2832AD2C2A3056AA001C419D /* UITabBar+Badge.m */; };
+		2845573D2AA1C9FE0047D047 /* JQDemoViewControllerD42_3.m in Sources */ = {isa = PBXBuildFile; fileRef = 2845573C2AA1C9FE0047D047 /* JQDemoViewControllerD42_3.m */; };
+		2845573F2AA1CA720047D047 /* musics2.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2845573E2AA1CA720047D047 /* musics2.plist */; };
+		284557422AA1D07B0047D047 /* JQDemoViewControllerD42_4.m in Sources */ = {isa = PBXBuildFile; fileRef = 284557412AA1D07B0047D047 /* JQDemoViewControllerD42_4.m */; };
 		285F40A52A838A7D0051DE68 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 285F40A32A838A7C0051DE68 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */; };
 		2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6512A26F0F700A55275 /* JQBlockButton.m */; };
@@ -85,6 +89,19 @@
 		287A592B2A306C820015C58F /* JQTabBar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 287A592A2A306C820015C58F /* JQTabBar.plist */; };
 		287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A592D2A3075F40015C58F /* JQBaseModel.m */; };
 		287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A59302A3077A30015C58F /* JQTabBarModel.m */; };
+		288321502AA18677004F7817 /* JQPersonViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2883214F2AA18677004F7817 /* JQPersonViewModel.m */; };
+		288321532AA1A962004F7817 /* JQDemoViewControllerD42.m in Sources */ = {isa = PBXBuildFile; fileRef = 288321522AA1A962004F7817 /* JQDemoViewControllerD42.m */; };
+		288321552AA1A9A5004F7817 /* yaobuqi.wav in Resources */ = {isa = PBXBuildFile; fileRef = 288321542AA1A9A5004F7817 /* yaobuqi.wav */; };
+		288321582AA1AA37004F7817 /* JQAudioManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 288321572AA1AA37004F7817 /* JQAudioManager.m */; };
+		288321622AA1BA05004F7817 /* 会呼吸的痛.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2883215C2AA1BA05004F7817 /* 会呼吸的痛.mp3 */; };
+		288321632AA1BA05004F7817 /* 终于等到你.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2883215D2AA1BA05004F7817 /* 终于等到你.mp3 */; };
+		288321642AA1BA05004F7817 /* liangjingru.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2883215E2AA1BA05004F7817 /* liangjingru.jpg */; };
+		288321652AA1BA05004F7817 /* 北京北京.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2883215F2AA1BA05004F7817 /* 北京北京.mp3 */; };
+		288321662AA1BA05004F7817 /* zhangliangying.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 288321602AA1BA05004F7817 /* zhangliangying.jpg */; };
+		288321672AA1BA05004F7817 /* wangfeng.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 288321612AA1BA05004F7817 /* wangfeng.jpg */; };
+		288321692AA1BA4D004F7817 /* musics.plist in Resources */ = {isa = PBXBuildFile; fileRef = 288321682AA1BA4D004F7817 /* musics.plist */; };
+		2883216D2AA1BA7D004F7817 /* JQMusicModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2883216C2AA1BA7D004F7817 /* JQMusicModel.m */; };
+		288321702AA1BC4A004F7817 /* JQDemoViewControllerD42_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2883216F2AA1BC4A004F7817 /* JQDemoViewControllerD42_2.m */; };
 		2887A9262A3853B8007A9D76 /* JQDemoViewControllerD19_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 2887A9252A3853B8007A9D76 /* JQDemoViewControllerD19_2.m */; };
 		28919F3A2A9C3279006835D1 /* JQDemoViewControllerD39_4.m in Sources */ = {isa = PBXBuildFile; fileRef = 28919F392A9C3279006835D1 /* JQDemoViewControllerD39_4.m */; };
 		289A1B7E2A9C3A3E009FAE0D /* JQDemoViewControllerD39_5.m in Sources */ = {isa = PBXBuildFile; fileRef = 289A1B7D2A9C3A3E009FAE0D /* JQDemoViewControllerD39_5.m */; };
@@ -268,6 +285,8 @@
 		280717602AA16EE90081FA4F /* JQReaderModel+CoreDataClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JQReaderModel+CoreDataClass.h"; sourceTree = "<group>"; };
 		280717612AA16EE90081FA4F /* JQReaderModel+CoreDataClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JQReaderModel+CoreDataClass.m"; sourceTree = "<group>"; };
 		280717622AA16EE90081FA4F /* JQReaderModel+CoreDataProperties.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "JQReaderModel+CoreDataProperties.m"; sourceTree = "<group>"; };
+		280717672AA183190081FA4F /* JQDemoViewControllerD41_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD41_2.h; sourceTree = "<group>"; };
+		280717682AA183190081FA4F /* JQDemoViewControllerD41_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD41_2.m; sourceTree = "<group>"; };
 		281D25472A36FE090058FF7D /* JQDemoViewControllerD14.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD14.h; sourceTree = "<group>"; };
 		281D25482A36FE090058FF7D /* JQDemoViewControllerD14.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD14.m; sourceTree = "<group>"; };
 		281D254A2A37079D0058FF7D /* test_02.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_02.jpg; sourceTree = "<group>"; };
@@ -344,6 +363,11 @@
 		2832AD292A30538A001C419D /* JQDemoViewControllerD11.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD11.m; sourceTree = "<group>"; };
 		2832AD2B2A3056AA001C419D /* UITabBar+Badge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+Badge.h"; sourceTree = "<group>"; };
 		2832AD2C2A3056AA001C419D /* UITabBar+Badge.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+Badge.m"; sourceTree = "<group>"; };
+		2845573B2AA1C9FD0047D047 /* JQDemoViewControllerD42_3.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD42_3.h; sourceTree = "<group>"; };
+		2845573C2AA1C9FE0047D047 /* JQDemoViewControllerD42_3.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD42_3.m; sourceTree = "<group>"; };
+		2845573E2AA1CA720047D047 /* musics2.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = musics2.plist; sourceTree = "<group>"; };
+		284557402AA1D07B0047D047 /* JQDemoViewControllerD42_4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD42_4.h; sourceTree = "<group>"; };
+		284557412AA1D07B0047D047 /* JQDemoViewControllerD42_4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD42_4.m; sourceTree = "<group>"; };
 		285F40A32A838A7C0051DE68 /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
 		285F40A42A838A7C0051DE68 /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
 		2861B64D2A26EF7300A55275 /* JQDemoViewControllerD4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD4.h; sourceTree = "<group>"; };
@@ -374,6 +398,24 @@
 		287A592D2A3075F40015C58F /* JQBaseModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQBaseModel.m; sourceTree = "<group>"; };
 		287A592F2A3077A30015C58F /* JQTabBarModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTabBarModel.h; sourceTree = "<group>"; };
 		287A59302A3077A30015C58F /* JQTabBarModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTabBarModel.m; sourceTree = "<group>"; };
+		2883214E2AA18677004F7817 /* JQPersonViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQPersonViewModel.h; sourceTree = "<group>"; };
+		2883214F2AA18677004F7817 /* JQPersonViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQPersonViewModel.m; sourceTree = "<group>"; };
+		288321512AA1A962004F7817 /* JQDemoViewControllerD42.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD42.h; sourceTree = "<group>"; };
+		288321522AA1A962004F7817 /* JQDemoViewControllerD42.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD42.m; sourceTree = "<group>"; };
+		288321542AA1A9A5004F7817 /* yaobuqi.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = yaobuqi.wav; sourceTree = "<group>"; };
+		288321562AA1AA37004F7817 /* JQAudioManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQAudioManager.h; sourceTree = "<group>"; };
+		288321572AA1AA37004F7817 /* JQAudioManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQAudioManager.m; sourceTree = "<group>"; };
+		2883215C2AA1BA05004F7817 /* 会呼吸的痛.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "会呼吸的痛.mp3"; sourceTree = "<group>"; };
+		2883215D2AA1BA05004F7817 /* 终于等到你.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "终于等到你.mp3"; sourceTree = "<group>"; };
+		2883215E2AA1BA05004F7817 /* liangjingru.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = liangjingru.jpg; sourceTree = "<group>"; };
+		2883215F2AA1BA05004F7817 /* 北京北京.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "北京北京.mp3"; sourceTree = "<group>"; };
+		288321602AA1BA05004F7817 /* zhangliangying.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = zhangliangying.jpg; sourceTree = "<group>"; };
+		288321612AA1BA05004F7817 /* wangfeng.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = wangfeng.jpg; sourceTree = "<group>"; };
+		288321682AA1BA4D004F7817 /* musics.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = musics.plist; sourceTree = "<group>"; };
+		2883216B2AA1BA7D004F7817 /* JQMusicModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQMusicModel.h; sourceTree = "<group>"; };
+		2883216C2AA1BA7D004F7817 /* JQMusicModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQMusicModel.m; sourceTree = "<group>"; };
+		2883216E2AA1BC4A004F7817 /* JQDemoViewControllerD42_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD42_2.h; sourceTree = "<group>"; };
+		2883216F2AA1BC4A004F7817 /* JQDemoViewControllerD42_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD42_2.m; sourceTree = "<group>"; };
 		2887A9242A3853B8007A9D76 /* JQDemoViewControllerD19_2.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD19_2.h; sourceTree = "<group>"; };
 		2887A9252A3853B8007A9D76 /* JQDemoViewControllerD19_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD19_2.m; sourceTree = "<group>"; };
 		28919F382A9C3279006835D1 /* JQDemoViewControllerD39_4.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD39_4.h; sourceTree = "<group>"; };
@@ -713,6 +755,19 @@
 			path = JSONKit;
 			sourceTree = "<group>";
 		};
+		2883215B2AA1BA05004F7817 /* music */ = {
+			isa = PBXGroup;
+			children = (
+				2883215C2AA1BA05004F7817 /* 会呼吸的痛.mp3 */,
+				2883215E2AA1BA05004F7817 /* liangjingru.jpg */,
+				2883215D2AA1BA05004F7817 /* 终于等到你.mp3 */,
+				288321602AA1BA05004F7817 /* zhangliangying.jpg */,
+				2883215F2AA1BA05004F7817 /* 北京北京.mp3 */,
+				288321612AA1BA05004F7817 /* wangfeng.jpg */,
+			);
+			path = music;
+			sourceTree = "<group>";
+		};
 		28A2B8B02A85D0FD007324DD /* MD5 */ = {
 			isa = PBXGroup;
 			children = (
@@ -1012,6 +1067,16 @@
 				280717152A9F1B880081FA4F /* JQDemoViewControllerD40_2.m */,
 				2807173E2AA021640081FA4F /* JQDemoViewControllerD41.h */,
 				2807173F2AA021640081FA4F /* JQDemoViewControllerD41.m */,
+				280717672AA183190081FA4F /* JQDemoViewControllerD41_2.h */,
+				280717682AA183190081FA4F /* JQDemoViewControllerD41_2.m */,
+				288321512AA1A962004F7817 /* JQDemoViewControllerD42.h */,
+				288321522AA1A962004F7817 /* JQDemoViewControllerD42.m */,
+				2883216E2AA1BC4A004F7817 /* JQDemoViewControllerD42_2.h */,
+				2883216F2AA1BC4A004F7817 /* JQDemoViewControllerD42_2.m */,
+				2845573B2AA1C9FD0047D047 /* JQDemoViewControllerD42_3.h */,
+				2845573C2AA1C9FE0047D047 /* JQDemoViewControllerD42_3.m */,
+				284557402AA1D07B0047D047 /* JQDemoViewControllerD42_4.h */,
+				284557412AA1D07B0047D047 /* JQDemoViewControllerD42_4.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1033,6 +1098,8 @@
 				28EB20322A384455008AA0A0 /* contacts.plist */,
 				28EB203A2A384EF9008AA0A0 /* JQPersonModel.h */,
 				28EB203B2A384EF9008AA0A0 /* JQPersonModel.m */,
+				2883214E2AA18677004F7817 /* JQPersonViewModel.h */,
+				2883214F2AA18677004F7817 /* JQPersonViewModel.m */,
 				28BE964B2A3C3E52008F65A4 /* messages.plist */,
 				28BE96452A3C3C50008F65A4 /* JQMessageModel.h */,
 				28BE96462A3C3C50008F65A4 /* JQMessageModel.m */,
@@ -1042,6 +1109,10 @@
 				28055C402A6115690082D8E9 /* categories.plist */,
 				28055C422A6115990082D8E9 /* JQCategoryModel.h */,
 				28055C432A6115990082D8E9 /* JQCategoryModel.m */,
+				288321682AA1BA4D004F7817 /* musics.plist */,
+				2845573E2AA1CA720047D047 /* musics2.plist */,
+				2883216B2AA1BA7D004F7817 /* JQMusicModel.h */,
+				2883216C2AA1BA7D004F7817 /* JQMusicModel.m */,
 				282C07A22A9843BA00123B18 /* leftMenu.plist */,
 				282C07A42A9843D000123B18 /* JQLeftMenuModel.h */,
 				282C07A52A9843D000123B18 /* JQLeftMenuModel.m */,
@@ -1138,6 +1209,8 @@
 		28F5DEDB2A25834700ECB80B /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				288321562AA1AA37004F7817 /* JQAudioManager.h */,
+				288321572AA1AA37004F7817 /* JQAudioManager.m */,
 				28B250582A93099600456DDD /* JQEleme */,
 				28C2F4972A4AD3C00079E678 /* JQMogujie */,
 				28C2F47C2A482FA60079E678 /* JQWeibo */,
@@ -1372,6 +1445,8 @@
 				281D254B2A37079D0058FF7D /* test_03.jpg */,
 				281D254C2A37079D0058FF7D /* test_04.jpg */,
 				281D254E2A37079E0058FF7D /* test_05.jpg */,
+				288321542AA1A9A5004F7817 /* yaobuqi.wav */,
+				2883215B2AA1BA05004F7817 /* music */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -1517,6 +1592,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				288321642AA1BA05004F7817 /* liangjingru.jpg in Resources */,
 				28F5DEA92A2581A900ECB80B /* LaunchScreen.storyboard in Resources */,
 				287A592B2A306C820015C58F /* JQTabBar.plist in Resources */,
 				281D25812A383B510058FF7D /* wechat.plist in Resources */,
@@ -1530,14 +1606,20 @@
 				28BE964C2A3C3E52008F65A4 /* messages.plist in Resources */,
 				28C2F4992A4AD3D70079E678 /* mogujie.plist in Resources */,
 				28F5DF322A25A40A00ECB80B /* Coca-ColaCareFont-TextLight.TTF in Resources */,
+				2845573F2AA1CA720047D047 /* musics2.plist in Resources */,
 				281D256F2A38182F0058FF7D /* cars_complete.plist in Resources */,
 				281D254F2A37079E0058FF7D /* test_02.jpg in Resources */,
+				288321692AA1BA4D004F7817 /* musics.plist in Resources */,
 				28F5DF2E2A25A40A00ECB80B /* Coca-ColaCareFont-TextMedium.TTF in Resources */,
 				281D25532A37079E0058FF7D /* test_05.jpg in Resources */,
+				288321662AA1BA05004F7817 /* zhangliangying.jpg in Resources */,
 				281D256D2A38130F0058FF7D /* cars_incomplete.plist in Resources */,
+				288321632AA1BA05004F7817 /* 终于等到你.mp3 in Resources */,
 				28C2F4812A4831320079E678 /* weibo.plist in Resources */,
 				28BE96552A3C503E008F65A4 /* meituan.plist in Resources */,
 				28F5DF332A25A40A00ECB80B /* Coca-ColaCareFont-TextBold.TTF in Resources */,
+				288321672AA1BA05004F7817 /* wangfeng.jpg in Resources */,
+				288321552AA1A9A5004F7817 /* yaobuqi.wav in Resources */,
 				28F5DF312A25A40A00ECB80B /* Coca-ColaCareFont-TextBlack.TTF in Resources */,
 				28F5DF382A25CC8A00ECB80B /* lotus.gif in Resources */,
 				28F5DF3E2A25D72F00ECB80B /* test_image.jpg in Resources */,
@@ -1546,9 +1628,11 @@
 				28ACC10D2A32EABE00DA12E0 /* JQDemoTable.plist in Resources */,
 				281D25782A3831CA0058FF7D /* industries.plist in Resources */,
 				281D25502A37079E0058FF7D /* test_03.jpg in Resources */,
+				288321622AA1BA05004F7817 /* 会呼吸的痛.mp3 in Resources */,
 				289A77B82A5D390100EA1DE1 /* cities.plist in Resources */,
 				281D25522A37079E0058FF7D /* test_01.jpg in Resources */,
 				28EB20332A384455008AA0A0 /* contacts.plist in Resources */,
+				288321652AA1BA05004F7817 /* 北京北京.mp3 in Resources */,
 				282C07A32A9843BA00123B18 /* leftMenu.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1716,6 +1800,7 @@
 				28C2F4932A4ABE8F0079E678 /* JQWeiboEstimateHeightCell.m in Sources */,
 				282C07A92A989C9500123B18 /* JQDemoViewControllerD39_3.m in Sources */,
 				281E32C72A80E2BC00A282CC /* JQDemoViewControllerD29.m in Sources */,
+				288321702AA1BC4A004F7817 /* JQDemoViewControllerD42_2.m in Sources */,
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
 				28A5DF042A5BFBB40042C893 /* JQDemoViewControllerD22_2.m in Sources */,
@@ -1723,6 +1808,7 @@
 				28F5DEF52A25834800ECB80B /* AppDelegate.m in Sources */,
 				28F5DEF32A25834800ECB80B /* SceneDelegate.m in Sources */,
 				28C2F4AE2A57E6D80079E678 /* JQDemoViewControllerD21_3.m in Sources */,
+				284557422AA1D07B0047D047 /* JQDemoViewControllerD42_4.m in Sources */,
 				280717162A9F1B880081FA4F /* JQDemoViewControllerD40_2.m in Sources */,
 				289E456E2A972AC80008B990 /* JQDemoViewControllerD37.m in Sources */,
 				28DB78C82A36EB56001D2D07 /* JQAssistiveButton.m in Sources */,
@@ -1735,6 +1821,7 @@
 				280717652AA16EE90081FA4F /* JQReaderModel+CoreDataClass.m in Sources */,
 				287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */,
 				28BA29562A5E7B8700688C3F /* JQProgressView.m in Sources */,
+				2845573D2AA1C9FE0047D047 /* JQDemoViewControllerD42_3.m in Sources */,
 				289A77B62A5D302800EA1DE1 /* JQDemoViewControllerD23.m in Sources */,
 				28C2F4902A4AB2250079E678 /* JQImageListView.m in Sources */,
 				281D25762A3831970058FF7D /* JQIndustryModel.m in Sources */,
@@ -1745,6 +1832,7 @@
 				28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */,
 				28C2F47F2A4830400079E678 /* JQDemoViewControllerD20.m in Sources */,
 				289A77BB2A5D396900EA1DE1 /* JQCityModel.m in Sources */,
+				288321582AA1AA37004F7817 /* JQAudioManager.m in Sources */,
 				28BA29682A5E952100688C3F /* JQDemoViewControllerD24.m in Sources */,
 				28B2506E2A933D2E00456DDD /* JQDemoViewControllerD33_4.m in Sources */,
 				281D25622A380CA40058FF7D /* JQDemoViewControllerD16.m in Sources */,
@@ -1802,6 +1890,7 @@
 				28F5DF212A2597DE00ECB80B /* JQVerticalLabel.m in Sources */,
 				28BE96532A3C5032008F65A4 /* JQShopCell.m in Sources */,
 				280717082A9EEBBF0081FA4F /* NSString+Extension.m in Sources */,
+				288321532AA1A962004F7817 /* JQDemoViewControllerD42.m in Sources */,
 				28BA295C2A5E8BEF00688C3F /* JQShapeView.m in Sources */,
 				282FB94D2A8F582800EB3F45 /* JQDemoViewControllerD33_2.m in Sources */,
 				2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */,
@@ -1819,9 +1908,11 @@
 				28A2B8A62A85C69D007324DD /* JQDemoViewControllerD32.m in Sources */,
 				289E45752A973CB40008B990 /* JQAnnotation.m in Sources */,
 				28E370272A5FD18500F23623 /* JQDrawView.m in Sources */,
+				2883216D2AA1BA7D004F7817 /* JQMusicModel.m in Sources */,
 				28BA29592A5E88AD00688C3F /* JQLineView.m in Sources */,
 				28F5DF1B2A2596C500ECB80B /* JQDemoViewControllerD1.m in Sources */,
 				28C2F4A22A4AD7BA0079E678 /* JQDemoViewControllerD21_2.m in Sources */,
+				280717692AA183190081FA4F /* JQDemoViewControllerD41_2.m in Sources */,
 				28055C3F2A60F3E00082D8E9 /* JQDemoViewControllerD25_2.m in Sources */,
 				285F40A52A838A7D0051DE68 /* JSONKit.m in Sources */,
 				282FB9462A8F38F600EB3F45 /* JQHTTPManager.m in Sources */,
@@ -1836,6 +1927,7 @@
 				28055C392A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m in Sources */,
 				2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */,
 				28A2B8AC2A85CDAA007324DD /* JQDemoViewControllerD32_3.m in Sources */,
+				288321502AA18677004F7817 /* JQPersonViewModel.m in Sources */,
 				28DB78BC2A36AE09001D2D07 /* JQAlertView.m in Sources */,
 				28A5DEFB2A5BF60B0042C893 /* JQCollectionLayout.m in Sources */,
 				281D255F2A3803510058FF7D /* JQTextView.m in Sources */,

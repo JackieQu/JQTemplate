@@ -10,6 +10,7 @@
 #import <UMCommon/UMCommon.h>
 #import <UMShare/UMShare.h>
 #import <UserNotifications/UserNotifications.h>
+#import <AVFoundation/AVFoundation.h>
 
 extern CFAbsoluteTime StartTime;
 
@@ -19,9 +20,25 @@ extern CFAbsoluteTime StartTime;
 
 @implementation AppDelegate
 
+// 接受远程通知
+- (void)remoteControlReceivedWithEvent:(UIEvent *)event {
+    
+    if (_receivedWithEventBlock) {
+        _receivedWithEventBlock(event);
+    }
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     JQLogFunction
+    
+    // 设置音乐后台播放
+    AVAudioSession *session = [AVAudioSession sharedInstance];
+    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+    [session setActive:YES error:nil];
+    
+    // 让 app 支持接受远程控制事件
+    [application beginReceivingRemoteControlEvents];
     
     NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     // 隐私协议判断
