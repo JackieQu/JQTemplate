@@ -1234,6 +1234,21 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>视频</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>播放视频</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD43</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>
