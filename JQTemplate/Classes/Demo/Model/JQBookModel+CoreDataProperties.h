@@ -2,7 +2,7 @@
 //  JQBookModel+CoreDataProperties.h
 //  JQTemplate
 //
-//  Created by JackieQu on 2023/8/30.
+//  Created by JackieQu on 2023/9/1.
 //
 //
 
@@ -15,8 +15,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<JQBookModel *> *)fetchRequest NS_SWIFT_NAME(fetchRequest());
 
-@property (nullable, nonatomic, copy) NSString *name;
-@property (nullable, nonatomic, copy) NSDecimalNumber *price;
+@property (nonatomic) double price;
+@property (nullable, nonatomic, copy) NSString *title;
 @property (nullable, nonatomic, retain) JQReaderModel *reader;
 
 @end

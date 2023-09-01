@@ -2,7 +2,7 @@
 //  JQReaderModel+CoreDataProperties.m
 //  JQTemplate
 //
-//  Created by JackieQu on 2023/8/30.
+//  Created by JackieQu on 2023/9/1.
 //
 //
 
@@ -14,8 +14,9 @@
 	return [NSFetchRequest fetchRequestWithEntityName:@"JQReaderModel"];
 }
 
-@dynamic name;
 @dynamic age;
+@dynamic name;
+@dynamic vip;
 @dynamic book;
 
 @end

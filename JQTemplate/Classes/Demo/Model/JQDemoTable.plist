@@ -1156,6 +1156,29 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>CoreData</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>CoreData增删改查&amp;数据迁移</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD41</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+				<dict>
+					<key>title</key>
+					<string>CoreData</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD41</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

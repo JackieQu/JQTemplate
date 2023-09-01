@@ -2,7 +2,7 @@
 //  JQReaderModel+CoreDataProperties.h
 //  JQTemplate
 //
-//  Created by JackieQu on 2023/8/30.
+//  Created by JackieQu on 2023/9/1.
 //
 //
 
@@ -15,8 +15,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSFetchRequest<JQReaderModel *> *)fetchRequest NS_SWIFT_NAME(fetchRequest());
 
+@property (nonatomic) double age;
 @property (nullable, nonatomic, copy) NSString *name;
-@property (nonatomic) int16_t age;
+@property (nonatomic) double vip;
 @property (nullable, nonatomic, retain) JQBookModel *book;
 
 @end
