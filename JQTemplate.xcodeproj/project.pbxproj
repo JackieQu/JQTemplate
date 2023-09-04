@@ -180,6 +180,9 @@
 		28D710062AA59F61007C3E79 /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D710022AA59F60007C3E79 /* NSObject+AssociatedObject.m */; };
 		28D710072AA59F61007C3E79 /* UIViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D710032AA59F61007C3E79 /* UIViewController+Logging.m */; };
 		28D7100A2AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D710092AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift */; };
+		28D7100D2AA5CB9A007C3E79 /* JQDemoViewControllerD31.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7100C2AA5CB9A007C3E79 /* JQDemoViewControllerD31.m */; };
+		28D710102AA5CD4E007C3E79 /* JQTrainModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D7100F2AA5CD4E007C3E79 /* JQTrainModel.m */; };
+		28D710132AA5CEA3007C3E79 /* JQTrainParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D710122AA5CEA3007C3E79 /* JQTrainParser.m */; };
 		28DB78BC2A36AE09001D2D07 /* JQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BB2A36AE09001D2D07 /* JQAlertView.m */; };
 		28DB78BF2A36C228001D2D07 /* JQDemoViewControllerD13.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BE2A36C228001D2D07 /* JQDemoViewControllerD13.m */; };
 		28DB78C22A36C3F8001D2D07 /* JQDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78C12A36C3F8001D2D07 /* JQDemoView.m */; };
@@ -575,6 +578,12 @@
 		28D710032AA59F61007C3E79 /* UIViewController+Logging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Logging.m"; sourceTree = "<group>"; };
 		28D710082AA5C0EE007C3E79 /* JQTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JQTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
 		28D710092AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JQDemoViewControllerD45.swift; sourceTree = "<group>"; };
+		28D7100B2AA5CB9A007C3E79 /* JQDemoViewControllerD31.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD31.h; sourceTree = "<group>"; };
+		28D7100C2AA5CB9A007C3E79 /* JQDemoViewControllerD31.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD31.m; sourceTree = "<group>"; };
+		28D7100E2AA5CD4E007C3E79 /* JQTrainModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTrainModel.h; sourceTree = "<group>"; };
+		28D7100F2AA5CD4E007C3E79 /* JQTrainModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTrainModel.m; sourceTree = "<group>"; };
+		28D710112AA5CEA3007C3E79 /* JQTrainParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTrainParser.h; sourceTree = "<group>"; };
+		28D710122AA5CEA3007C3E79 /* JQTrainParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTrainParser.m; sourceTree = "<group>"; };
 		28DB78BA2A36AE09001D2D07 /* JQAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQAlertView.h; sourceTree = "<group>"; };
 		28DB78BB2A36AE09001D2D07 /* JQAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQAlertView.m; sourceTree = "<group>"; };
 		28DB78BD2A36C228001D2D07 /* JQDemoViewControllerD13.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD13.h; sourceTree = "<group>"; };
@@ -1059,6 +1068,8 @@
 				281E32CF2A81DE5200A282CC /* JQDemoViewControllerD29_4.m */,
 				281E32D12A820ED000A282CC /* JQDemoViewControllerD30.h */,
 				281E32D22A820ED000A282CC /* JQDemoViewControllerD30.m */,
+				28D7100B2AA5CB9A007C3E79 /* JQDemoViewControllerD31.h */,
+				28D7100C2AA5CB9A007C3E79 /* JQDemoViewControllerD31.m */,
 				28A2B8A42A85C69D007324DD /* JQDemoViewControllerD32.h */,
 				28A2B8A52A85C69D007324DD /* JQDemoViewControllerD32.m */,
 				28A2B8A72A85C99D007324DD /* JQDemoViewControllerD32_2.h */,
@@ -1164,6 +1175,10 @@
 				2807170F2A9F0D0C0081FA4F /* JQSqliteHelper.m */,
 				280717112A9F13F30081FA4F /* JQFMDBHelper.h */,
 				280717122A9F13F30081FA4F /* JQFMDBHelper.m */,
+				28D7100E2AA5CD4E007C3E79 /* JQTrainModel.h */,
+				28D7100F2AA5CD4E007C3E79 /* JQTrainModel.m */,
+				28D710112AA5CEA3007C3E79 /* JQTrainParser.h */,
+				28D710122AA5CEA3007C3E79 /* JQTrainParser.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1862,6 +1877,7 @@
 				289A77AD2A5D1D5E00EA1DE1 /* JQWaterfallLayout.m in Sources */,
 				28BA295F2A5E8D8200688C3F /* JQImageTextView.m in Sources */,
 				280717632AA16EE90081FA4F /* JQBookModel+CoreDataClass.m in Sources */,
+				28D710132AA5CEA3007C3E79 /* JQTrainParser.m in Sources */,
 				28F5DF092A258E2300ECB80B /* JQBaseViewController.m in Sources */,
 				28F5DF0C2A258E7D00ECB80B /* JQBaseNavigationController.m in Sources */,
 				28B075172AA1D6FB00B7F507 /* JQDemoViewControllerD43.m in Sources */,
@@ -1874,6 +1890,7 @@
 				28C2F4902A4AB2250079E678 /* JQImageListView.m in Sources */,
 				281D25762A3831970058FF7D /* JQIndustryModel.m in Sources */,
 				28E370242A5FCFF000F23623 /* JQDrawPath.m in Sources */,
+				28D710102AA5CD4E007C3E79 /* JQTrainModel.m in Sources */,
 				28919F3A2A9C3279006835D1 /* JQDemoViewControllerD39_4.m in Sources */,
 				28C2F49C2A4AD43D0079E678 /* JQGoodsModel.m in Sources */,
 				28EB202E2A38403B008AA0A0 /* JQBaseTableViewController.m in Sources */,
@@ -1973,6 +1990,7 @@
 				281D255C2A37FFF10058FF7D /* JQDemoViewControllerD15.m in Sources */,
 				281E32C42A7CC33800A282CC /* JQDemoViewControllerD28.m in Sources */,
 				28F5DF362A25C5A300ECB80B /* JQDemoViewControllerD3.m in Sources */,
+				28D7100D2AA5CB9A007C3E79 /* JQDemoViewControllerD31.m in Sources */,
 				2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */,
 				28BA29532A5E4DA100688C3F /* JQDemoViewControllerD23_3.m in Sources */,
 				28055C392A5FD5570082D8E9 /* JQDemoViewControllerD24_3.m in Sources */,
