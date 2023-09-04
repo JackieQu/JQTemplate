@@ -1249,6 +1249,36 @@
 				</dict>
 			</array>
 		</dict>
+		<dict>
+			<key>title</key>
+			<string>RunTime</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>RunTime</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD44</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>title</key>
+			<string>Swift</string>
+			<key>rows</key>
+			<array>
+				<dict>
+					<key>title</key>
+					<string>Swift</string>
+					<key>className</key>
+					<string>JQDemoViewControllerD45</string>
+					<key>flag</key>
+					<false/>
+				</dict>
+			</array>
+		</dict>
 	</array>
 </dict>
 </plist>

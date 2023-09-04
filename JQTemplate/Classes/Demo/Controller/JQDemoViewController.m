@@ -114,6 +114,23 @@ static NSString *kCellID    = @"identifier";
         } else {
             [self.navigationController pushViewController:vc animated:YES];
         }
+        
+    } else {
+        
+        NSString *bundleKey = [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleExecutableKey];
+        NSString *vcName = [NSString stringWithFormat:@"%@.%@", bundleKey, item.className];
+        Class swiftCls = NSClassFromString(vcName);
+        if (swiftCls) {
+            JQBaseViewController *vc = [[swiftCls alloc] init];
+            vc.title = item.title;
+            if (item.flag) {
+                vc.modalDelegate = self;
+                vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
+                [self presentViewController:vc animated:YES completion:nil];
+            } else {
+                [self.navigationController pushViewController:vc animated:YES];
+            }
+        }
     }
     
     [tableView setUserInteractionEnabled:YES];

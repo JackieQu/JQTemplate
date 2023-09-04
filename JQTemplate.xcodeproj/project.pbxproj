@@ -174,6 +174,12 @@
 		28CD34442A95D21300815E1A /* JQDemoViewControllerD35_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD34432A95D21300815E1A /* JQDemoViewControllerD35_2.m */; };
 		28CD34472A95F76D00815E1A /* JQDemoViewControllerD36.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CD34462A95F76D00815E1A /* JQDemoViewControllerD36.m */; };
 		28CDE5582A9EEADF0010123C /* JQDemoViewControllerD40.m in Sources */ = {isa = PBXBuildFile; fileRef = 28CDE5572A9EEADF0010123C /* JQDemoViewControllerD40.m */; };
+		28D70FF72AA57C9A007C3E79 /* JQDemoViewControllerD44.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D70FF62AA57C9A007C3E79 /* JQDemoViewControllerD44.m */; };
+		28D710042AA59F61007C3E79 /* MessageForwarding.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D70FFC2AA59F5F007C3E79 /* MessageForwarding.m */; };
+		28D710052AA59F61007C3E79 /* Message.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D710012AA59F60007C3E79 /* Message.m */; };
+		28D710062AA59F61007C3E79 /* NSObject+AssociatedObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D710022AA59F60007C3E79 /* NSObject+AssociatedObject.m */; };
+		28D710072AA59F61007C3E79 /* UIViewController+Logging.m in Sources */ = {isa = PBXBuildFile; fileRef = 28D710032AA59F61007C3E79 /* UIViewController+Logging.m */; };
+		28D7100A2AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D710092AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift */; };
 		28DB78BC2A36AE09001D2D07 /* JQAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BB2A36AE09001D2D07 /* JQAlertView.m */; };
 		28DB78BF2A36C228001D2D07 /* JQDemoViewControllerD13.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78BE2A36C228001D2D07 /* JQDemoViewControllerD13.m */; };
 		28DB78C22A36C3F8001D2D07 /* JQDemoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 28DB78C12A36C3F8001D2D07 /* JQDemoView.m */; };
@@ -557,6 +563,18 @@
 		28CD34462A95F76D00815E1A /* JQDemoViewControllerD36.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD36.m; sourceTree = "<group>"; };
 		28CDE5562A9EEADF0010123C /* JQDemoViewControllerD40.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD40.h; sourceTree = "<group>"; };
 		28CDE5572A9EEADF0010123C /* JQDemoViewControllerD40.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD40.m; sourceTree = "<group>"; };
+		28D70FF52AA57C9A007C3E79 /* JQDemoViewControllerD44.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD44.h; sourceTree = "<group>"; };
+		28D70FF62AA57C9A007C3E79 /* JQDemoViewControllerD44.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD44.m; sourceTree = "<group>"; };
+		28D70FFC2AA59F5F007C3E79 /* MessageForwarding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageForwarding.m; sourceTree = "<group>"; };
+		28D70FFD2AA59F5F007C3E79 /* NSObject+AssociatedObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AssociatedObject.h"; sourceTree = "<group>"; };
+		28D70FFE2AA59F60007C3E79 /* UIViewController+Logging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Logging.h"; sourceTree = "<group>"; };
+		28D70FFF2AA59F60007C3E79 /* MessageForwarding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageForwarding.h; sourceTree = "<group>"; };
+		28D710002AA59F60007C3E79 /* Message.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Message.h; sourceTree = "<group>"; };
+		28D710012AA59F60007C3E79 /* Message.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Message.m; sourceTree = "<group>"; };
+		28D710022AA59F60007C3E79 /* NSObject+AssociatedObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AssociatedObject.m"; sourceTree = "<group>"; };
+		28D710032AA59F61007C3E79 /* UIViewController+Logging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Logging.m"; sourceTree = "<group>"; };
+		28D710082AA5C0EE007C3E79 /* JQTemplate-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "JQTemplate-Bridging-Header.h"; sourceTree = "<group>"; };
+		28D710092AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JQDemoViewControllerD45.swift; sourceTree = "<group>"; };
 		28DB78BA2A36AE09001D2D07 /* JQAlertView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQAlertView.h; sourceTree = "<group>"; };
 		28DB78BB2A36AE09001D2D07 /* JQAlertView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQAlertView.m; sourceTree = "<group>"; };
 		28DB78BD2A36C228001D2D07 /* JQDemoViewControllerD13.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD13.h; sourceTree = "<group>"; };
@@ -835,6 +853,21 @@
 			path = JQMogujie;
 			sourceTree = "<group>";
 		};
+		28D70FFB2AA59F3F007C3E79 /* RuntimeDemo */ = {
+			isa = PBXGroup;
+			children = (
+				28D710002AA59F60007C3E79 /* Message.h */,
+				28D710012AA59F60007C3E79 /* Message.m */,
+				28D70FFF2AA59F60007C3E79 /* MessageForwarding.h */,
+				28D70FFC2AA59F5F007C3E79 /* MessageForwarding.m */,
+				28D70FFD2AA59F5F007C3E79 /* NSObject+AssociatedObject.h */,
+				28D710022AA59F60007C3E79 /* NSObject+AssociatedObject.m */,
+				28D70FFE2AA59F60007C3E79 /* UIViewController+Logging.h */,
+				28D710032AA59F61007C3E79 /* UIViewController+Logging.m */,
+			);
+			path = RuntimeDemo;
+			sourceTree = "<group>";
+		};
 		28E6CAB32A2DC6F300C20059 /* FDFullscreenPopGesture */ = {
 			isa = PBXGroup;
 			children = (
@@ -1082,6 +1115,10 @@
 				284557412AA1D07B0047D047 /* JQDemoViewControllerD42_4.m */,
 				28B075152AA1D6FB00B7F507 /* JQDemoViewControllerD43.h */,
 				28B075162AA1D6FB00B7F507 /* JQDemoViewControllerD43.m */,
+				28D70FF52AA57C9A007C3E79 /* JQDemoViewControllerD44.h */,
+				28D70FF62AA57C9A007C3E79 /* JQDemoViewControllerD44.m */,
+				28D710092AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift */,
+				28D710082AA5C0EE007C3E79 /* JQTemplate-Bridging-Header.h */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1363,6 +1400,7 @@
 		28F5DEE62A25834700ECB80B /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				28D70FFB2AA59F3F007C3E79 /* RuntimeDemo */,
 				28A2B8B02A85D0FD007324DD /* MD5 */,
 				285F40A22A838A7C0051DE68 /* JSONKit */,
 				281E32D42A82171B00A282CC /* Reachability */,
@@ -1561,6 +1599,7 @@
 				TargetAttributes = {
 					28F5DE922A2581A700ECB80B = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 					28F5DEB02A2581A900ECB80B = {
 						CreatedOnToolsVersion = 14.2;
@@ -1800,15 +1839,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28D7100A2AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift in Sources */,
 				281E32D02A81DE5200A282CC /* JQDemoViewControllerD29_4.m in Sources */,
 				28055C472A6116710082D8E9 /* JQDemoViewControllerD26.m in Sources */,
 				28C2F4932A4ABE8F0079E678 /* JQWeiboEstimateHeightCell.m in Sources */,
 				282C07A92A989C9500123B18 /* JQDemoViewControllerD39_3.m in Sources */,
 				281E32C72A80E2BC00A282CC /* JQDemoViewControllerD29.m in Sources */,
 				288321702AA1BC4A004F7817 /* JQDemoViewControllerD42_2.m in Sources */,
+				28D710062AA59F61007C3E79 /* NSObject+AssociatedObject.m in Sources */,
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
 				28A5DF042A5BFBB40042C893 /* JQDemoViewControllerD22_2.m in Sources */,
+				28D710052AA59F61007C3E79 /* Message.m in Sources */,
 				281D257C2A383B310058FF7D /* JQWeChatModel.m in Sources */,
 				28F5DEF52A25834800ECB80B /* AppDelegate.m in Sources */,
 				28F5DEF32A25834800ECB80B /* SceneDelegate.m in Sources */,
@@ -1848,6 +1890,7 @@
 				282C079B2A97475300123B18 /* JQDemoViewControllerD38.m in Sources */,
 				281D25692A38125A0058FF7D /* JQCarGroupModel.m in Sources */,
 				28B250682A9311B100456DDD /* JQHUDHelper.m in Sources */,
+				28D70FF72AA57C9A007C3E79 /* JQDemoViewControllerD44.m in Sources */,
 				28BE964A2A3C3CA7008F65A4 /* JQMessageCell.m in Sources */,
 				280717102A9F0D0C0081FA4F /* JQSqliteHelper.m in Sources */,
 				287A59272A3069210015C58F /* JQCustomTabBar.m in Sources */,
@@ -1867,6 +1910,7 @@
 				28055C3C2A5FEC640082D8E9 /* JQDemoViewControllerD25.m in Sources */,
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
 				28F5DF122A25900200ECB80B /* JQHomeViewController.m in Sources */,
+				28D710072AA59F61007C3E79 /* UIViewController+Logging.m in Sources */,
 				28C2F4872A4834000079E678 /* NSString+TimeFormat.m in Sources */,
 				28BE96502A3C5015008F65A4 /* JQShopModel.m in Sources */,
 				282C07A62A9843D000123B18 /* JQLeftMenuModel.m in Sources */,
@@ -1902,6 +1946,7 @@
 				2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */,
 				281D25492A36FE090058FF7D /* JQDemoViewControllerD14.m in Sources */,
 				2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */,
+				28D710042AA59F61007C3E79 /* MessageForwarding.m in Sources */,
 				28EB20392A384C20008AA0A0 /* JQDemoViewControllerD19.m in Sources */,
 				281D25562A370BA50058FF7D /* JQDemoViewControllerD14_2.m in Sources */,
 				2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */,
@@ -2139,6 +2184,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8E5A83P9AJ;
@@ -2163,6 +2209,9 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.jackiequ.JQTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "JQTemplate/Classes/Demo/Controller/JQTemplate-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -2173,6 +2222,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8E5A83P9AJ;
@@ -2197,6 +2247,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.jackiequ.JQTemplate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "JQTemplate/Classes/Demo/Controller/JQTemplate-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -2205,6 +2257,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = AF252E99561207F57F343A87 /* Pods-JQTemplateTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2224,6 +2277,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = ADD8E32A14D8FB0B2CBFA368 /* Pods-JQTemplateTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
@@ -2243,6 +2297,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 519BB0FCCD22492F543D6A4E /* Pods-JQTemplate-JQTemplateUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8E5A83P9AJ;
@@ -2260,6 +2315,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A96CCC9CFDC24F753B6ED712 /* Pods-JQTemplate-JQTemplateUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8E5A83P9AJ;

@@ -7,6 +7,18 @@
 
 #import "JQPersonModel.h"
 
+@interface JQPersonModel ()
+
+{
+    NSString *_number;
+}
+
+@property (nonatomic, assign) CGFloat height;
+
+- (void)classMethod:(NSString *)name age:(NSInteger)age;
+
+@end
+
 @implementation JQPersonModel
 
 - (instancetype)init {
@@ -31,6 +43,27 @@
         _birthDate  = birthDate;
     }
     return self;
+}
+
+- (void)method1 {
+    
+}
+
+- (void)method2WithName:(NSString *)name {
+    
+}
+
++ (void)classMethod {
+    
+}
+
+- (void)classMethod:(NSString *)name age:(NSInteger)age {
+    
+}
+
+- (void)run {
+    
+    NSLog(@"%s",__FUNCTION__);
 }
 
 @end

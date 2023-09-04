@@ -9,8 +9,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JQPersonModel : NSObject
+@class Person;
 
+@protocol PersonDelegate <NSObject>
+
+- (void)person:(Person *)person;
+
+@end
+
+@interface JQPersonModel : NSObject <NSCopying, NSMutableCopying, PersonDelegate>
+
+{
+    NSInteger _age;
+}
+
+//
 @property (nonatomic, copy) NSString *name;
 
 @property (nonatomic, assign) NSInteger age;
@@ -21,6 +34,15 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readonly) NSDate   *birthDate;
 
 - (instancetype)initWithSalutation:(NSString *)salutation firstName:(NSString *)firstName lastName:(NSString *)lastName birthDate:(NSDate *)birthDate;
+//
+
+- (void)method1;
+
+- (void)method2WithName:(NSString *)name;
+
++ (void)classMethod;
+
+- (void)run;
 
 @end
 
