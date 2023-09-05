@@ -21,7 +21,7 @@
     // AFN 监测网络
     [[AFNetworkReachabilityManager sharedManager] setReachabilityStatusChangeBlock:^(AFNetworkReachabilityStatus status) {
        
-        NSLog(@"Reachability - %@",AFStringFromNetworkReachabilityStatus(status));
+        JQLog(@"Reachability - %@",AFStringFromNetworkReachabilityStatus(status));
     }];
     
     [[AFNetworkReachabilityManager sharedManager] startMonitoring];
@@ -50,7 +50,7 @@
         
     } completionHandler:^(NSURLResponse *response, NSURL *filePath, NSError *error) {
         
-        NSLog(@"filePath - %@", filePath);
+        JQLog(@"filePath - %@", filePath);
     }];
     
     [task resume];
@@ -73,9 +73,9 @@
     NSURLSessionUploadTask *task = [manager uploadTaskWithStreamedRequest:request progress:nil completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
        
         if (error) {
-            NSLog(@"error - %@",error);
+            JQLog(@"error - %@",error);
         } else {
-            NSLog(@"%@ - %@",response,responseObject);
+            JQLog(@"%@ - %@",response,responseObject);
         }
     }];
     
@@ -99,9 +99,9 @@
     } completionHandler:^(NSURLResponse * _Nonnull response, id  _Nullable responseObject, NSError * _Nullable error) {
         
         if (error) {
-            NSLog(@"error - %@",error);
+            JQLog(@"error - %@",error);
         } else {
-            NSLog(@"%@ - %@",response,responseObject);
+            JQLog(@"%@ - %@",response,responseObject);
         }
     }];
     
@@ -114,11 +114,11 @@
     
     [manager GET:@"http://127.0.0.1/city.json" parameters:nil headers:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         
-        NSLog(@"success - %@",responseObject);
+        JQLog(@"success - %@",responseObject);
         
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
-        NSLog(@"failure - %@",error);
+        JQLog(@"failure - %@",error);
     }];
 }
 

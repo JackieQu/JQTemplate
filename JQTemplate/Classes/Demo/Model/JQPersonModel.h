@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @end
 
-@interface JQPersonModel : NSObject <NSCopying, NSMutableCopying, PersonDelegate>
+@interface JQPersonModel : NSObject
 
 {
     NSInteger _age;

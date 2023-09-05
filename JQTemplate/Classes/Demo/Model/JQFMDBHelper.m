@@ -32,7 +32,7 @@ static FMDatabase *_database;
             NSString *name = [resultSet stringForColumn:@"name"];
             NSUInteger age = [resultSet intForColumn:@"age"];
             
-            NSLog(@"name: %@, age: %@", name, @(age));
+            JQLog(@"name: %@, age: %@", name, @(age));
             
             // 4.2 添加数据到数组中
             [dataList addObject:@{@"name": name, @"age": @(age)}];
@@ -47,7 +47,7 @@ static FMDatabase *_database;
 
 + (BOOL)executeUpdate:(NSString *)sql {
     
-    NSLog(@"sql: %@", sql);
+    JQLog(@"sql: %@", sql);
     
     // 1. 打开数据库
     if ([_database open]) {
@@ -74,22 +74,22 @@ static FMDatabase *_database;
     // 2. 打开数据库
     if ([_database open]) {
         
-        NSLog(@"打开数据库成功");
+        JQLog(@"打开数据库成功");
         
         // 3. 创建表
         BOOL flag = [_database executeUpdate:@"CREATE TABLE IF NOT EXISTS t_student (id integer PRIMARY KEY AUTOINCREMENT, name text, age integer);"];
         
         if (flag) {
-            NSLog(@"创建表成功");
+            JQLog(@"创建表成功");
         }else{
-            NSLog(@"创建表失败");
+            JQLog(@"创建表失败");
         }
         
         // 4. 关闭数据库
         [_database close];
         
     } else {
-        NSLog(@"打开数据库失败");
+        JQLog(@"打开数据库失败");
     }
 }
 

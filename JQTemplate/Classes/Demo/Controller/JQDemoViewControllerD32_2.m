@@ -53,7 +53,7 @@
 totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
     
     // 打印下载进度
-    NSLog(@"%.2f%%",totalBytesWritten * 100.0 / totalBytesExpectedToWrite);
+    JQLog(@"%.2f%%",totalBytesWritten * 100.0 / totalBytesExpectedToWrite);
 }
 
 // 下载完成
@@ -68,7 +68,7 @@ totalBytesExpectedToWrite:(int64_t)totalBytesExpectedToWrite {
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     
-    NSLog(@"%@",error);
+    JQLog(@"%@",error);
 }
 
 #pragma mark - 断点续传

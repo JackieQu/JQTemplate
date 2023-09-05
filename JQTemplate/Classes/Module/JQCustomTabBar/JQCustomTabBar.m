@@ -44,18 +44,18 @@
         self.backgroundColor = [UIColor whiteColor];
         
         NSUInteger itemCount = self.tabBarModel.availableItems.count;
-        CGFloat itemWidth = frame.size.width / itemCount;
+//        CGFloat itemWidth = frame.size.width / itemCount;
         for (NSUInteger i = 0; i < itemCount; i ++) {
             JQTabBarItemModel *item = self.tabBarModel.availableItems[i];
             JQTabBarButton *btn = [JQTabBarButton buttonWithType:UIButtonTypeCustom];
             if (item.isSpecial) {
                 btn.tag = kSpecialTag;
-                btn.frame = CGRectMake(0, 0, 80, 80);
-                btn.center = CGPointMake(itemWidth * i + itemWidth / 2, 0);
+//                btn.frame = CGRectMake(0, 0, 80, 80);
+//                btn.center = CGPointMake(itemWidth * i + itemWidth / 2, 0);
                 self.specialBtn = btn;
             } else {
-                btn.tag = i;
-                btn.frame = CGRectMake(itemWidth * i, 0, itemWidth, self.frame.size.height);
+                btn.tag = kStandardTag + i;
+//                btn.frame = CGRectMake(itemWidth * i, 0, itemWidth, self.frame.size.height);
             }
             btn.showsTouchWhenHighlighted = NO;
             btn.item = item;
@@ -76,8 +76,27 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
+    NSUInteger itemCount = self.tabBarModel.availableItems.count;
+    CGFloat itemWidth = self.frame.size.width / itemCount;
+    for (UIView *subview in self.subviews) {
+        if (!subview.tag) continue;
+
+        NSUInteger i = subview.tag - kStandardTag;
+        if (subview.tag == kSpecialTag) {
+            self.specialBtn.frame = CGRectMake(0, 0, 80, 80);
+            self.specialBtn.center = CGPointMake(itemWidth * self.tabBarModel.specialIndex + itemWidth / 2, 0);
+            self.specialBtn.item = self.specialBtn.item;
+        } else {
+            subview.frame = CGRectMake(itemWidth * i, 0, itemWidth, self.frame.size.height);
+        }
+    }
+
+    if (self.tabBarModel.isMarked) {
+        self.markLineView.centerX = self.selectedBtn.centerX;
+    }
+    
     if (self.tabBarModel.specialItem) {
-        [self bringSubviewToFront: self.specialBtn];
+        [self bringSubviewToFront:self.specialBtn];
     }
 }
 
@@ -85,7 +104,7 @@
     
     BOOL isSpecial  = sender.tag == kSpecialTag;
     BOOL isMarked   = self.tabBarModel.isMarked && !isSpecial;
-    BOOL isAnimated = self.tabBarModel.isAnimated;
+    BOOL isAnimated = self.tabBarModel.isAnimated && !isSpecial;
  
     if (isAnimated) {
         
@@ -123,12 +142,13 @@
 
 - (void)handleAction:(JQDockButton *)sender {
     
+    NSInteger tag = sender.tag == kSpecialTag ? kSpecialTag : sender.tag - kStandardTag;
     if ([self.delegate respondsToSelector:@selector(tabBar:selectedAtIndex:)]) {
-        [self.delegate tabBar:self selectedAtIndex:sender.tag];
+        [self.delegate tabBar:self selectedAtIndex:tag];
         return;
     }
     
-    !self.block ? : self.block(self, sender.tag);
+    !self.block ? : self.block(self, tag);
 }
 
 //- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {

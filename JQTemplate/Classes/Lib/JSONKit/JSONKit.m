@@ -76,9 +76,9 @@
   From the original ConvertUTF.[ch]:
 
  * Copyright 2001-2004 Unicode, Inc.
- * 
+ *
  * Disclaimer
- * 
+ *
  * This source code is provided as is by Unicode, Inc. No claims are
  * made as to fitness for any particular purpose. No warranties of any
  * kind are expressed or implied. The recipient agrees to determine
@@ -86,9 +86,9 @@
  * purchased on magnetic or optical media from Unicode, Inc., the
  * sole remedy for any claim will be exchange of defective media
  * within 90 days of receipt.
- * 
+ *
  * Limitations on Rights to Redistribute This Code
- * 
+ *
  * Unicode, Inc. hereby grants the right to freely use the information
  * supplied in this file in the creation of products supporting the
  * Unicode Standard, and to make copies of this file in any form
@@ -196,13 +196,13 @@
 #define JK_EXPECT_T(cond)               JK_EXPECTED(cond, 1U)
 #define JK_EXPECT_F(cond)               JK_EXPECTED(cond, 0U)
 #define JK_PREFETCH(ptr)                __builtin_prefetch(ptr)
-#else  // defined (__GNUC__) && (__GNUC__ >= 4) 
+#else  // defined (__GNUC__) && (__GNUC__ >= 4)
 #define JK_ATTRIBUTES(attr, ...)
 #define JK_EXPECTED(cond, expect)       (cond)
 #define JK_EXPECT_T(cond)               (cond)
 #define JK_EXPECT_F(cond)               (cond)
 #define JK_PREFETCH(ptr)
-#endif // defined (__GNUC__) && (__GNUC__ >= 4) 
+#endif // defined (__GNUC__) && (__GNUC__ >= 4)
 
 #define JK_STATIC_INLINE                         static __inline__ JK_ATTRIBUTES(always_inline)
 #define JK_ALIGNED(arg)                                            JK_ATTRIBUTES(aligned(arg))
@@ -612,7 +612,7 @@ JK_STATIC_INLINE size_t jk_max(size_t a, size_t b);
 JK_STATIC_INLINE JKHash jk_calculateHash(JKHash currentHash, unsigned char c);
 
 // JSONKit v1.4 used both a JKArray : NSArray and JKMutableArray : NSMutableArray, and the same for the dictionary collection type.
-// However, Louis Gerbarg (via cocoa-dev) pointed out that Cocoa / Core Foundation actually implements only a single class that inherits from the 
+// However, Louis Gerbarg (via cocoa-dev) pointed out that Cocoa / Core Foundation actually implements only a single class that inherits from the
 // mutable version, and keeps an ivar bit for whether or not that instance is mutable.  This means that the immutable versions of the collection
 // classes receive the mutating methods, but this is handled by having those methods throw an exception when the ivar bit is set to immutable.
 // We adopt the same strategy here.  It's both cleaner and gets rid of the method swizzling hackery used in JSONKit v1.4.
@@ -677,7 +677,7 @@ static JKArray *_JKArrayCreate(id *objects, NSUInteger count, BOOL mutableCollec
   NSCParameterAssert((objects != NULL) && (_JKArrayClass != NULL) && (_JKArrayInstanceSize > 0UL));
   JKArray *array = NULL;
   if(JK_EXPECT_T((array = (JKArray *)calloc(1UL, _JKArrayInstanceSize)) != NULL)) { // Directly allocate the JKArray instance via calloc.
-      object_setClass(array, _JKArrayClass);
+    object_setClass(array, _JKArrayClass);
     if((array = [array init]) == NULL) { return(NULL); }
     array->capacity = count;
     array->count    = count;
@@ -928,7 +928,7 @@ static JKDictionary *_JKDictionaryCreate(id *keys, NSUInteger *keyHashes, id *ob
   NSCParameterAssert((keys != NULL) && (keyHashes != NULL) && (objects != NULL) && (_JKDictionaryClass != NULL) && (_JKDictionaryInstanceSize > 0UL));
   JKDictionary *dictionary = NULL;
   if(JK_EXPECT_T((dictionary = (JKDictionary *)calloc(1UL, _JKDictionaryInstanceSize)) != NULL)) { // Directly allocate the JKDictionary instance via calloc.
-      object_setClass(dictionary, _JKDictionaryClass);
+    object_setClass(dictionary, _JKDictionaryClass);
     if((dictionary = [dictionary init]) == NULL) { return(NULL); }
     dictionary->capacity = _JKDictionaryCapacityForCount(count);
     dictionary->count    = 0UL;
@@ -1074,7 +1074,7 @@ static JKHashTableEntry *_JKDictionaryHashTableEntryForKey(JKDictionary *diction
   
   _JKDictionaryResizeIfNeccessary(self);
 #ifndef __clang_analyzer__
-  aKey     = [aKey     copy];   // Why on earth would clang complain that this -copy "might leak", 
+  aKey     = [aKey     copy];   // Why on earth would clang complain that this -copy "might leak",
   anObject = [anObject retain]; // but this -retain doesn't!?
 #endif // __clang_analyzer__
   _JKDictionaryAddObject(self, CFHash(aKey), aKey, anObject);
@@ -1344,7 +1344,7 @@ static ConversionResult ConvertSingleCodePointInUTF8(const UTF8 *sourceStart, co
 
   if(JK_EXPECT_F((source + extraBytesToRead + 1) > sourceEnd) || JK_EXPECT_F(!isLegalUTF8(source, extraBytesToRead + 1))) {
     source++;
-    while((source < sourceEnd) && (((*source) & 0xc0) == 0x80) && ((source - sourceStart) < (extraBytesToRead + 1))) { source++; } 
+    while((source < sourceEnd) && (((*source) & 0xc0) == 0x80) && ((source - sourceStart) < (extraBytesToRead + 1))) { source++; }
     NSCParameterAssert(source <= sourceEnd);
     result = ((source < sourceEnd) && (((*source) & 0xc0) != 0x80)) ? sourceIllegal : ((sourceStart + extraBytesToRead + 1) > sourceEnd) ? sourceExhausted : sourceIllegal;
     ch = UNI_REPLACEMENT_CHAR;
@@ -1554,7 +1554,7 @@ static int jk_parse_string(JKParseState *parseState) {
               if(stringState == JSONStringStateEscapedUnicode4) {
                 if(((escapedUnicode1 >= 0xD800U) && (escapedUnicode1 < 0xE000U))) {
                   if((escapedUnicode1 >= 0xD800U) && (escapedUnicode1 < 0xDC00U)) { stringState = JSONStringStateEscapedNeedEscapeForSurrogate; }
-                  else if((escapedUnicode1 >= 0xDC00U) && (escapedUnicode1 < 0xE000U)) { 
+                  else if((escapedUnicode1 >= 0xDC00U) && (escapedUnicode1 < 0xE000U)) {
                     if((parseState->parseOptionFlags & JKParseOptionLooseUnicode)) { escapedUnicodeCodePoint = UNI_REPLACEMENT_CHAR; }
                     else { jk_error(parseState, @"Illegal \\u Unicode escape sequence."); stringState = JSONStringStateError; goto finishedParsing; }
                   }
@@ -1570,7 +1570,7 @@ static int jk_parse_string(JKParseState *parseState) {
                 else { escapedUnicodeCodePoint = ((escapedUnicode1 - 0xd800) * 0x400) + (escapedUnicode2 - 0xdc00) + 0x10000; }
               }
                 
-              if((stringState == JSONStringStateEscapedUnicode4) || (stringState == JSONStringStateEscapedUnicodeSurrogate4)) { 
+              if((stringState == JSONStringStateEscapedUnicode4) || (stringState == JSONStringStateEscapedUnicodeSurrogate4)) {
                 if((isValidCodePoint(&escapedUnicodeCodePoint) == sourceIllegal) && ((parseState->parseOptionFlags & JKParseOptionLooseUnicode) == 0)) { jk_error(parseState, @"Illegal \\u Unicode escape sequence."); stringState = JSONStringStateError; goto finishedParsing; }
                 stringState = JSONStringStateParsing;
                 if(jk_string_add_unicodeCodePoint(parseState, escapedUnicodeCodePoint, &tokenBufferIdx, &stringHash)) { jk_error(parseState, @"Internal error: Unable to add UTF8 sequence to internal string buffer. %@ line #%ld", [NSString stringWithUTF8String:__FILE__], (long)__LINE__); stringState = JSONStringStateError; goto finishedParsing; }
@@ -1585,7 +1585,7 @@ static int jk_parse_string(JKParseState *parseState) {
 
         case JSONStringStateEscapedNeedEscapeForSurrogate:
           if(currentChar == '\\') { stringState = JSONStringStateEscapedNeedEscapedUForSurrogate; }
-          else { 
+          else {
             if((parseState->parseOptionFlags & JKParseOptionLooseUnicode) == 0) { jk_error(parseState, @"Required a second \\u Unicode escape sequence following a surrogate \\u Unicode escape sequence."); stringState = JSONStringStateError; goto finishedParsing; }
             else { stringState = JSONStringStateParsing; atStringCharacter--;    if(jk_string_add_unicodeCodePoint(parseState, UNI_REPLACEMENT_CHAR, &tokenBufferIdx, &stringHash)) { jk_error(parseState, @"Internal error: Unable to add UTF8 sequence to internal string buffer. %@ line #%ld", [NSString stringWithUTF8String:__FILE__], (long)__LINE__); stringState = JSONStringStateError; goto finishedParsing; } }
           }
@@ -1593,7 +1593,7 @@ static int jk_parse_string(JKParseState *parseState) {
 
         case JSONStringStateEscapedNeedEscapedUForSurrogate:
           if(currentChar == 'u') { stringState = JSONStringStateEscapedUnicodeSurrogate1; }
-          else { 
+          else {
             if((parseState->parseOptionFlags & JKParseOptionLooseUnicode) == 0) { jk_error(parseState, @"Required a second \\u Unicode escape sequence following a surrogate \\u Unicode escape sequence."); stringState = JSONStringStateError; goto finishedParsing; }
             else { stringState = JSONStringStateParsing; atStringCharacter -= 2; if(jk_string_add_unicodeCodePoint(parseState, UNI_REPLACEMENT_CHAR, &tokenBufferIdx, &stringHash)) { jk_error(parseState, @"Internal error: Unable to add UTF8 sequence to internal string buffer. %@ line #%ld", [NSString stringWithUTF8String:__FILE__], (long)__LINE__); stringState = JSONStringStateError; goto finishedParsing; } }
           }
@@ -1809,7 +1809,7 @@ static int jk_parse_next_token(JKParseState *parseState) {
     else if(JK_EXPECT_T(currentCharacter == 't')) { if(!((JK_EXPECT_T((atCharacterPtr + 4UL) < endOfStringPtr)) && (JK_EXPECT_T(atCharacterPtr[1] == 'r')) && (JK_EXPECT_T(atCharacterPtr[2] == 'u')) && (JK_EXPECT_T(atCharacterPtr[3] == 'e'))))                                            { stopParsing = 1; /* XXX Add error message */ } else { jk_set_parsed_token(parseState, atCharacterPtr, 4UL, JKTokenTypeTrue,  4UL); } }
     else if(JK_EXPECT_T(currentCharacter == 'f')) { if(!((JK_EXPECT_T((atCharacterPtr + 5UL) < endOfStringPtr)) && (JK_EXPECT_T(atCharacterPtr[1] == 'a')) && (JK_EXPECT_T(atCharacterPtr[2] == 'l')) && (JK_EXPECT_T(atCharacterPtr[3] == 's')) && (JK_EXPECT_T(atCharacterPtr[4] == 'e')))) { stopParsing = 1; /* XXX Add error message */ } else { jk_set_parsed_token(parseState, atCharacterPtr, 5UL, JKTokenTypeFalse, 5UL); } }
     else if(JK_EXPECT_T(currentCharacter == 'n')) { if(!((JK_EXPECT_T((atCharacterPtr + 4UL) < endOfStringPtr)) && (JK_EXPECT_T(atCharacterPtr[1] == 'u')) && (JK_EXPECT_T(atCharacterPtr[2] == 'l')) && (JK_EXPECT_T(atCharacterPtr[3] == 'l'))))                                            { stopParsing = 1; /* XXX Add error message */ } else { jk_set_parsed_token(parseState, atCharacterPtr, 4UL, JKTokenTypeNull,  4UL); } }
-    else { stopParsing = 1; /* XXX Add error message */ }    
+    else { stopParsing = 1; /* XXX Add error message */ }
   }
 
   if(JK_EXPECT_F(stopParsing)) { jk_error(parseState, @"Unexpected token, wanted '{', '}', '[', ']', ',', ':', 'true', 'false', 'null', '\"STRING\"', 'NUMBER'."); }
@@ -2292,7 +2292,7 @@ static id _JKParseUTF8String(JKParseState *parseState, BOOL mutableCollections, 
  
  const unsigned char *utf8String = (const unsigned char *)[self UTF8String];
  if(utf8String == NULL) { return(NULL); }
- size_t               utf8Length = strlen((const char *)utf8String); 
+ size_t               utf8Length = strlen((const char *)utf8String);
  return([[JSONDecoder decoderWithParseOptions:parseOptionFlags] parseUTF8String:utf8String length:utf8Length error:error]);
  
  This changed with v1.4 to a more complicated method.  The reason for this is to keep the amount of memory that is
@@ -2309,7 +2309,7 @@ static id _JKParseUTF8String(JKParseState *parseState, BOOL mutableCollections, 
  Another change made was a slight modification to JSONDecoder so that most of the cleanup work that was done in -dealloc was moved
  to a private, internal function.  These convenience routines keep the pointer to the autoreleased JSONDecoder and calls
  _JSONDecoderCleanup() to early release the decoders resources since we already know that particular decoder is not going to be used
- again.  
+ again.
  
  If everything goes smoothly, this will most likely result in perhaps a few hundred bytes that are allocated but waiting for the
  autorelease pool to pop.  This is compared to the thousands and easily hundreds of thousands of bytes that would have been in
@@ -2447,7 +2447,7 @@ JK_STATIC_INLINE void jk_encode_updateCache(JKEncodeState *encodeState, JKEncode
     NSCParameterAssert((object != NULL) && (startingAtIndex <= encodeState->atIndex));
     cacheSlot->object = object;
     cacheSlot->offset = startingAtIndex;
-    cacheSlot->length = (size_t)(encodeState->atIndex - startingAtIndex);  
+    cacheSlot->length = (size_t)(encodeState->atIndex - startingAtIndex);
   }
 }
 
@@ -2491,7 +2491,7 @@ static int jk_encode_writePrettyPrintWhiteSpace(JKEncodeState *encodeState) {
   size_t depthWhiteSpace = 0UL;
   for(depthWhiteSpace = 0UL; depthWhiteSpace < (encodeState->depth * 2UL); depthWhiteSpace++) { NSCParameterAssert(encodeState->atIndex < encodeState->stringBuffer.bytes.length); encodeState->stringBuffer.bytes.ptr[encodeState->atIndex++] = ' '; }
   return(0);
-}  
+}
 
 static int jk_encode_write1slow(JKEncodeState *encodeState, ssize_t depthChange, const char *format) {
   NSCParameterAssert((encodeState != NULL) && (encodeState->atIndex < encodeState->stringBuffer.bytes.length) && (format != NULL) && ((depthChange >= -1L) && (depthChange <= 1L)) && ((encodeState->depth == 0UL) ? (depthChange >= 0L) : 1) && ((encodeState->serializeOptionFlags & JKSerializeOptionPretty) != 0UL));
@@ -2563,11 +2563,11 @@ static int jk_encode_add_atom_to_buffer(JKEncodeState *encodeState, void *object
  rerunAfterClassFormatter:;
 
   // XXX XXX XXX XXX
-  //     
+  //
   //     We need to work around a bug in 10.7, which breaks ABI compatibility with Objective-C going back not just to 10.0, but OpenStep and even NextStep.
-  //     
+  //
   //     It has long been documented that "the very first thing that a pointer to an Objective-C object "points to" is a pointer to that objects class".
-  //     
+  //
   //     This is euphemistically called "tagged pointers".  There are a number of highly technical problems with this, most involving long passages from
   //     the C standard(s).  In short, one can make a strong case, couched from the perspective of the C standard(s), that that 10.7 "tagged pointers" are
   //     fundamentally Wrong and Broken, and should have never been implemented.  Assuming those points are glossed over, because the change is very clearly
@@ -2578,20 +2578,20 @@ static int jk_encode_add_atom_to_buffer(JKEncodeState *encodeState, void *object
   //     "lower, unused bits" must be preserved when casting the result to an integer type, but this "works" because for most architectures
   //     `sizeof(long) == sizeof(void *)` and the compiler uses the same representation for both.  (note: this is informal, not meant to be
   //     normative or pedantically correct).
-  //     
+  //
   //     In other words, while this "works" for now, technically the compiler is not obligated to do "what we want", and a later version of the compiler
   //     is not required in any way to produce the same results or behavior that earlier versions of the compiler did for the statement below.
   //
   //     Fan-fucking-tastic.
-  //     
+  //
   //     Why not just use `object_getClass()`?  Because `object->isa` reduces to (typically) a *single* instruction.  Calling `object_getClass()` requires
   //     that the compiler potentially spill registers, establish a function call frame / environment, and finally execute a "jump subroutine" instruction.
   //     Then, the called subroutine must spend half a dozen instructions in its prolog, however many instructions doing whatever it does, then half a dozen
   //     instructions in its prolog.  One instruction compared to dozens, maybe a hundred instructions.
-  //     
+  //
   //     Yes, that's one to two orders of magnitude difference.  Which is compelling in its own right.  When going for performance, you're often happy with
   //     gains in the two to three percent range.
-  //     
+  //
   // XXX XXX XXX XXX
 
 
@@ -2909,7 +2909,7 @@ errorExit:
     jk_managedBuffer_release(&encodeState->stringBuffer);
     jk_managedBuffer_release(&encodeState->utf8ConversionBuffer);
     free(encodeState); encodeState = NULL;
-  }  
+  }
 }
 
 - (void)dealloc
@@ -3062,4 +3062,3 @@ errorExit:
 @end
 
 #endif // __BLOCKS__
-

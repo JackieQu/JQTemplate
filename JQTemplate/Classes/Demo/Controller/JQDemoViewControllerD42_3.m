@@ -129,7 +129,7 @@
     
     if (status == AVPlayerItemStatusReadyToPlay) {
         
-        NSLog(@"准备播放：%@",[self.musicList[self.currentIndex] title]);
+        JQLog(@"准备播放：%@",[self.musicList[self.currentIndex] title]);
     
         // CMTime 为播放音频、视频的时间
         // 获取当前音频时长，设置音频总时长
@@ -148,10 +148,10 @@
         
     } else if (status == AVPlayerItemStatusFailed) {
         
-        NSLog(@"播放失败");
+        JQLog(@"播放失败");
     
         // 音乐链接来自网易云音乐，若播放失败，可能资源过期
-        NSLog(@"%@",[self.musicList[self.currentIndex] url]);
+        JQLog(@"%@",[self.musicList[self.currentIndex] url]);
     }
 }
 

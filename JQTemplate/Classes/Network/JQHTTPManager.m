@@ -75,7 +75,7 @@
                 success:(JQRequestSuccessBlock)success
                 failure:(JQRequestFailureBlock)failure {
     
-    NSLog(@"请求网址 - %@",url);
+    JQLog(@"请求网址 - %@",url);
     
     if ([self isConnectionAvailable]) {
 

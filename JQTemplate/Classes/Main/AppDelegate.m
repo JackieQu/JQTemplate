@@ -57,7 +57,7 @@ extern CFAbsoluteTime StartTime;
     self.window.backgroundColor = [UIColor whiteColor];
     
     double launchTime = (CFAbsoluteTimeGetCurrent() - StartTime);
-    JQLog(@"double======%f",launchTime);
+    JQLog(@"StartTime: %f",launchTime);
     
     return YES;
 }

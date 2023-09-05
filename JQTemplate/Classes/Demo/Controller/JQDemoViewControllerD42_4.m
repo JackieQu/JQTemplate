@@ -53,7 +53,7 @@ static NSString *identifier = @"cellID";
     
     // 指定通道的测量平均值，只有调用完 updateMeters 才有值，注意音频强度范围是 -160 ～ 0
     float value = [self.recorder averagePowerForChannel:0];
-    NSLog(@"%f",value);
+    JQLog(@"%f",value);
 }
 
 - (void)viewDidLoad {
@@ -99,7 +99,7 @@ static NSString *identifier = @"cellID";
     
     if (error) {
         
-        NSLog(@"%@",error);
+        JQLog(@"%@",error);
         
     } else {
         
@@ -109,7 +109,7 @@ static NSString *identifier = @"cellID";
 
 - (void)touchDown {
     
-    NSLog(@"开始录音");
+    JQLog(@"开始录音");
     
     NSString *cachePath = [NSSearchPathForDirectoriesInDomains(13, 1, 1) lastObject];
     
@@ -141,7 +141,7 @@ static NSString *identifier = @"cellID";
     
     if (error) {
         
-        NSLog(@"录音信息配置失败：%@",error);
+        JQLog(@"录音信息配置失败：%@",error);
         
     } else {
         
@@ -163,7 +163,7 @@ static NSString *identifier = @"cellID";
 
 - (void)touchUpIn {
     
-    NSLog(@"结束录音");
+    JQLog(@"结束录音");
     
     double currentTime = self.recorder.currentTime;
     
@@ -193,7 +193,7 @@ static NSString *identifier = @"cellID";
 
 - (void)touchUpOut {
     
-    NSLog(@"取消录音");
+    JQLog(@"取消录音");
     
     [self.recorder stop];
     

@@ -45,6 +45,12 @@ static NSString *kCellID    = @"identifier";
     // Do any additional setup after loading the view.
 }
 
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAV_HEIGHT - TAB_BAR_HEIGHT);
+}
+
 - (void)initUI {
     [super initUI];
     

@@ -105,15 +105,15 @@
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     
-    NSLog(@"%@",request.URL);
+    JQLog(@"%@",request.URL);
     NSURL * url = request.URL;
-//    NSLog(@"%@",url.scheme);
-//    NSLog(@"%@",url.host);
-//    NSLog(@"%@",url.query);
+//    JQLog(@"%@",url.scheme);
+//    JQLog(@"%@",url.host);
+//    JQLog(@"%@",url.query);
     
 //    if ([url.absoluteString hasPrefix:@"test"]) {
 //
-//        NSLog(@"%@",url.absoluteString);
+//        JQLog(@"%@",url.absoluteString);
 //    }
     
     if ([url.scheme isEqualToString:@"http"]) {
@@ -142,7 +142,7 @@
 
 - (void)webViewDidStartLoad:(UIWebView *)webView {
     
-    NSLog(@"开始加载");
+    JQLog(@"开始加载");
     
     self.backItem.enabled = webView.canGoBack;
     self.forwardItem.enabled = webView.canGoForward;
@@ -150,7 +150,7 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     
-    NSLog(@"结束加载");
+    JQLog(@"结束加载");
     
     self.backItem.enabled = webView.canGoBack;
     self.forwardItem.enabled = webView.canGoForward;
@@ -160,7 +160,7 @@
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
     
-    NSLog(@"%@",error);
+    JQLog(@"%@",error);
 }
 
 - (BOOL)loginWithUsername:(NSString *)username password:(NSString *)password {
@@ -179,9 +179,9 @@
 
 - (void)clickTest:(NSString *)params {
     
-    NSLog(@"我是 OC 代码");
+    JQLog(@"我是 OC 代码");
     
-    NSLog(@"%@", [self paramsDict:params]);
+    JQLog(@"%@", [self paramsDict:params]);
 }
 
 - (NSDictionary *)paramsDict:(NSString *)paramsString {

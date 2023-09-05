@@ -77,7 +77,7 @@
     
     [self keyChainTest];
     
-//    NSLog(@"%@",NSHomeDirectory());
+//    JQLog(@"%@",NSHomeDirectory());
     
 //    [self createZipFile1];
 //    [self createZipFile2];
@@ -94,7 +94,7 @@
     NSData *data = [string dataUsingEncoding:NSUTF8StringEncoding];
     
     NSString *base64String = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-    NSLog(@"%@",base64String);
+    JQLog(@"%@",base64String);
     
     // 2. 加密后的 data 转化为加密前的字符串
     // 将普通的 data 转化为加密后的 data
@@ -103,7 +103,7 @@
     NSData *data2 = [[NSData alloc] initWithBase64EncodedData:base64Data options:0];
     
     NSString *string2 = [[NSString alloc] initWithData:data2 encoding:NSUTF8StringEncoding];
-    NSLog(@"%@",string2);
+    JQLog(@"%@",string2);
 //    return;
     
     // 3. 加密图片
@@ -121,17 +121,17 @@
 
 - (void)md5Test {
     
-    NSString *password = @"123456";
-    NSLog(@"%@",password.md5String);
-    
-    // md5 + 盐
-    NSString *saltPassword = [password stringByAppendingString:@"qaz,WSX.EDC,rfv"];
-    NSLog(@"%@",saltPassword.md5String);
+//    NSString *password = @"123456";
+//    JQLog(@"%@",password.md5String);
+//    
+//    // md5 + 盐
+//    NSString *saltPassword = [password stringByAppendingString:@"qaz,WSX.EDC,rfv"];
+//    JQLog(@"%@",saltPassword.md5String);
 }
 
 - (void)keyChainTest {
 
-    NSLog(@"%@",NSHomeDirectory());
+    JQLog(@"%@",NSHomeDirectory());
        
     /*
     NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
@@ -139,26 +139,26 @@
     NSString *un = [ud objectForKey:@"username"];
     NSString *pw = [ud objectForKey:@"password"];
    
-    NSLog(@"%@",un);
-    NSLog(@"%@",pw);
+    JQLog(@"%@",un);
+    JQLog(@"%@",pw);
      */
    
 //    for (id keychain in [SSKeychain allAccounts]) {
-//        NSLog(@"%@",keychain);
+//        JQLog(@"%@",keychain);
 //    }
    
     // 通过服务标识找到密码
     NSString *password1 = [SSKeychain passwordForService:kLoginService account:@"user01" error:NULL];
     NSString *password2 = [SSKeychain passwordForService:kLoginService account:@"user02" error:NULL];
    
-    NSLog(@"%@",password1);
-    NSLog(@"%@",password2);
+    JQLog(@"%@",password1);
+    JQLog(@"%@",password2);
    
     // 删除钥匙串
     [SSKeychain deletePasswordForService:kLoginService account:@"JackieQu" error:NULL];
    
     NSString *password = [SSKeychain passwordForService:kLoginService account:@"JackieQu" error:NULL];
-    NSLog(@"%@",password);
+    JQLog(@"%@",password);
     
     /*
     NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
@@ -187,7 +187,7 @@
 - (void)createZipFile2 {
     
     NSString *path = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:@"images"];
-    NSLog(@"%@",path);
+    JQLog(@"%@",path);
     // 根据目录压缩文件
     [SSZipArchive createZipFileAtPath:@"/Users/JackieQu/Desktop/image.zip" withContentsOfDirectory:path];
 }

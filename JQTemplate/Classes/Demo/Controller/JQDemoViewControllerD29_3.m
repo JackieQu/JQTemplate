@@ -92,7 +92,7 @@ static NSString *identifier = @"cellID";
         [cache setObject:[NSString stringWithFormat:@"cache - %@",@(i)] forKey:@(i)];
     }
     for (NSInteger i = 0; i < 20; i ++) {
-        NSLog(@"%@",[cache objectForKey:@(i)]);
+        JQLog(@"%@",[cache objectForKey:@(i)]);
     }
     
     [self.view addSubview:self.tableView];
@@ -209,7 +209,7 @@ static NSString *identifier = @"cellID";
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     // 获取 url 的最后一项路径和 path 拼接
     path = [path stringByAppendingPathComponent:[url lastPathComponent]];
-    NSLog(@"%@",path);
+    JQLog(@"%@",path);
     return path;
 }
 
@@ -223,7 +223,7 @@ static NSString *identifier = @"cellID";
  */
 - (void)cache:(NSCache *)cache willEvictObject:(id)obj {
     
-    NSLog(@"willEvictObject - %@",obj);
+    JQLog(@"willEvictObject - %@",obj);
 }
 
 @end

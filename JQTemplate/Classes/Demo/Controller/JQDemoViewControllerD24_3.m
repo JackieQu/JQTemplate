@@ -150,7 +150,7 @@
 // 相册取消选择
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
     
-    NSLog(@"取消选择");
+    JQLog(@"取消选择");
     
     [picker dismissViewControllerAnimated:YES completion:nil];
 }
@@ -174,7 +174,7 @@
 - (void)image:(UIImage *)image didFinishSavingWithError:(NSError *)error contextInfo:(void *)contextInfo {
     
     if (!error) {
-        NSLog(@"保存成功");
+        JQLog(@"保存成功");
     }
 }
 

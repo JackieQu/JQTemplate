@@ -55,7 +55,7 @@
 
 - (void)loadAnimationWithInsets:(UIEdgeInsets)insets {
     
-    NSLog(@"%@",insets.top ? @"发起下拉刷新" : @"发起上拉加载");
+    JQLog(@"%@",insets.top ? @"发起下拉刷新" : @"发起上拉加载");
     
     [UIView animateWithDuration:1.0 animations:^{
         

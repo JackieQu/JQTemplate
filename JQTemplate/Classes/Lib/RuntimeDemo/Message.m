@@ -12,10 +12,10 @@
 
 @implementation Message
 
-//- (void)sendMessage:(NSString *)word
-//{
-//    NSLog(@"normal way : send message = %@", word);
-//}
+- (void)sendMessage:(NSString *)word
+{
+    NSLog(@"normal way : send message = %@", word);
+}
 
 #pragma mark - Method Resolution
 /// override resolveInstanceMethod or resolveClassMethod for changing sendMessage method implementation
@@ -42,24 +42,24 @@
 
 
 #pragma mark - Normal Forwarding
-- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
-{
-    NSMethodSignature *methodSignature = [super methodSignatureForSelector:aSelector];
-    
-    if (!methodSignature) {
-        methodSignature = [NSMethodSignature signatureWithObjCTypes:"v@:*"];
-    }
-    
-    return methodSignature;
-}
-
-- (void)forwardInvocation:(NSInvocation *)anInvocation
-{
-    MessageForwarding *messageForwarding = [MessageForwarding new];
-    
-    if ([messageForwarding respondsToSelector:anInvocation.selector]) {
-        [anInvocation invokeWithTarget:messageForwarding];
-    }
-}
+//- (NSMethodSignature *)methodSignatureForSelector:(SEL)aSelector
+//{
+//    NSMethodSignature *methodSignature = [super methodSignatureForSelector:aSelector];
+//
+//    if (!methodSignature) {
+//        methodSignature = [NSMethodSignature signatureWithObjCTypes:"v@:*"];
+//    }
+//
+//    return methodSignature;
+//}
+//
+//- (void)forwardInvocation:(NSInvocation *)anInvocation
+//{
+//    MessageForwarding *messageForwarding = [MessageForwarding new];
+//
+//    if ([messageForwarding respondsToSelector:anInvocation.selector]) {
+//        [anInvocation invokeWithTarget:messageForwarding];
+//    }
+//}
 
 @end

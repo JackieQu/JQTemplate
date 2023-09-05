@@ -36,16 +36,16 @@
                             modifiedSelector,
                             method_getImplementation(originalMethod),
                             method_getTypeEncoding(originalMethod));
-        NSLog(@"1");
+        JQLog(@"1");
     } else {
         method_exchangeImplementations(originalMethod, modifiedMethod);
-        NSLog(@"2");
+        JQLog(@"2");
     }
 }
 
 - (CGSize)my_sizeWithAttributes:(UIFont *)font {
     
-    NSLog(@"%s %@",__FUNCTION__,[self class]);
+    JQLog(@"%s %@",__FUNCTION__,[self class]);
     
     return [self sizeWithAttributes:@{NSFontAttributeName:font}];
 }

@@ -14,7 +14,7 @@ static NSString *mp4Url = @"https://www.runoob.com/try/demo_source/movie.mp4";
 
 @interface JQDemoViewControllerD43 ()
 
-@property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
+//@property (nonatomic, strong) MPMoviePlayerController *moviePlayer;
 
 @property (nonatomic, strong) AVPlayer *player;
 
@@ -48,15 +48,15 @@ static NSString *mp4Url = @"https://www.runoob.com/try/demo_source/movie.mp4";
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 创建视频播放实例
-    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:mp4Url]];
-
-    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
-
-    self.moviePlayer.view.frame = CGRectMake(0, 20, 320, 180);
-    self.moviePlayer.view.centerX = self.view.centerX;
-
-    [self.view addSubview:self.moviePlayer.view];
+//    // 创建视频播放实例
+//    self.moviePlayer = [[MPMoviePlayerController alloc] initWithContentURL:[NSURL URLWithString:mp4Url]];
+//
+//    self.moviePlayer.controlStyle = MPMovieControlStyleNone;
+//
+//    self.moviePlayer.view.frame = CGRectMake(0, 20, 320, 180);
+//    self.moviePlayer.view.centerX = self.view.centerX;
+//
+//    [self.view addSubview:self.moviePlayer.view];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
@@ -66,14 +66,14 @@ static NSString *mp4Url = @"https://www.runoob.com/try/demo_source/movie.mp4";
 
 - (void)playAction {
     
-    [self.moviePlayer play];
+//    [self.moviePlayer play];
 }
 
 - (void)playAction2 {
     
-    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:mp4Url]];
-    
-    [self presentViewController:moviePlayer animated:YES completion:nil];
+//    MPMoviePlayerViewController *moviePlayer = [[MPMoviePlayerViewController alloc] initWithContentURL:[NSURL URLWithString:mp4Url]];
+//
+//    [self presentViewController:moviePlayer animated:YES completion:nil];
 }
 
 - (void)playAction3 {

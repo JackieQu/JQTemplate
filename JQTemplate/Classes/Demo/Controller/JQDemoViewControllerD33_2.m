@@ -43,17 +43,17 @@
     
     [[JQHTTPManager shared] requestWithPath:@"http://127.0.0.1/city.json" method:JQHTTPRequestGet parameters:@{} prepare:^{
 
-        NSLog(@"显示指示器");
+        JQLog(@"显示指示器");
 
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nonnull responseObject) {
 
-        NSLog(@"%@",responseObject);
-        NSLog(@"关闭指示器");
+        JQLog(@"%@",responseObject);
+        JQLog(@"关闭指示器");
 
     } failure:^(NSURLSessionDataTask * _Nonnull task, NSError * _Nonnull error) {
 
-        NSLog(@"failure - %@",error);
-        NSLog(@"关闭指示器");
+        JQLog(@"failure - %@",error);
+        JQLog(@"关闭指示器");
     }];
 }
 
@@ -62,14 +62,14 @@
     // http://127.0.0.1/images/lotus.gif
     [self.imageView downloadImage:@"https://jackiequ.github.io/css/images/banner.jpg" placeholderImage:[UIImage imageNamed:@"scene"] progress:^(CGFloat progress) {
         
-        NSLog(@"progress - %.2f%%",progress);
+        JQLog(@"progress - %.2f%%",progress);
     } success:^(SDImageCacheType cacheType, UIImage *image) {
         
-        NSLog(@"success - %@",@(cacheType));
+        JQLog(@"success - %@",@(cacheType));
         
     } failure:^(NSError *error) {
         
-        NSLog(@"failure - %@",error);
+        JQLog(@"failure - %@",error);
         
     }];
 }

@@ -207,7 +207,7 @@ static NSString *identifier = @"cellID";
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
     // 获取 url 的最后一项路径和 path 拼接
     path = [path stringByAppendingPathComponent:[url lastPathComponent]];
-    NSLog(@"%@",path);
+    JQLog(@"%@",path);
     return path;
 }
 

@@ -63,7 +63,7 @@
 
 - (void)run {
     
-    NSLog(@"%s",__FUNCTION__);
+    JQLog(@"%s",__FUNCTION__);
 }
 
 @end

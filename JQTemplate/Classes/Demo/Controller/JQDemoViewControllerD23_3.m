@@ -95,7 +95,7 @@
     datePicker.height += TAB_BAR_HEIGHT;
     
     // 获取所有时区
-//    NSLog(@"%@",[NSLocale availableLocaleIdentifiers]);
+//    JQLog(@"%@",[NSLocale availableLocaleIdentifiers]);
     
     // 设置时区
     datePicker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_Hans_CN"];

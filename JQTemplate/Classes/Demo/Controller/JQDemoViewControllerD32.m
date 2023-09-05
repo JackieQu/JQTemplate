@@ -34,7 +34,7 @@
      NSURLSessionDownloadTask 默认下载到 tmp 文件夹，下载完成后删除临时文件，所以需要在删除文件之前，将其移到 cache 中
      */
     
-//    NSLog(@"%@",NSSearchPathForDirectoriesInDomains(9, 1, 1));
+//    JQLog(@"%@",NSSearchPathForDirectoriesInDomains(9, 1, 1));
     
 //    [self getTest];
 //    [self postTest];
@@ -59,11 +59,11 @@
     NSURLSessionDownloadTask *task = [session downloadTaskWithURL:url completionHandler:^(NSURL * _Nullable location, NSURLResponse * _Nullable response, NSError * _Nullable error) {
        
         // location，下载到沙盒的路径
-        NSLog(@"下载完成 - %@",location);
+        JQLog(@"下载完成 - %@",location);
         
         // response.suggestedFilename 响应信息中资源的文件名
         NSString *cachesPath = [[NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject] stringByAppendingPathComponent:response.suggestedFilename];
-        NSLog(@"缓存路径 - %@",cachesPath);
+        JQLog(@"缓存路径 - %@",cachesPath);
         
         // 获取文件管理器
         NSFileManager *manager = [NSFileManager defaultManager];
@@ -91,7 +91,7 @@
     
     [[[NSURLSession sharedSession] dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        JQLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     }] resume];
 }
 
@@ -106,7 +106,7 @@
     // 创建任务
     NSURLSessionDataTask *task = [session dataTaskWithURL:url completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        NSLog(@"task - %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        JQLog(@"task - %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     }];
     
     // 开启网络任务
@@ -118,7 +118,7 @@
     
     NSURLSessionDataTask *task2 = [session dataTaskWithRequest:request completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
         
-        NSLog(@"task2 - %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+        JQLog(@"task2 - %@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
     }];
     
     [task2 resume];
@@ -130,7 +130,7 @@
 // 接收服务器响应
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition))completionHandler {
     
-    NSLog(@"%s",__FUNCTION__);
+    JQLog(@"%s",__FUNCTION__);
     
     // 允许接受服务器回传数据
     completionHandler(NSURLSessionResponseAllow);
@@ -139,13 +139,13 @@
 // 接受服务器回传数据，可能执行多次
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
     
-    NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    JQLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
 // 请求成功或失败
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     
-    NSLog(@"%@",error);
+    JQLog(@"%@",error);
 }
 
 @end

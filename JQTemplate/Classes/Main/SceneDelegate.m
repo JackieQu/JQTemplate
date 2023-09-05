@@ -27,8 +27,8 @@
     // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
     JQLogFunction
     
-//    UIWindowScene *windowScene = [[UIWindowScene alloc] initWithSession:session connectionOptions:connectionOptions];
-    UIWindowScene *windowScene = (UIWindowScene *)scene;
+    UIWindowScene *windowScene = [[UIWindowScene alloc] initWithSession:session connectionOptions:connectionOptions];
+//    UIWindowScene *windowScene = (UIWindowScene *)scene;
     self.window = [[UIWindow alloc] initWithWindowScene:windowScene];
     self.window.frame = windowScene.coordinateSpace.bounds;
     self.window.rootViewController = [[JQBaseTabBarController alloc] init];
@@ -136,9 +136,9 @@
         NSURL *url = urlContext.URL;
         if ([url.scheme isEqualToString:@"WeChat"]) {
             if ([url.host isEqualToString:@"moment"]) {
-                NSLog(@"分享到微信朋友圈：%@", url.query);
+                JQLog(@"分享到微信朋友圈：%@", url.query);
             } else if ([url.host isEqualToString:@"friend"]) {
-                NSLog(@"分享给微信好友：%@", url.query);
+                JQLog(@"分享给微信好友：%@", url.query);
             }
         }
 //        break;

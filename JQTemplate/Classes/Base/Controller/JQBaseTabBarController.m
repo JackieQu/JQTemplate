@@ -39,7 +39,7 @@
     appearance.backgroundImage = [UIImage new];
     appearance.shadowImage = [UIImage new];
     
-    NSMutableArray *viewControllers = self.customTabBar.tabBarModel.availableItems;
+    NSMutableArray *viewControllers = [NSMutableArray arrayWithArray:self.customTabBar.tabBarModel.availableItems];
     for (NSUInteger i = 0; i < viewControllers.count; i ++) {
         JQTabBarItemModel *item = viewControllers[i];
         JQBaseViewController *vc = [[item.cls alloc] init];
@@ -55,6 +55,12 @@
     self.tabBar.barTintColor = self.customTabBar.backgroundColor;
     [self.tabBar addSubview:self.customTabBar];
 //    [self setValue:self.customTabBar forKey:@"tabBar"];
+}
+
+- (void)viewWillLayoutSubviews {
+    [super viewWillLayoutSubviews];
+    
+    self.customTabBar.frame = self.tabBar.bounds;
 }
 
 - (void)handleAction:(JQCustomTabBar *)tabBar selectedIndex:(NSUInteger)idx {

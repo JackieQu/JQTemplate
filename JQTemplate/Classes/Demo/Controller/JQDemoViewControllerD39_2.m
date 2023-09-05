@@ -89,7 +89,7 @@
     
     if (vc == nil) {
         
-        NSLog(@"%@",menu.name);
+        JQLog(@"%@",menu.name);
         
         [self.mm_drawerController closeDrawerAnimated:YES completion:nil];
         

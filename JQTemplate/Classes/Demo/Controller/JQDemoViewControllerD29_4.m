@@ -67,7 +67,7 @@ static NSString *identifier = @"cellID";
     
     // 获取缓存大小
     CGFloat size = (CGFloat)[[SDImageCache sharedImageCache] totalDiskSize] / 1024 / 1024;
-    NSLog(@"%.2f", size);
+    JQLog(@"%.2f", size);
     
     [self.view addSubview:self.imageView];
     
@@ -105,10 +105,10 @@ static NSString *identifier = @"cellID";
 //    [cell.iconView sd_setImageWithURL:url placeholderImage:placeholderImage completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
 //
 //        if (error) {
-//            NSLog(@"下载失败");
+//            JQLog(@"下载失败");
 //        } else {
-//            NSLog(@"image - %@",image);
-//            NSLog(@"cacheType - %@",@(cacheType));
+//            JQLog(@"image - %@",image);
+//            JQLog(@"cacheType - %@",@(cacheType));
 //        }
 //    }];
     
@@ -132,15 +132,15 @@ static NSString *identifier = @"cellID";
 
         // receivedSize 已经收到的大小
         // expectedSize 期待的大小
-//        NSLog(@"receivedSize - %@",@(receivedSize));
-//        NSLog(@"expectedSize - %@",@(expectedSize));
+//        JQLog(@"receivedSize - %@",@(receivedSize));
+//        JQLog(@"expectedSize - %@",@(expectedSize));
 
         CGFloat progress = (float)receivedSize / expectedSize;
-        NSLog(@"%.2f%%",progress * 100);
+        JQLog(@"%.2f%%",progress * 100);
 
     } completed:^(UIImage * _Nullable image, NSError * _Nullable error, SDImageCacheType cacheType, NSURL * _Nullable imageURL) {
 
-        NSLog(@"加载完成");
+        JQLog(@"加载完成");
     }];
     
     return cell;
@@ -152,8 +152,8 @@ static NSString *identifier = @"cellID";
     [[SDImageCache sharedImageCache] clearDiskOnCompletion:^{
         // 获取缓存大小
         CGFloat size = (CGFloat)[[SDImageCache sharedImageCache] totalDiskSize] / 1024 / 1024;
-        NSLog(@"%.2f", size);
-        NSLog(@"%@",NSHomeDirectory());
+        JQLog(@"%.2f", size);
+        JQLog(@"%@",NSHomeDirectory());
     }];
 }
 

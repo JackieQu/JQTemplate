@@ -66,7 +66,7 @@
     
     // 1. 获得音效
     SystemSoundID soundID = [self getSoundID:file];
-    NSLog(@"%@",@(soundID));
+    JQLog(@"%@",@(soundID));
     
     // 2. 播放音效
     AudioServicesPlaySystemSound(soundID);
@@ -103,7 +103,7 @@
     _audioPlayer = [[AVAudioPlayer alloc] initWithContentsOfURL:url error:&error];
     
     if (error) {
-        NSLog(@"初始化失败：%@",error);
+        JQLog(@"初始化失败：%@",error);
     } else {
         
         [_audioPlayer prepareToPlay];

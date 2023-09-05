@@ -149,10 +149,10 @@
     [self setUpSingerIcon:self.currentMusicIndex];
     
     // 响应用户远程点击事件
-    AppDelegate *app = [UIApplication sharedApplication].delegate;
+    AppDelegate *app = (AppDelegate *)[UIApplication sharedApplication].delegate;
     [app setReceivedWithEventBlock:^(UIEvent *event) {
        
-        NSLog(@"%@",event);
+        JQLog(@"%@",event);
         
         switch (event.subtype) {
             case UIEventSubtypeRemoteControlNextTrack:

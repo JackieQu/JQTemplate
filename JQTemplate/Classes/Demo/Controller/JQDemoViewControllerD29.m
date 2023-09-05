@@ -202,7 +202,7 @@ static NSString *identifier = @"cellID";
     
     // 在模拟器上，沙盒目录是变化的，所以每次都次都要打印
 //    NSString *path = NSHomeDirectory();
-//    NSLog(@"%@",path);
+//    JQLog(@"%@",path);
     
     // 获取沙盒目录的方法
     NSString *path = [NSSearchPathForDirectoriesInDomains(NSCachesDirectory, NSUserDomainMask, YES) lastObject];
@@ -210,7 +210,7 @@ static NSString *identifier = @"cellID";
     path = [path stringByAppendingPathComponent:@"data.plist"];
     NSArray *array = @[@1,@2,@3,@4,@5];
     [array writeToFile:path atomically:YES];
-    NSLog(@"%@",path);
+    JQLog(@"%@",path);
     
     // 偏好设置、用户信息、是否推送、是否支持 3G
     NSUserDefaults *data = [NSUserDefaults standardUserDefaults];
@@ -223,9 +223,9 @@ static NSString *identifier = @"cellID";
 //    [data synchronize];
     
     // 从本地获取
-    NSLog(@"%@",[data objectForKey:@"username"]);
+    JQLog(@"%@",[data objectForKey:@"username"]);
     [data removeObjectForKey:@"age"];
-    NSLog(@"%@",[data objectForKey:@"age"]);
+    JQLog(@"%@",[data objectForKey:@"age"]);
 }
 
 @end

@@ -49,7 +49,7 @@
     
     if (![CLLocationManager locationServicesEnabled]) {
         
-        NSLog(@"提示用户打开定位服务");
+        JQLog(@"提示用户打开定位服务");
         
     } else {
         
@@ -64,19 +64,19 @@
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    NSLog(@"%@", self.textField.text);
+    JQLog(@"%@", self.textField.text);
     
     // 实例化编码器
     CLGeocoder *gecoder = [[CLGeocoder alloc] init];
     
     [gecoder geocodeAddressString:self.textField.text completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
        
-        NSLog(@"%@",@(placemarks.count));
+        JQLog(@"%@",@(placemarks.count));
         
-        NSLog(@"%@",error);
+        JQLog(@"%@",error);
         
         if (!placemarks.count || error) {
-            NSLog(@"地理编码失败");
+            JQLog(@"地理编码失败");
             return;
         }
         
@@ -85,8 +85,8 @@
         
         CLLocationCoordinate2D coorinate = placemark.location.coordinate;
         
-        NSLog(@"经度: %f",coorinate.longitude);
-        NSLog(@"纬度: %f",coorinate.latitude);
+        JQLog(@"经度: %f",coorinate.longitude);
+        JQLog(@"纬度: %f",coorinate.latitude);
         
         // 导航的终点、起点的类，mapItemForCurrentLocation 获取起点的位置
         MKMapItem *sourceItem = [MKMapItem mapItemForCurrentLocation];

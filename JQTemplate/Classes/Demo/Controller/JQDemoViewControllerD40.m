@@ -52,7 +52,7 @@
     
     NSArray *array = [JQFMDBHelper executeQuery:@"SELECT * FROM t_student"];
     
-    NSLog(@"%@", array);
+    JQLog(@"%@", array);
     
 //    NSString *sql = @"select * from t_student";
 //
@@ -60,7 +60,7 @@
 //
 //    for (JQStudentModel *s in dataList) {
 //
-//        NSLog(@"name = %@, age = %@", s.name, @(s.age));
+//        JQLog(@"name = %@, age = %@", s.name, @(s.age));
 //    }
 }
 
@@ -71,17 +71,17 @@
     BOOL flag = [JQFMDBHelper executeUpdate:sql];
     
     if (flag) {
-        NSLog(@"修改成功");
+        JQLog(@"修改成功");
     } else {
-        NSLog(@"修改失败");
+        JQLog(@"修改失败");
     }
     
 //    NSString *sql = @"update t_student set name = 'Jack' where age = 24";
 //
 //    if ([JQSqliteHelper sqlite3WithSql:sql]) {
-//        NSLog(@"更新成功");
+//        JQLog(@"更新成功");
 //    } else {
-//        NSLog(@"更新失败");
+//        JQLog(@"更新失败");
 //    }
 }
 
@@ -92,17 +92,17 @@
     BOOL flag = [JQFMDBHelper executeUpdate:sql];
 
     if (flag) {
-        NSLog(@"删除成功");
+        JQLog(@"删除成功");
     } else {
-        NSLog(@"删除失败");
+        JQLog(@"删除失败");
     }
     
 //    NSString *sql = @"delete from t_student where name = 'Jackie'";
 //
 //    if ([JQSqliteHelper sqlite3WithSql:sql]) {
-//        NSLog(@"删除成功");
+//        JQLog(@"删除成功");
 //    } else {
-//        NSLog(@"删除失败");
+//        JQLog(@"删除失败");
 //    }
 }
 
@@ -113,17 +113,17 @@
     BOOL flag = [JQFMDBHelper executeUpdate:sql];
     
     if (flag) {
-        NSLog(@"插入成功");
+        JQLog(@"插入成功");
     } else {
-        NSLog(@"插入失败");
+        JQLog(@"插入失败");
     }
     
 //    NSString *sql = [NSString stringWithFormat:@"insert into t_student (name, age) values ('%@', %d);", @"Jackie", 24];
 //
 //    if ([JQSqliteHelper sqlite3WithSql:sql]) {
-//        NSLog(@"插入成功");
+//        JQLog(@"插入成功");
 //    } else {
-//        NSLog(@"插入失败");
+//        JQLog(@"插入失败");
 //    }
 }
 

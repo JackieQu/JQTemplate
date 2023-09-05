@@ -83,7 +83,7 @@
         
         image1 = [UIImage imageWithData:data];
         
-        NSLog(@"op1 - %@",[NSThread currentThread]);
+        JQLog(@"op1 - %@",[NSThread currentThread]);
     }];
     
     __block UIImage *image2;
@@ -97,7 +97,7 @@
         
         image2 = [UIImage imageWithData:data];
         
-        NSLog(@"op2 - %@",[NSThread currentThread]);
+        JQLog(@"op2 - %@",[NSThread currentThread]);
     }];
     
     // 创建操作 3，用于合并图片
@@ -115,14 +115,14 @@
         
         UIGraphicsEndImageContext();
         
-        NSLog(@"op3 - %@",[NSThread currentThread]);
+        JQLog(@"op3 - %@",[NSThread currentThread]);
         
         // 返回主线程，更新 UI
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             
             self.imageView.image = image;
             
-            NSLog(@"%@",[NSThread currentThread]);
+            JQLog(@"%@",[NSThread currentThread]);
         }];
     }];
     
@@ -188,7 +188,7 @@
     // 取消挂起状态
     self.queue.suspended = NO;
     
-    NSLog(@"----- 取消 -----");
+    JQLog(@"----- 取消 -----");
 }
 
 // 设置依赖关系
@@ -199,12 +199,12 @@
     op1.queuePriority = -5;
     
     NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"解压文件");
+        JQLog(@"解压文件");
     }];
     op2.queuePriority = 0;
     
     NSBlockOperation *op3 = [NSBlockOperation blockOperationWithBlock:^{
-        NSLog(@"查看图片");
+        JQLog(@"查看图片");
     }];
     op3.queuePriority = 5;
     
@@ -245,7 +245,7 @@
     
     NSBlockOperation *op2 = [NSBlockOperation blockOperationWithBlock:^{
        
-        NSLog(@"op2 - %@",[NSThread currentThread]);
+        JQLog(@"op2 - %@",[NSThread currentThread]);
     }];
     
     // 添加 NSOperation 到 NSOperationQueue 中，通常添加之后，短时间内就会运行
@@ -255,12 +255,12 @@
     // 添加一个 block 形式的 operation
     [queue addOperationWithBlock:^{
 
-        NSLog(@"op3 - %@",[NSThread currentThread]);
+        JQLog(@"op3 - %@",[NSThread currentThread]);
     }];
 
     [queue addOperations:@[op,op2] waitUntilFinished:YES];
     
-    NSLog(@"完成");
+    JQLog(@"完成");
 }
 
 - (void)opTest2 {
@@ -268,21 +268,21 @@
     // 并发的执行一个或多个 block 对象，所有相关的 block 都执行完成后，操作才算完成
     NSBlockOperation *op = [NSBlockOperation blockOperationWithBlock:^{
         
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"任务一");
+        JQLog(@"%@",[NSThread currentThread]);
+        JQLog(@"任务一");
     }];
     
     // 通过 addExecutionBlock 方法添加 block 操作，开辟多个线程
     [op addExecutionBlock:^{
         
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"任务二");
+        JQLog(@"%@",[NSThread currentThread]);
+        JQLog(@"任务二");
     }];
     
     [op addExecutionBlock:^{
         
-        NSLog(@"%@",[NSThread currentThread]);
-        NSLog(@"任务三");
+        JQLog(@"%@",[NSThread currentThread]);
+        JQLog(@"任务三");
     }];
     
     [op start];
@@ -296,7 +296,7 @@
     
     // 如果需要在一个 NSOperation 执行完毕后做一些事情，就调用 NSOperation 的 setCompletionBlock 方法来设置要执行的任务
     [op setCompletionBlock:^{
-        NSLog(@"完成");
+        JQLog(@"完成");
     }];
     
     // 开始执行任务（同步执行）
@@ -308,7 +308,7 @@
     
     [NSThread sleepForTimeInterval:2];
     
-    NSLog(@"%@ - %@", [NSThread currentThread],string);
+    JQLog(@"%@ - %@", [NSThread currentThread],string);
 }
 
 @end

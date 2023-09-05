@@ -49,7 +49,7 @@
     [btn4 addTarget:self action:@selector(insertAction) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn4];
     
-    NSLog(@"%@",NSHomeDirectory());
+    JQLog(@"%@",NSHomeDirectory());
     
     // 实例化数据库模型，合并所有模型文件
     NSManagedObjectModel *model = [NSManagedObjectModel mergedModelFromBundles:nil];
@@ -74,9 +74,9 @@
     [coordinator addPersistentStoreWithType:NSSQLiteStoreType configuration:nil URL:url options:options error:&error];
     
     if (error) {
-        NSLog(@"打开数据库失败：%@", error);
+        JQLog(@"打开数据库失败：%@", error);
     } else {
-        NSLog(@"打开数据库成功");
+        JQLog(@"打开数据库成功");
         
         // C10K
         
@@ -112,9 +112,9 @@
         // 懒加载，用哪个表就查哪个表
         for (JQReaderModel *r in dataList) {
             
-//            NSLog(@"name: %@, age: %f, book: %@, price: %f",r.name,r.age,r.book.title,r.book.price);
-            NSLog(@"name: %@, age: %f, vip: %f",r.name,r.age,r.vip);
-            NSLog(@"book: %@, price: %f",r.book.title,r.book.price);
+//            JQLog(@"name: %@, age: %f, book: %@, price: %f",r.name,r.age,r.book.title,r.book.price);
+            JQLog(@"name: %@, age: %f, vip: %f",r.name,r.age,r.vip);
+            JQLog(@"book: %@, price: %f",r.book.title,r.book.price);
         }
     }
 }
@@ -135,9 +135,9 @@
     }
     
     if ([self.objContext save:nil]) {
-        NSLog(@"修改成功");
+        JQLog(@"修改成功");
     } else {
-        NSLog(@"修改失败");
+        JQLog(@"修改失败");
     }
 }
 
@@ -157,9 +157,9 @@
     }
     
     if ([self.objContext save:nil]) {
-        NSLog(@"删除成功");
+        JQLog(@"删除成功");
     } else {
-        NSLog(@"删除失败");
+        JQLog(@"删除失败");
     }
 }
 
@@ -189,9 +189,9 @@
     
     // 保存数据
     if ([self.objContext save:&error]) {
-        NSLog(@"插入成功");
+        JQLog(@"插入成功");
     } else {
-        NSLog(@"插入失败：%@",error);
+        JQLog(@"插入失败：%@",error);
     }
 }
 

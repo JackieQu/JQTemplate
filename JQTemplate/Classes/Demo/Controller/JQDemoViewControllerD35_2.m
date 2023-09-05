@@ -140,7 +140,7 @@
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"WeChat://"]]) {
         
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"WeChat://moment?from=DingTalk"] options:[NSDictionary dictionary] completionHandler:^(BOOL success) {
-            NSLog(@"分享到微信朋友圈");
+            JQLog(@"分享到微信朋友圈");
         }];
     }
 }
@@ -150,7 +150,7 @@
     if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"WeChat://"]]) {
         
         [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"WeChat://friend?from=DingTalk"] options:[NSDictionary dictionary] completionHandler:^(BOOL success) {
-            NSLog(@"分享给微信好友");
+            JQLog(@"分享给微信好友");
         }];
     }
 }

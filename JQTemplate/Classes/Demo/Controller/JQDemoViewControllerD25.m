@@ -96,8 +96,8 @@
     
     [self.view addSubview:imageView];
     
-    NSLog(@"contents: %@",imageView.layer.contents);
-    NSLog(@"%@",NSStringFromCGRect(imageView.frame));
+    JQLog(@"contents: %@",imageView.layer.contents);
+    JQLog(@"%@",NSStringFromCGRect(imageView.frame));
 }
 
 - (void)testAnimation {
@@ -121,7 +121,7 @@
     
     [self.view.layer addSublayer:layer];
     
-    NSLog(@"contents: %@",layer.contents);
+    JQLog(@"contents: %@",layer.contents);
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

@@ -49,7 +49,7 @@
         _audioPlayer.delegate = self;
         
         if (error) {
-            NSLog(@"初始化失败：%@",error);
+            JQLog(@"初始化失败：%@",error);
         } else {
             
             // 准备开始播放，缓冲数据
@@ -144,9 +144,9 @@
 - (void)playInterruption:(NSNotification *)notify {
     
     if (notify.userInfo.allKeys.count == 2) {
-        NSLog(@"结束中断");
+        JQLog(@"结束中断");
     } else {
-        NSLog(@"开始中断");
+        JQLog(@"开始中断");
     }
 }
 
@@ -154,25 +154,25 @@
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
     
-    NSLog(@"播放完成");
+    JQLog(@"播放完成");
 }
 
 - (void)audioPlayerDecodeErrorDidOccur:(AVAudioPlayer *)player error:(NSError *)error {
     
-    NSLog(@"error: %@",error);
+    JQLog(@"error: %@",error);
 }
 
 // iOS 8 中断方法
 //- (void)audioPlayerBeginInterruption:(AVAudioPlayer *)player {
 //
-//    NSLog(@"开始中断");
+//    JQLog(@"开始中断");
 //
 //    [self.audioPlayer pause];
 //}
 //
 //- (void)audioPlayerEndInterruption:(AVAudioPlayer *)player withOptions:(NSUInteger)flags {
 //
-//    NSLog(@"结束中断");
+//    JQLog(@"结束中断");
 //
 //    [self.audioPlayer play];
 //}

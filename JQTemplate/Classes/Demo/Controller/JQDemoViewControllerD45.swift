@@ -244,19 +244,20 @@ class JQDemoViewControllerD45: JQBaseViewController {
             print(tmpValue)
             
             let result:Int = value!
-            print(value)
+            print(value ?? 0)
             print(result)
         }
         
         // 当不确定可选值是否有值时，尽量使用 if 进行判断
         let url = NSURL(string: "www.baidu.com")
         if let tmpUrl = url {
-            NSURLRequest(url: tmpUrl as URL)
+            _ = NSURLRequest(url: tmpUrl as URL)
         }
         
         // 可选项：??，可以对 nil 进行快速判断，?? 后的值参与计算
         var num:Int?
-        let result:Int = num ?? 0
+        num = 123
+        let result:Int = num!
         print(result)
     }
     
@@ -289,7 +290,7 @@ class JQDemoViewControllerD45: JQBaseViewController {
         // 常用方法
         // 1、初始化空字符串
         let emptyString = ""
-        let emptyString2 = String()
+        _ = String()
         
         // 2、遍历字符串
         let str2 = "Jackie"
@@ -559,7 +560,7 @@ class JQDemoViewControllerD45: JQBaseViewController {
 //        }
         
         // switch 和 元组
-        let position = (10,10)
+//        let position = (10,10)
 
 //        switch position {
 //        case (0,0):
@@ -575,26 +576,26 @@ class JQDemoViewControllerD45: JQBaseViewController {
 //        }
         
         // Value Binding: 将元素中元素提取出来，直接使用，不可与 fallthrought 同用
-        switch position {
-        case (let x, 10):
-            print("x: \(x)")
-//            fallthrough
-        case (1, let y):
-            print("y: \(y)")
-//            fallthrough
-        case (let x, let y):
-            print("x: \(x) y: \(y)")
-        }
+//        switch position {
+//        case (let x, 10):
+//            print("x: \(x)")
+////            fallthrough
+//        case (1, let y):
+//            print("y: \(y)")
+////            fallthrough
+//        case (let x, let y):
+//            print("x: \(x) y: \(y)")
+//        }
         
         // where 后缀的表达式为真，case 即为真
-        let point = (10, 20)
-        
-        switch point {
-        case let(x,y) where x > y:
-            print("x: \(x) y: \(y)")
-        default:
-            print("other")
-        }
+//        let point = (10, 20)
+//
+//        switch point {
+//        case let(x,y) where x > y:
+//            print("x: \(x) y: \(y)")
+//        default:
+//            print("other")
+//        }
         
         print("SwitchExercise")
     }

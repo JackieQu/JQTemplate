@@ -84,7 +84,7 @@
 // 接收服务器返回响应信息
 - (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response {
     
-    NSLog(@"%@",response);
+    JQLog(@"%@",response);
 }
 
 // 接收数据（多次调用）
@@ -92,7 +92,7 @@
     
     [self.data appendData:data];
     
-    NSLog(@"%@",data);
+    JQLog(@"%@",data);
 }
 
 // 请求完成
@@ -100,7 +100,7 @@
     
     [self.data writeToFile:@"/Users/JackieQu/Desktop/test.ogg" atomically:YES];
     
-    NSLog(@"网络请求完成");
+    JQLog(@"网络请求完成");
 }
 
 - (void)testSyncURLRequest {
@@ -116,13 +116,13 @@
     
     NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
     
-    NSLog(@"%@",response);
+    JQLog(@"%@",response);
     
-    NSLog(@"%@",error);
+    JQLog(@"%@",error);
     
     NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
     
-    NSLog(@"%@",string);
+    JQLog(@"%@",string);
 }
 
 - (void)testAsyncURLRequest {
@@ -162,27 +162,27 @@
         
         // 服务器与客户端以二进制流通讯
         
-        NSLog(@"%@",data);
+        JQLog(@"%@",data);
         
-        NSLog(@"%@",[NSThread currentThread]);
+        JQLog(@"%@",[NSThread currentThread]);
         
         if (connectionError) {
             
-            NSLog(@"错误信息 - %@",connectionError);
+            JQLog(@"错误信息 - %@",connectionError);
             
         } else {
             
-            NSLog(@"响应信息 - %@",response);
+            JQLog(@"响应信息 - %@",response);
             
             NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            NSLog(@"%@",string);
+            JQLog(@"%@",string);
             
             NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:NULL];
-            NSLog(@"%@",json);
+            JQLog(@"%@",json);
             
             // JSONKit
             NSDictionary *json2 = [data objectFromJSONData];
-            NSLog(@"%@",json2);
+            JQLog(@"%@",json2);
             
             [[NSOperationQueue mainQueue] addOperationWithBlock:^{
                 
@@ -209,16 +209,16 @@
     
     switch (self.reachable.currentReachabilityStatus) {
         case NotReachable:
-            NSLog(@"暂无网络连接");
+            JQLog(@"暂无网络连接");
             break;
         case ReachableViaWiFi:
-            NSLog(@"WiFi网络");
+            JQLog(@"WiFi网络");
             break;
         case ReachableViaWWAN:
-            NSLog(@"移动蜂窝网络");
+            JQLog(@"移动蜂窝网络");
             break;
         default:
-            NSLog(@"未知网络连接");
+            JQLog(@"未知网络连接");
             break;
     }
 }
@@ -249,7 +249,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
        
         NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",string);
+        JQLog(@"%@",string);
     }];
 }
 
@@ -274,7 +274,7 @@
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse * _Nullable response, NSData * _Nullable data, NSError * _Nullable connectionError) {
         
         NSString *string = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",string);
+        JQLog(@"%@",string);
     }];
 }
 

@@ -38,7 +38,7 @@
     [self drawLine2];
     [self drawLine3];
     
-    NSLog(@"%@",NSStringFromCGRect(rect));
+    JQLog(@"%@",NSStringFromCGRect(rect));
 }
 
 - (void)drawBezierLine {

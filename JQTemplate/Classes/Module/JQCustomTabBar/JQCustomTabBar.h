@@ -11,6 +11,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 static NSUInteger kSpecialTag = 1000;
+static NSUInteger kStandardTag = 2000;
 
 typedef NS_ENUM(NSUInteger, JQDockButtonType) {
     JQDockButtonDemo,

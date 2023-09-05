@@ -88,7 +88,7 @@ static sqlite3 *database = nil;
     
     NSString *filename = [NSString cachePathWith:@"test_sqlite.sqlite"];
 
-//    NSLog(@"%@",filename);
+//    JQLog(@"%@",filename);
     
     // sqlite3 操作
     
@@ -97,7 +97,7 @@ static sqlite3 *database = nil;
     // arg2: 数据库的地址，也叫句柄
     if (sqlite3_open(filename.UTF8String, &database) == SQLITE_OK) {
         
-        NSLog(@"数据库打开成功");
+        JQLog(@"数据库打开成功");
         
         // 2、创建表，若表已存在则无需创建
         NSString *sql = @"create table if not exists t_student (id integer primary key autoincrement, name text, age integer);";
@@ -110,16 +110,16 @@ static sqlite3 *database = nil;
         sqlite3_exec(database, sql.UTF8String, NULL, NULL, &errmsg);
         
         if (errmsg) {
-            NSLog(@"创建表失败：%s",errmsg);
+            JQLog(@"创建表失败：%s",errmsg);
         } else {
-            NSLog(@"创建表成功");
+            JQLog(@"创建表成功");
         }
         
         // 4、关闭数据库
         sqlite3_close(database);
         
     } else {
-        NSLog(@"数据库打开失败");
+        JQLog(@"数据库打开失败");
     }
 }
 

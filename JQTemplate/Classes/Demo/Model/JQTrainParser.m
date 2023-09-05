@@ -80,7 +80,7 @@
 // 1. 打开文档
 - (void)parserDidStartDocument:(NSXMLParser *)parser {
     
-    NSLog(@"打开文档，开始解析");
+    JQLog(@"打开文档，开始解析");
     
     // 每次解析前进行清空
     [self.dataList removeAllObjects];
@@ -89,8 +89,8 @@
 // 2. 开始查找起始标签
 - (void)parser:(NSXMLParser *)parser didStartElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName attributes:(NSDictionary<NSString *,NSString *> *)attributeDict {
     
-    NSLog(@"开始元素 - %@",elementName);
-    NSLog(@"元素属性 - %@",attributeDict);
+    JQLog(@"开始元素 - %@",elementName);
+    JQLog(@"元素属性 - %@",attributeDict);
     
     if ([elementName isEqualToString:@"trainDetailInfo"]) {
         
@@ -110,17 +110,17 @@
     // 防止多次执行获取内容的方法
     [self.mString appendString:string];
     
-    NSLog(@"获取内容 - %@",string);
+    JQLog(@"获取内容 - %@",string);
 }
 
 // 4. 查找结束标签
 - (void)parser:(NSXMLParser *)parser didEndElement:(NSString *)elementName namespaceURI:(NSString *)namespaceURI qualifiedName:(NSString *)qName {
     
-    NSLog(@"结束元素 - %@",elementName);
+    JQLog(@"结束元素 - %@",elementName);
     
     if ([elementName isEqualToString:@"trainDetailInfo"]) {
         
-        NSLog(@"%@",self.dataList.lastObject);
+        JQLog(@"%@",self.dataList.lastObject);
         
         [self.dataList addObject:self.trainInfo];
         
@@ -133,7 +133,7 @@
 // 5. 查询文档结束
 - (void)parserDidEndDocument:(NSXMLParser *)parser {
     
-    NSLog(@"解析完成 - %@",self.dataList);
+    JQLog(@"解析完成 - %@",self.dataList);
     
     // 解析完成后，将数据回传给视图控制器
     if (self.endParser) {

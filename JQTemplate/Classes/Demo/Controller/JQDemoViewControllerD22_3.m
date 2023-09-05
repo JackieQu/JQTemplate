@@ -85,7 +85,7 @@ static NSString *identifier = @"cellID";
 //
 //    NSValue *value = self.dataList[indexPath.row];
 //
-//    NSLog(@"%@",NSStringFromCGSize([value CGSizeValue]));
+//    JQLog(@"%@",NSStringFromCGSize([value CGSizeValue]));
 //
 //    return [value CGSizeValue];
 //}

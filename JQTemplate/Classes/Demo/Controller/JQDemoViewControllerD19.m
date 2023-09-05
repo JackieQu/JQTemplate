@@ -140,7 +140,7 @@
     
     for (JQPersonModel *person in personList) {
         
-        NSLog(@"%@",person.name);
+        JQLog(@"%@",person.name);
     }
 }
 
@@ -237,7 +237,7 @@
     
     for (NSString *name in nameList) {
         
-        NSLog(@"%@",name);
+        JQLog(@"%@",name);
     }
 }
 
@@ -296,9 +296,9 @@
         BOOL isTelNum = [p evaluateWithObject:num];
         
         if (isTelNum) {
-            NSLog(@"%@: YES",num);
+            JQLog(@"%@: YES",num);
         } else {
-            NSLog(@"%@: NO",num);
+            JQLog(@"%@: NO",num);
         }
     }
 }

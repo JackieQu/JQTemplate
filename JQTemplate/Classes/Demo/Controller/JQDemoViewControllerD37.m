@@ -92,7 +92,7 @@
     // 3、判断定位服务是否打开
     if (![CLLocationManager locationServicesEnabled]) {
         
-        NSLog(@"提示用户打开定位服务");
+        JQLog(@"提示用户打开定位服务");
         
     } else {
         
@@ -133,13 +133,13 @@
         return;
     }
     
-    JQAnnotation *annotation = [[JQAnnotation alloc] init];
-    annotation.coordinate = CLLocationCoordinate2DMake(45.796341, 126.507318);
-    annotation.title = @"TITLE";
-    annotation.subtitle = @"SUBTITLE";
-    annotation.icon = @"position_hl";
-    [self.mapView addAnnotation:annotation];
-    return;
+//    JQAnnotation *annotation = [[JQAnnotation alloc] init];
+//    annotation.coordinate = CLLocationCoordinate2DMake(45.796341, 126.507318);
+//    annotation.title = @"TITLE";
+//    annotation.subtitle = @"SUBTITLE";
+//    annotation.icon = @"position_hl";
+//    [self.mapView addAnnotation:annotation];
+//    return;
     
     // 获取用户所在的经纬度
     CLLocationCoordinate2D coordinate = self.mapView.userLocation.location.coordinate;
@@ -151,15 +151,15 @@
     // 定位可见区域
     [self.mapView setRegion:region animated:YES];
     
-    NSLog(@"当前经度: %f",coordinate.longitude);
-    NSLog(@"当前纬度: %f",coordinate.latitude);
+    JQLog(@"当前经度: %f",coordinate.longitude);
+    JQLog(@"当前纬度: %f",coordinate.latitude);
 }
 
 - (MKAnnotationView *)mapView:(MKMapView *)mapView viewForAnnotation:(id<MKAnnotation>)annotation {
     
     if ([annotation isKindOfClass:[MKUserLocation class]]) {
         
-        NSLog(@"恢复当前位置样式");
+        JQLog(@"恢复当前位置样式");
         return nil;
     }
     
@@ -236,8 +236,8 @@
      } MKCoordinateRegion;
      */
     
-    NSLog(@"经度: %f",mapView.region.span.longitudeDelta);
-    NSLog(@"纬度: %f",mapView.region.span.latitudeDelta);
+    JQLog(@"经度: %f",mapView.region.span.longitudeDelta);
+    JQLog(@"纬度: %f",mapView.region.span.latitudeDelta);
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
@@ -250,8 +250,8 @@
     // 获取经纬度
     CLLocationCoordinate2D coordiante = location.coordinate;
     
-    NSLog(@"经度：%f",coordiante.longitude);
-    NSLog(@"纬度：%f",coordiante.latitude);
+    JQLog(@"经度：%f",coordiante.longitude);
+    JQLog(@"纬度：%f",coordiante.latitude);
 }
 
 // 地理编码（通过地名获得经纬度）
@@ -263,13 +263,13 @@
     // 地理编码
     [gecoder geocodeAddressString:@"凯德广场学府路店" completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
        
-        NSLog(@"%@",@(placemarks.count));
+        JQLog(@"%@",@(placemarks.count));
         
-        NSLog(@"%@",error);
+        JQLog(@"%@",error);
         
         if (!placemarks.count || error) {
             
-            NSLog(@"地理编码失败");
+            JQLog(@"地理编码失败");
             
             return;
         }
@@ -279,12 +279,12 @@
             
             CLLocationCoordinate2D coordinate = placemark.location.coordinate;
             
-            NSLog(@"经度: %f",coordinate.longitude);
-            NSLog(@"纬度: %f",coordinate.latitude);
+            JQLog(@"经度: %f",coordinate.longitude);
+            JQLog(@"纬度: %f",coordinate.latitude);
             
-            NSLog(@"name: %@",placemark.name);
-            NSLog(@"country: %@",placemark.country);
-            NSLog(@"thoroughfare: %@",placemark.thoroughfare);
+            JQLog(@"name: %@",placemark.name);
+            JQLog(@"country: %@",placemark.country);
+            JQLog(@"thoroughfare: %@",placemark.thoroughfare);
         }
     }];
 }
@@ -302,13 +302,13 @@
     // 反地理位置编码
     [geocoder reverseGeocodeLocation:location completionHandler:^(NSArray<CLPlacemark *> * _Nullable placemarks, NSError * _Nullable error) {
         
-        NSLog(@"%@",@(placemarks.count));
+        JQLog(@"%@",@(placemarks.count));
         
-        NSLog(@"%@",error);
+        JQLog(@"%@",error);
         
         if (!placemarks.count || error) {
             
-            NSLog(@"地理编码失败");
+            JQLog(@"地理编码失败");
             
             return;
         }
@@ -316,9 +316,9 @@
         // 获取位置标记
         for (CLPlacemark *placemark in placemarks) {
             
-            NSLog(@"name: %@",placemark.name);
-            NSLog(@"country: %@",placemark.country);
-            NSLog(@"locality: %@",placemark.locality);
+            JQLog(@"name: %@",placemark.name);
+            JQLog(@"country: %@",placemark.country);
+            JQLog(@"locality: %@",placemark.locality);
         }
     }];
 }

@@ -59,9 +59,9 @@
         BOOL flag = [db executeUpdate:@"create table if not exists t_account (id integer primary key autoincrement, owner text, balance real);"];
         
         if (flag) {
-            NSLog(@"创建成功");
+            JQLog(@"创建成功");
         } else {
-            NSLog(@"创建失败");
+            JQLog(@"创建失败");
         }
         
         [db close];
@@ -81,7 +81,7 @@
                 int account_id = [rs intForColumn:@"id"];
                 NSString *owner = [rs stringForColumn:@"owner"];
                 CGFloat balance = [rs doubleForColumn:@"balance"];
-                NSLog(@"id: %d, owner: %@, balance: %lf", account_id, owner, balance);
+                JQLog(@"id: %d, owner: %@, balance: %lf", account_id, owner, balance);
             }
             
             [db close];
@@ -125,9 +125,9 @@
             BOOL flag = [db executeUpdate:@"delete from t_account"];
             
             if (flag) {
-                NSLog(@"删除成功");
+                JQLog(@"删除成功");
             } else {
-                NSLog(@"删除失败");
+                JQLog(@"删除失败");
             }
             
             [db close];
