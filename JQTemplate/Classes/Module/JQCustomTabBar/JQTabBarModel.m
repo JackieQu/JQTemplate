@@ -21,10 +21,11 @@ static NSString *kResourceName = @"JQTabBar";
 
 + (instancetype)tabBarModel {
     
-    NSString *path = [[NSBundle mainBundle] pathForResource:kResourceName ofType:@"plist"];
-    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
-    JQTabBarModel *tabBarModel = [JQTabBarModel modelWithDictionary:dict];
+//    NSString *path = [[NSBundle mainBundle] pathForResource:kResourceName ofType:@"plist"];
+//    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+//    JQTabBarModel *tabBarModel = [JQTabBarModel modelWithDictionary:dict];
     
+    JQTabBarModel *tabBarModel = [JQTabBarModel modelWithPath:kResourceName];
     NSMutableArray *availableItems = [NSMutableArray array];
     for (NSUInteger i = 0; i < tabBarModel.items.count; i ++) {
         JQTabBarItemModel *item = tabBarModel.items[i];
@@ -34,6 +35,12 @@ static NSString *kResourceName = @"JQTabBar";
         }
         // 校验类名设置
         Class cls = NSClassFromString(item.className);
+        if (!cls) {
+            // 适配 swift 混编情况
+            NSString *bundleKey = [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleExecutableKey];
+            NSString *className = [NSString stringWithFormat:@"%@.%@", bundleKey, item.className];
+            cls = NSClassFromString(className);
+        }
         if (!(cls && [cls isSubclassOfClass:[JQBaseViewController class]])) {
             JQLog(@"%@ 第 %ld 项 className 设置错误", kResourceName, i + 1);
             cls = [JQBaseViewController class];
@@ -43,23 +50,27 @@ static NSString *kResourceName = @"JQTabBar";
         if (tabBarModel.isSpecial && i == tabBarModel.specialIndex) {
             item.isSpecial = YES;
             tabBarModel.specialItem = item;
+            
         } else {
             item.isSpecial = NO;
         }
         [availableItems addObject:item];
     }
     tabBarModel.availableItems = availableItems;
+    
     // 校验特殊 item 下标
     if (tabBarModel.specialIndex >= availableItems.count || tabBarModel.specialIndex < 0) {
         JQLog(@"%@ specialIndex 设置错误", kResourceName);
         tabBarModel.specialIndex = availableItems.count - 1;
     }
+    
     // 校验选中 item 下标
     if ((tabBarModel.selectedIndex >= availableItems.count || tabBarModel.selectedIndex < 0) ||
         (tabBarModel.isSpecial && tabBarModel.selectedIndex == tabBarModel.specialIndex)) {
         JQLog(@"%@ selectedIndex 设置错误", kResourceName);
         tabBarModel.selectedIndex = 0;
     }
+    
     return tabBarModel;
 }
 

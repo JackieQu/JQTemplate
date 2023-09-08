@@ -34,7 +34,7 @@
 - (UIView *)my_hitTest:(CGPoint)point withEvent:(UIEvent *)event {
     
     UIView *view = [self my_hitTest:point withEvent:event];
-    if (view) {
+    if (view || ![JQCustomTabBar shared].tabBarModel.isSpecial) {
         return view;
     }
     
@@ -42,15 +42,17 @@
         return nil;
     }
     
-    NSArray *arr = [[self.subviews reverseObjectEnumerator] allObjects];
-    for (UIView *firstLayerView in arr) {
+    for (NSInteger i = self.subviews.count - 1; i >= 0; i --) {
+        UIView *firstLayerView = self.subviews[i];
         if (![self canAnswerEvent:firstLayerView]) {
             continue;
         }
+        
         if ([firstLayerView isKindOfClass:[JQCustomTabBar class]] && !firstLayerView.superview.isHidden) {
-            for (UIView *secondLayerView in firstLayerView.subviews) {
-                CGPoint transformPoint = [secondLayerView convertPoint:point fromView:firstLayerView];
-                if (CGRectContainsPoint(secondLayerView.bounds, transformPoint)) {
+            for (NSInteger j = firstLayerView.subviews.count - 1; j >= 0; j --) {
+                UIView *secondLayerView = firstLayerView.subviews[j];
+                CGPoint convertPoint = [secondLayerView convertPoint:point fromView:firstLayerView];
+                if (CGRectContainsPoint(secondLayerView.bounds, convertPoint)) {
                     return secondLayerView;
                 }
             }
@@ -61,7 +63,7 @@
 
 - (BOOL)canAnswerEvent:(UIView *)view {
     
-    if (!view.isUserInteractionEnabled || view.hidden || view.alpha <= 0.01) {
+    if (view.hidden || view.alpha <= 0.01 || !view.isUserInteractionEnabled) {
         return NO;
     }
     return YES;

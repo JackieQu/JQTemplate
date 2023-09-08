@@ -11,11 +11,11 @@
 
 - (NSDictionary *)parameters {
     
-    NSMutableDictionary * parametersDictionary = [NSMutableDictionary dictionary];
-    NSArray * queryComponents = [self.query componentsSeparatedByString:@"&"];
-    for (NSString * queryComponent in queryComponents) {
-        NSString * key = [queryComponent componentsSeparatedByString:@"="].firstObject;
-        NSString * value = [queryComponent substringFromIndex:(key.length + 1)];
+    NSMutableDictionary *parametersDictionary = [NSMutableDictionary dictionary];
+    NSArray *queryComponents = [self.query componentsSeparatedByString:@"&"];
+    for (NSString *queryComponent in queryComponents) {
+        NSString *key = [queryComponent componentsSeparatedByString:@"="].firstObject;
+        NSString *value = [queryComponent substringFromIndex:(key.length + 1)];
         [parametersDictionary setObject:value forKey:key];
     }
     return parametersDictionary;

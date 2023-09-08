@@ -56,10 +56,10 @@ static NSString *kCellID    = @"identifier";
     
     [self.view addSubview:self.tableView];
     
-    NSInteger lastSection = self.dataList.count - 1;
-    NSInteger lastRow = self.dataList[lastSection].rows.count - 1;
-    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:lastSection];
-    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+//    NSInteger lastSection = self.dataList.count - 1;
+//    NSInteger lastRow = self.dataList[lastSection].rows.count - 1;
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:lastSection];
+//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark - UITableViewDataSource Methods

@@ -6,13 +6,13 @@
 //
 
 #import "JQCustomTabBar.h"
-#import "JQTabBarButton.h"
+#import "JQCustomTabBarButton.h"
 
 @interface JQCustomTabBar ()
 
 @property (nonatomic, strong, readwrite) JQTabBarModel *tabBarModel;
-@property (nonatomic, strong) JQTabBarButton *selectedBtn;
-@property (nonatomic, strong) JQTabBarButton *specialBtn;
+@property (nonatomic, strong) JQCustomTabBarButton *selectedBtn;
+@property (nonatomic, strong) JQCustomTabBarButton *specialBtn;
 @property (nonatomic, strong) UIView *markLineView;
 
 @end
@@ -37,6 +37,16 @@
     return _markLineView;
 }
 
++ (JQCustomTabBar *)shared {
+    
+    static JQCustomTabBar *instance = nil;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        instance = [[self alloc] init];
+    });
+    return instance;
+}
+
 - (instancetype)initWithFrame:(CGRect)frame {
     
     if (self = [super initWithFrame:frame]) {
@@ -44,18 +54,18 @@
         self.backgroundColor = [UIColor whiteColor];
         
         NSUInteger itemCount = self.tabBarModel.availableItems.count;
-//        CGFloat itemWidth = frame.size.width / itemCount;
+        CGFloat itemWidth = frame.size.width / itemCount;
         for (NSUInteger i = 0; i < itemCount; i ++) {
             JQTabBarItemModel *item = self.tabBarModel.availableItems[i];
-            JQTabBarButton *btn = [JQTabBarButton buttonWithType:UIButtonTypeCustom];
+            JQCustomTabBarButton *btn = [JQCustomTabBarButton buttonWithType:UIButtonTypeCustom];
             if (item.isSpecial) {
                 btn.tag = kSpecialTag;
-//                btn.frame = CGRectMake(0, 0, 80, 80);
-//                btn.center = CGPointMake(itemWidth * i + itemWidth / 2, 0);
+                btn.frame = CGRectMake(0, 0, 80, 80);
+                btn.center = CGPointMake(itemWidth * i + itemWidth / 2, 0);
                 self.specialBtn = btn;
             } else {
-                btn.tag = kStandardTag + i;
-//                btn.frame = CGRectMake(itemWidth * i, 0, itemWidth, self.frame.size.height);
+                btn.tag = JQCustomButtonDemo + i;
+                btn.frame = CGRectMake(itemWidth * i, 0, itemWidth, self.frame.size.height);
             }
             btn.showsTouchWhenHighlighted = NO;
             btn.item = item;
@@ -80,18 +90,22 @@
     CGFloat itemWidth = self.frame.size.width / itemCount;
     for (UIView *subview in self.subviews) {
         if (!subview.tag) continue;
-
-        NSUInteger i = subview.tag - kStandardTag;
+        
+        NSUInteger i = subview.tag - JQCustomButtonDemo;
         if (subview.tag == kSpecialTag) {
-            self.specialBtn.frame = CGRectMake(0, 0, 80, 80);
-            self.specialBtn.center = CGPointMake(itemWidth * self.tabBarModel.specialIndex + itemWidth / 2, 0);
-            self.specialBtn.item = self.specialBtn.item;
+            subview.center = CGPointMake(itemWidth * self.tabBarModel.specialIndex + itemWidth / 2, 0);
         } else {
             subview.frame = CGRectMake(itemWidth * i, 0, itemWidth, self.frame.size.height);
         }
     }
-
+    
     if (self.tabBarModel.isMarked) {
+        UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
+        if (orientation == UIDeviceOrientationPortrait || orientation == UIDeviceOrientationPortraitUpsideDown) {
+            self.markLineView.frame = CGRectMake(0, -ADAPT_VALUE(2), ADAPT_VALUE(24), ADAPT_VALUE(2));
+        } else if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight) {
+            self.markLineView.frame = CGRectMake(0, -ADAPT_VALUE_HORIZONTAL(2), ADAPT_VALUE_HORIZONTAL(24), ADAPT_VALUE_HORIZONTAL(2));
+        }
         self.markLineView.centerX = self.selectedBtn.centerX;
     }
     
@@ -100,12 +114,18 @@
     }
 }
 
-- (void)clickAction:(JQTabBarButton *)sender {
+- (void)clickAction:(JQCustomTabBarButton *)sender {
     
     BOOL isSpecial  = sender.tag == kSpecialTag;
     BOOL isMarked   = self.tabBarModel.isMarked && !isSpecial;
-    BOOL isAnimated = self.tabBarModel.isAnimated && !isSpecial;
+    BOOL isAnimated = self.tabBarModel.isAnimated; // && !isSpecial;
  
+    if (![sender isEqual:self.selectedBtn] && !isSpecial) {
+        self.selectedBtn.selected = NO;
+        sender.selected = YES;
+        self.selectedBtn = sender;
+    }
+    
     if (isAnimated) {
         
         [UIView animateWithDuration:0.2 animations:^{
@@ -130,37 +150,17 @@
         }
         [self handleAction:sender];
     }
-    
-    if (isSpecial) { return; }
-    
-    if (![sender isEqual:self.selectedBtn]) {
-        self.selectedBtn.selected = NO;
-        sender.selected = YES;
-        self.selectedBtn = sender;
-    }
 }
 
-- (void)handleAction:(JQDockButton *)sender {
+- (void)handleAction:(JQCustomTabBarButton *)sender {
     
-    NSInteger tag = sender.tag == kSpecialTag ? kSpecialTag : sender.tag - kStandardTag;
+    NSInteger index = sender.tag == kSpecialTag ? kSpecialTag : sender.tag - JQCustomButtonDemo;
     if ([self.delegate respondsToSelector:@selector(tabBar:selectedAtIndex:)]) {
-        [self.delegate tabBar:self selectedAtIndex:tag];
+        [self.delegate tabBar:self selectedAtIndex:index];
         return;
     }
     
-    !self.block ? : self.block(self, tag);
+    !self.block ? : self.block(self, index);
 }
-
-//- (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
-//    
-//    UIView *view = [super hitTest:point withEvent:event];
-//    if (!view) {
-//        CGPoint newPoint = [self.specialBtn convertPoint:point fromView:self];
-//        if (CGRectContainsPoint(self.specialBtn.bounds, newPoint)) {
-//            view = self.specialBtn;
-//        }
-//    }
-//    return view;
-//}
 
 @end

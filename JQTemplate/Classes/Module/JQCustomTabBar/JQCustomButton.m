@@ -1,15 +1,15 @@
 //
-//  JQDockButton.m
+//  JQCustomButton.m
 //  JQTemplate
 //
 //  Created by JackieQu on 2023/5/31.
 //
 
-#import "JQDockButton.h"
+#import "JQCustomButton.h"
 
 static const CGFloat kScale = 0.618;
 
-@implementation JQDockButton
+@implementation JQCustomButton
 
 - (instancetype)initWithFrame:(CGRect)frame {
     
@@ -23,20 +23,17 @@ static const CGFloat kScale = 0.618;
 
 - (CGRect)titleRectForContentRect:(CGRect)contentRect {
     
-    CGFloat pointX = 0;
     CGFloat pointY = contentRect.size.height * kScale;
     CGFloat width  = contentRect.size.width;
     CGFloat height = contentRect.size.height * (1 - kScale);
-    return CGRectMake(pointX, pointY, width, height);
+    return CGRectMake(0, pointY, width, height);
 }
 
 - (CGRect)imageRectForContentRect:(CGRect)contentRect {
     
-    CGFloat pointX = 0;
-    CGFloat pointY = 0;
     CGFloat width  = contentRect.size.width;
     CGFloat height = contentRect.size.height * kScale;
-    return CGRectMake(pointX, pointY, width, height);
+    return CGRectMake(0, 0, width, height);
 }
 
 @end

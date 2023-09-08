@@ -12,7 +12,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import <AVFoundation/AVFoundation.h>
 
-extern CFAbsoluteTime StartTime;
+extern CFAbsoluteTime startTime;
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 
@@ -33,15 +33,15 @@ extern CFAbsoluteTime StartTime;
     JQLogFunction
     
     // 设置音乐后台播放
-    AVAudioSession *session = [AVAudioSession sharedInstance];
-    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
-    [session setActive:YES error:nil];
-    
+//    AVAudioSession *session = [AVAudioSession sharedInstance];
+//    [session setCategory:AVAudioSessionCategoryPlayback error:nil];
+//    [session setActive:YES error:nil];
+
     // 让 app 支持接受远程控制事件
     [application beginReceivingRemoteControlEvents];
-    
-    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+
     // 隐私协议判断
+    NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
     if([[defaults objectForKey:@"showStatus"] isEqualToString:@"1"]){
         [UMConfigure setLogEnabled:YES];
         [UMConfigure initWithAppkey:@"59892ebcaed179694b000104" channel:@"App Store"];
@@ -56,8 +56,8 @@ extern CFAbsoluteTime StartTime;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    double launchTime = (CFAbsoluteTimeGetCurrent() - StartTime);
-    JQLog(@"StartTime: %f",launchTime);
+    double launchTime = (CFAbsoluteTimeGetCurrent() - startTime);
+    JQLog(@"startTime: %f",launchTime);
     
     return YES;
 }

@@ -138,7 +138,7 @@
     Ivar *vars = class_copyIvarList(cls, &varsOutCount);
     for (int i = 0; i < varsOutCount; i ++) {
         Ivar var = vars[i];
-        const char * varName = ivar_getName(var);
+        const char *varName = ivar_getName(var);
         JQLog(@"%s",varName);
     }
     free(vars);

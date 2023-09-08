@@ -15,8 +15,6 @@
 	<key>items</key>
 	<array>
 		<dict>
-			<key>isHidden</key>
-			<false/>
 			<key>className</key>
 			<string>JQDemoViewController</string>
 			<key>title</key>
@@ -25,10 +23,10 @@
 			<string>tab_3</string>
 			<key>imageSelected</key>
 			<string>tab_3_s</string>
-		</dict>
-		<dict>
 			<key>isHidden</key>
 			<false/>
+		</dict>
+		<dict>
 			<key>className</key>
 			<string>JQHomeViewController</string>
 			<key>title</key>
@@ -37,10 +35,10 @@
 			<string>tab_0</string>
 			<key>imageSelected</key>
 			<string>tab_0_s</string>
-		</dict>
-		<dict>
 			<key>isHidden</key>
 			<false/>
+		</dict>
+		<dict>
 			<key>className</key>
 			<string>JQProfileViewController</string>
 			<key>title</key>
@@ -49,6 +47,8 @@
 			<string>tab_2</string>
 			<key>imageSelected</key>
 			<string>tab_2_s</string>
+			<key>isHidden</key>
+			<false/>
 		</dict>
 	</array>
 </dict>

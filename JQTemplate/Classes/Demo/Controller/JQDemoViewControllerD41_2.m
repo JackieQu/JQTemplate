@@ -12,7 +12,7 @@
 @interface JQDemoViewControllerD41_2 ()
 
 //@property (nonatomic, strong) JQPersonModel *person;
-@property (nonatomic, strong) JQPersonViewModel * personVM;
+@property (nonatomic, strong) JQPersonViewModel *personVM;
 
 @property (nonatomic, strong) UILabel *nameLabel;
 

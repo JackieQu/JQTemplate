@@ -7,7 +7,7 @@
 
 #import "JQDemoViewControllerD4.h"
 #import "JQBlockButton.h"
-#import "JQDockButton.h"
+#import "JQCustomButton.h"
 
 @interface JQDemoViewControllerD4 ()
 
@@ -54,7 +54,7 @@
     CGFloat height = width + 20;
 
     for (int i = 0; i < titleArr.count; i ++) {
-        JQDockButton *btn = [JQDockButton buttonWithType:UIButtonTypeCustom];
+        JQCustomButton *btn = [JQCustomButton buttonWithType:UIButtonTypeCustom];
         CGFloat pointX = i % 3;
         CGFloat pointY = i / 3;
         if (i == 9) {

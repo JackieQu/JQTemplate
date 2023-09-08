@@ -100,7 +100,7 @@
     
 //    [[[UIApplication sharedApplication].windows.firstObject rootViewController].navigationController pushViewController:vc animated:YES];
     
-    UINavigationController * navC = [[UINavigationController alloc] initWithRootViewController:vc];
+    UINavigationController *navC = [[UINavigationController alloc] initWithRootViewController:vc];
     [self.mm_drawerController setCenterViewController:navC withCloseAnimation:YES completion:nil];
 }
 

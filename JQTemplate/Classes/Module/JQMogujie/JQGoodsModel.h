@@ -5,11 +5,11 @@
 //  Created by JackieQu on 2023/6/27.
 //
 
-#import <Foundation/Foundation.h>
+#import "JQBaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JQGoodsModel : NSObject
+@interface JQGoodsModel : JQBaseModel
 
 @property (nonatomic, copy) NSString *image;
 

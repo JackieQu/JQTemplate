@@ -25,9 +25,13 @@
 #define STANDARD_MARGIN             20.f
 #define STANDARD_PADDING            20.f
 #define STANDARD_WIDTH              375.f
+#define STANDARD_HEIGHT             667.f
 
 #define ADAPT_SCALE                 (SCREEN_WIDTH / STANDARD_WIDTH)
-#define ADAPT_VALUE(value)          roundf(value * ADAPT_SCALE)
+#define ADAPT_VALUE(v)              roundf(v * ADAPT_SCALE)
+
+#define ADAPT_SCALE_HORIZONTAL      (SCREEN_WIDTH / STANDARD_HEIGHT)
+#define ADAPT_VALUE_HORIZONTAL(v)   roundf(v * ADAPT_SCALE_HORIZONTAL)
 
 #endif /* JQMacro_h */
 

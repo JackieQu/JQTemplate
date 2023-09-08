@@ -10,22 +10,21 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-static NSUInteger kSpecialTag = 1000;
-static NSUInteger kStandardTag = 2000;
+static NSInteger kSpecialTag = 999;
 
-typedef NS_ENUM(NSUInteger, JQDockButtonType) {
-    JQDockButtonDemo,
-    JQDockButtonHome,
-    JQDockButtonProfile,
+typedef NS_ENUM(NSInteger, JQCustomButtonTag) {
+    JQCustomButtonDemo = 1000,
+    JQCustomButtonHome,
+    JQCustomButtonProfile,
 };
 
 @class JQCustomTabBar;
 
-typedef void(^JQCustomTabBarBlock)(JQCustomTabBar *tabBar, JQDockButtonType type);
+typedef void(^JQCustomTabBarBlock)(JQCustomTabBar *tabBar, JQCustomButtonTag tag);
 
 @protocol JQCustomTabBarDelegate <NSObject>
 
-- (void)tabBar:(JQCustomTabBar *)tabBar selectedAtIndex:(JQDockButtonType)type;
+- (void)tabBar:(JQCustomTabBar *)tabBar selectedAtIndex:(JQCustomButtonTag)tag;
 
 @end
 
@@ -36,6 +35,8 @@ typedef void(^JQCustomTabBarBlock)(JQCustomTabBar *tabBar, JQDockButtonType type
 @property (nonatomic, weak) id<JQCustomTabBarDelegate> delegate;
 
 @property (nonatomic, strong, readonly) JQTabBarModel *tabBarModel;
+
++ (JQCustomTabBar *)shared;
 
 @end
 

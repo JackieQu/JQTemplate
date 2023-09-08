@@ -104,6 +104,7 @@
     
     if (error) {
         JQLog(@"初始化失败：%@",error);
+        
     } else {
         
         [_audioPlayer prepareToPlay];

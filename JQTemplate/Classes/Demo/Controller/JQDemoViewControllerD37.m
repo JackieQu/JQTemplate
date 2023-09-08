@@ -246,7 +246,7 @@
     [manager stopUpdatingLocation];
     
     // 获取定位信息
-    CLLocation * location = [locations lastObject];
+    CLLocation *location = [locations lastObject];
     // 获取经纬度
     CLLocationCoordinate2D coordiante = location.coordinate;
     

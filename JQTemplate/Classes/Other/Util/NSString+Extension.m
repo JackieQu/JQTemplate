@@ -36,10 +36,8 @@
                             modifiedSelector,
                             method_getImplementation(originalMethod),
                             method_getTypeEncoding(originalMethod));
-        JQLog(@"1");
     } else {
         method_exchangeImplementations(originalMethod, modifiedMethod);
-        JQLog(@"2");
     }
 }
 

@@ -277,10 +277,10 @@ class JQDemoViewControllerD45: JQBaseViewController {
          var charValue1:Character = "Jackie"    // 错误
          
          字符串是可以存放多个字符的集合
-         OC:    NSString * strValue = @"Jackie";
+         OC:    NSString *strValue = @"Jackie";
          Swift: let strValue:String = "Jackie"
          
-         OC 是以 '\0' 为字符串结束：NSString * stringValue = @"aaaa\0bbbb";
+         OC 是以 '\0' 为字符串结束：NSString *stringValue = @"aaaa\0bbbb";
          Swift 不是以 '\0' 为结束：let stringValue:String = "aaaa\0bbbb"
          */
         // String -> NSString

@@ -77,7 +77,7 @@
 		285F40A52A838A7D0051DE68 /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 285F40A32A838A7C0051DE68 /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		2861B64F2A26EF7300A55275 /* JQDemoViewControllerD4.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */; };
 		2861B6522A26F0F700A55275 /* JQBlockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6512A26F0F700A55275 /* JQBlockButton.m */; };
-		2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6542A26F2AF00A55275 /* JQDockButton.m */; };
+		2861B6552A26F2AF00A55275 /* JQCustomButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6542A26F2AF00A55275 /* JQCustomButton.m */; };
 		2861B6582A272F3C00A55275 /* JQIconTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B6572A272F3C00A55275 /* JQIconTextField.m */; };
 		2861B65B2A27318800A55275 /* JQDemoViewControllerD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B65A2A27318800A55275 /* JQDemoViewControllerD5.m */; };
 		2861B72F2A28846700A55275 /* JQDemoViewControllerD6.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B72E2A28846700A55275 /* JQDemoViewControllerD6.m */; };
@@ -128,7 +128,7 @@
 		28A5DF012A5BF83F0042C893 /* JQImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A5DF002A5BF83F0042C893 /* JQImageCell.m */; };
 		28A5DF042A5BFBB40042C893 /* JQDemoViewControllerD22_2.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A5DF032A5BFBB40042C893 /* JQDemoViewControllerD22_2.m */; };
 		28A5DF072A5BFC190042C893 /* JQLineLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 28A5DF062A5BFC190042C893 /* JQLineLayout.m */; };
-		28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */; };
+		28ACC1052A319E6500DA12E0 /* JQCustomTabBarButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC1042A319E6500DA12E0 /* JQCustomTabBarButton.m */; };
 		28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC1072A31B50A00DA12E0 /* UITabBar+HitTest.m */; };
 		28ACC10B2A32D65800DA12E0 /* JQDemoTableModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 28ACC10A2A32D65800DA12E0 /* JQDemoTableModel.m */; };
 		28ACC10D2A32EABE00DA12E0 /* JQDemoTable.plist in Resources */ = {isa = PBXBuildFile; fileRef = 28ACC10C2A32EABE00DA12E0 /* JQDemoTable.plist */; };
@@ -385,8 +385,8 @@
 		2861B64E2A26EF7300A55275 /* JQDemoViewControllerD4.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD4.m; sourceTree = "<group>"; };
 		2861B6502A26F0F700A55275 /* JQBlockButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQBlockButton.h; sourceTree = "<group>"; };
 		2861B6512A26F0F700A55275 /* JQBlockButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQBlockButton.m; sourceTree = "<group>"; };
-		2861B6532A26F2AF00A55275 /* JQDockButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDockButton.h; sourceTree = "<group>"; };
-		2861B6542A26F2AF00A55275 /* JQDockButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDockButton.m; sourceTree = "<group>"; };
+		2861B6532A26F2AF00A55275 /* JQCustomButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCustomButton.h; sourceTree = "<group>"; };
+		2861B6542A26F2AF00A55275 /* JQCustomButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCustomButton.m; sourceTree = "<group>"; };
 		2861B6562A272F3C00A55275 /* JQIconTextField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQIconTextField.h; sourceTree = "<group>"; };
 		2861B6572A272F3C00A55275 /* JQIconTextField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQIconTextField.m; sourceTree = "<group>"; };
 		2861B6592A27318800A55275 /* JQDemoViewControllerD5.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD5.h; sourceTree = "<group>"; };
@@ -479,8 +479,8 @@
 		28A5DF032A5BFBB40042C893 /* JQDemoViewControllerD22_2.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD22_2.m; sourceTree = "<group>"; };
 		28A5DF052A5BFC190042C893 /* JQLineLayout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQLineLayout.h; sourceTree = "<group>"; };
 		28A5DF062A5BFC190042C893 /* JQLineLayout.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQLineLayout.m; sourceTree = "<group>"; };
-		28ACC1032A319E6500DA12E0 /* JQTabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQTabBarButton.h; sourceTree = "<group>"; };
-		28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQTabBarButton.m; sourceTree = "<group>"; };
+		28ACC1032A319E6500DA12E0 /* JQCustomTabBarButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCustomTabBarButton.h; sourceTree = "<group>"; };
+		28ACC1042A319E6500DA12E0 /* JQCustomTabBarButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCustomTabBarButton.m; sourceTree = "<group>"; };
 		28ACC1062A31B50A00DA12E0 /* UITabBar+HitTest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UITabBar+HitTest.h"; sourceTree = "<group>"; };
 		28ACC1072A31B50A00DA12E0 /* UITabBar+HitTest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UITabBar+HitTest.m"; sourceTree = "<group>"; };
 		28ACC1092A32D65800DA12E0 /* JQDemoTableModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoTableModel.h; sourceTree = "<group>"; };
@@ -766,10 +766,10 @@
 			children = (
 				287A59252A3069210015C58F /* JQCustomTabBar.h */,
 				287A59262A3069210015C58F /* JQCustomTabBar.m */,
-				28ACC1032A319E6500DA12E0 /* JQTabBarButton.h */,
-				28ACC1042A319E6500DA12E0 /* JQTabBarButton.m */,
-				2861B6532A26F2AF00A55275 /* JQDockButton.h */,
-				2861B6542A26F2AF00A55275 /* JQDockButton.m */,
+				28ACC1032A319E6500DA12E0 /* JQCustomTabBarButton.h */,
+				28ACC1042A319E6500DA12E0 /* JQCustomTabBarButton.m */,
+				2861B6532A26F2AF00A55275 /* JQCustomButton.h */,
+				2861B6542A26F2AF00A55275 /* JQCustomButton.m */,
 				287A592A2A306C820015C58F /* JQTabBar.plist */,
 				287A592F2A3077A30015C58F /* JQTabBarModel.h */,
 				287A59302A3077A30015C58F /* JQTabBarModel.m */,
@@ -1319,24 +1319,24 @@
 				28F5DEFC2A258A0E00ECB80B /* UIColor+Random.m */,
 				28F5DEFE2A258A5600ECB80B /* UIColor+Hex.h */,
 				28F5DEFF2A258A5600ECB80B /* UIColor+Hex.m */,
+				2832AD2B2A3056AA001C419D /* UITabBar+Badge.h */,
+				2832AD2C2A3056AA001C419D /* UITabBar+Badge.m */,
+				2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */,
+				2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */,
 				28F5DF012A258A8300ECB80B /* UIImageView+GIF.h */,
 				28F5DF022A258A8300ECB80B /* UIImageView+GIF.m */,
 				28F5DF042A258AA300ECB80B /* UIImage+Color.h */,
 				28F5DF052A258AA300ECB80B /* UIImage+Color.m */,
-				2832AD222A302E6C001C419D /* UIBarButtonItem+Extension.h */,
-				2832AD232A302E6C001C419D /* UIBarButtonItem+Extension.m */,
-				2832AD2B2A3056AA001C419D /* UITabBar+Badge.h */,
-				2832AD2C2A3056AA001C419D /* UITabBar+Badge.m */,
-				28DB78C32A36E724001D2D07 /* UIPanGestureRecognizer+Direction.h */,
-				28DB78C42A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m */,
-				28C2F4852A4834000079E678 /* NSString+TimeFormat.h */,
-				28C2F4862A4834000079E678 /* NSString+TimeFormat.m */,
 				281F0F712A9355CB007BA9A7 /* NSURL+Param.h */,
 				281F0F722A9355CB007BA9A7 /* NSURL+Param.m */,
 				280717062A9EEBBF0081FA4F /* NSString+Extension.h */,
 				280717072A9EEBBF0081FA4F /* NSString+Extension.m */,
 				28A2B8B22A85D0FD007324DD /* NSString+Hash.h */,
 				28A2B8B12A85D0FD007324DD /* NSString+Hash.m */,
+				28C2F4852A4834000079E678 /* NSString+TimeFormat.h */,
+				28C2F4862A4834000079E678 /* NSString+TimeFormat.m */,
+				28DB78C32A36E724001D2D07 /* UIPanGestureRecognizer+Direction.h */,
+				28DB78C42A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m */,
 				2861B73C2A29E33D00A55275 /* JQModalDelegate.h */,
 			);
 			path = Util;
@@ -1859,6 +1859,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				280717492AA026CD0081FA4F /* JQTemplate.xcdatamodeld in Sources */,
+				280717632AA16EE90081FA4F /* JQBookModel+CoreDataClass.m in Sources */,
+				280717652AA16EE90081FA4F /* JQReaderModel+CoreDataClass.m in Sources */,
+				28D710062AA59F61007C3E79 /* NSObject+AssociatedObject.m in Sources */,
+				28F5DEFA2A2589E200ECB80B /* UIView+Frame.m in Sources */,
+				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
+				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
+				28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */,
+				2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */,
+				28D710072AA59F61007C3E79 /* UIViewController+Logging.m in Sources */,
+				28E6CAB62A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
+				2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */,
+				282FB9492A8F4C4D00EB3F45 /* UIImageView+SDWebImage.m in Sources */,
+				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
+				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
+				281F0F732A9355CB007BA9A7 /* NSURL+Param.m in Sources */,
+				280717082A9EEBBF0081FA4F /* NSString+Extension.m in Sources */,
+				28A2B8B32A85D0FD007324DD /* NSString+Hash.m in Sources */,
+				28C2F4872A4834000079E678 /* NSString+TimeFormat.m in Sources */,
+				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
+				280717642AA16EE90081FA4F /* JQBookModel+CoreDataProperties.m in Sources */,
+				280717662AA16EE90081FA4F /* JQReaderModel+CoreDataProperties.m in Sources */,
 				28F5DEF42A25834800ECB80B /* main.m in Sources */,
 				28F5DEF52A25834800ECB80B /* AppDelegate.m in Sources */,
 				28F5DEF32A25834800ECB80B /* SceneDelegate.m in Sources */,
@@ -1868,13 +1890,9 @@
 				28EB202E2A38403B008AA0A0 /* JQBaseTableViewController.m in Sources */,
 				287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */,
 				287A59312A3077A30015C58F /* JQTabBarModel.m in Sources */,
-				2861B6552A26F2AF00A55275 /* JQDockButton.m in Sources */,
-				28ACC1052A319E6500DA12E0 /* JQTabBarButton.m in Sources */,
+				2861B6552A26F2AF00A55275 /* JQCustomButton.m in Sources */,
+				28ACC1052A319E6500DA12E0 /* JQCustomTabBarButton.m in Sources */,
 				287A59272A3069210015C58F /* JQCustomTabBar.m in Sources */,
-				28F5DEFA2A2589E200ECB80B /* UIView+Frame.m in Sources */,
-				28ACC1082A31B50A00DA12E0 /* UITabBar+HitTest.m in Sources */,
-				2832AD2D2A3056AA001C419D /* UITabBar+Badge.m in Sources */,
-				28E6CAB62A2DC6F300C20059 /* UINavigationController+FDFullscreenPopGesture.m in Sources */,
 				28ACC10B2A32D65800DA12E0 /* JQDemoTableModel.m in Sources */,
 				28F5DF152A25901500ECB80B /* JQDemoViewController.m in Sources */,
 				28F5DF122A25900200ECB80B /* JQHomeViewController.m in Sources */,
@@ -1957,12 +1975,9 @@
 				28D7100A2AA5C0EF007C3E79 /* JQDemoViewControllerD45.swift in Sources */,
 				28D710052AA59F61007C3E79 /* Message.m in Sources */,
 				28D710042AA59F61007C3E79 /* MessageForwarding.m in Sources */,
-				28D710062AA59F61007C3E79 /* NSObject+AssociatedObject.m in Sources */,
-				28D710072AA59F61007C3E79 /* UIViewController+Logging.m in Sources */,
 				281E32D72A82171B00A282CC /* Reachability.m in Sources */,
 				282FB9462A8F38F600EB3F45 /* JQHTTPManager.m in Sources */,
 				28B2506B2A932F5D00456DDD /* MJExtensionConfig.m in Sources */,
-				282FB9492A8F4C4D00EB3F45 /* UIImageView+SDWebImage.m in Sources */,
 				288321582AA1AA37004F7817 /* JQAudioManager.m in Sources */,
 				28B2505C2A930BB700456DDD /* JQElmShopModel.m in Sources */,
 				28B2505F2A930BF200456DDD /* JQElmSupportModel.m in Sources */,
@@ -2005,16 +2020,6 @@
 				2883216D2AA1BA7D004F7817 /* JQMusicModel.m in Sources */,
 				282C07A62A9843D000123B18 /* JQLeftMenuModel.m in Sources */,
 				2807170D2A9F0C5C0081FA4F /* JQStudentModel.m in Sources */,
-				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
-				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
-				28F5DF032A258A8300ECB80B /* UIImageView+GIF.m in Sources */,
-				28F5DF062A258AA300ECB80B /* UIImage+Color.m in Sources */,
-				2832AD242A302E6C001C419D /* UIBarButtonItem+Extension.m in Sources */,
-				28DB78C52A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m in Sources */,
-				28C2F4872A4834000079E678 /* NSString+TimeFormat.m in Sources */,
-				28A2B8B32A85D0FD007324DD /* NSString+Hash.m in Sources */,
-				280717082A9EEBBF0081FA4F /* NSString+Extension.m in Sources */,
-				281F0F732A9355CB007BA9A7 /* NSURL+Param.m in Sources */,
 				28B250682A9311B100456DDD /* JQHUDHelper.m in Sources */,
 				28F5DF212A2597DE00ECB80B /* JQVerticalLabel.m in Sources */,
 				28BA295C2A5E8BEF00688C3F /* JQShapeView.m in Sources */,
@@ -2032,11 +2037,6 @@
 				28D710132AA5CEA3007C3E79 /* JQTrainParser.m in Sources */,
 				280717132A9F13F30081FA4F /* JQFMDBHelper.m in Sources */,
 				280717102A9F0D0C0081FA4F /* JQSqliteHelper.m in Sources */,
-				280717492AA026CD0081FA4F /* JQTemplate.xcdatamodeld in Sources */,
-				280717642AA16EE90081FA4F /* JQBookModel+CoreDataProperties.m in Sources */,
-				280717632AA16EE90081FA4F /* JQBookModel+CoreDataClass.m in Sources */,
-				280717662AA16EE90081FA4F /* JQReaderModel+CoreDataProperties.m in Sources */,
-				280717652AA16EE90081FA4F /* JQReaderModel+CoreDataClass.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

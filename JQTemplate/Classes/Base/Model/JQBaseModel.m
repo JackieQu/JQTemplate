@@ -9,6 +9,10 @@
 
 @implementation JQBaseModel
 
+- (void)setValue:(id)value forUndefinedKey:(NSString *)key {
+    
+}
+
 + (NSDictionary *)mj_replacedKeyFromPropertyName {
     
     return @{
@@ -29,6 +33,28 @@
 + (NSDictionary *)dictionaryWithModel:(JQBaseModel *)model {
     
     return [model mj_keyValues];
+}
+
++ (instancetype)modelWithPath:(NSString *)path {
+    
+    path = [[NSBundle mainBundle] pathForResource:path ofType:@"plist"];
+    NSDictionary *dict = [NSDictionary dictionaryWithContentsOfFile:path];
+    JQBaseModel *model = [self modelWithDictionary:dict];
+    return model;
+}
+
++ (NSArray *)modelArrayWithPath:(NSString *)path {
+    
+    path = [[NSBundle mainBundle] pathForResource:path ofType:@"plist"];
+    NSArray *arr = [NSArray arrayWithContentsOfFile:path];
+    NSMutableArray *dataList = [NSMutableArray array];
+    for (NSDictionary *dict in arr) {
+//        JQBaseModel *model = [[self alloc] init];
+//        [model setValuesForKeysWithDictionary:dict];
+        JQBaseModel *model = [self modelWithDictionary:dict];
+        [dataList addObject:model];
+    }
+    return dataList;
 }
 
 @end

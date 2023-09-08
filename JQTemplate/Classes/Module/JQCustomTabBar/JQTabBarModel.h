@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 /// 是否有动画
 @property (nonatomic, assign) BOOL isAnimated;
-/// 是否有标记
+/// 是否有标线
 @property (nonatomic, assign) BOOL isMarked;
 /// 是否有特殊项
 @property (nonatomic, assign) BOOL isSpecial;
@@ -37,14 +37,20 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface JQTabBarItemModel : JQBaseModel
 
-@property (nonatomic, assign) BOOL isSpecial;
-@property (nonatomic, assign) BOOL isHidden;
+/// 标题
 @property (nonatomic, strong) NSString *title;
+/// 类名
 @property (nonatomic, strong) NSString *className;
+/// 图标 normal
 @property (nonatomic, strong) NSString *imageNormal;
+/// 图标 selected
 @property (nonatomic, strong) NSString *imageSelected;
+/// 是否隐藏
+@property (nonatomic, assign) BOOL isHidden;
 
-/// 对应 vc 类
+/// 是否特殊
+@property (nonatomic, assign) BOOL isSpecial;
+/// 对应的类
 @property (nonatomic, strong) Class cls;
 
 @end

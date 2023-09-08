@@ -16,6 +16,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 + (NSDictionary *)dictionaryWithModel:(JQBaseModel *)model;
 
++ (instancetype)modelWithPath:(NSString *)path;
+
++ (NSArray *)modelArrayWithPath:(NSString *)path;
+
 @end
 
 NS_ASSUME_NONNULL_END

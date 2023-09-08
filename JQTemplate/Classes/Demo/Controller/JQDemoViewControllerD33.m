@@ -161,7 +161,7 @@
     JQLog(@"%@",password);
     
     /*
-    NSUserDefaults * ud = [NSUserDefaults standardUserDefaults];
+    NSUserDefaults *ud = [NSUserDefaults standardUserDefaults];
 
     [ud setObject:username forKey:@"username"];
     [ud setObject:password forKey:@"password"];

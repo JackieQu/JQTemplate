@@ -1,5 +1,5 @@
 //
-//  JQDockButton.h
+//  JQCustomButton.h
 //  JQTemplate
 //
 //  Created by JackieQu on 2023/5/31.
@@ -9,7 +9,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JQDockButton : UIButton
+@interface JQCustomButton : UIButton
 
 @end
 

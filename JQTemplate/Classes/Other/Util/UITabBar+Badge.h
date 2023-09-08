@@ -11,9 +11,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface UITabBar (Badge)
 
-- (void)showBadgeAtIndex:(int)index;
+- (void)showBadgeAtIndex:(NSInteger)index;
 
-- (void)hideBedgeAtIndex:(int)index;
+- (void)hideBedgeAtIndex:(NSInteger)index;
 
 @end
 

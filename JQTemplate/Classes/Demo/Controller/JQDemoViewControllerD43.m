@@ -30,7 +30,7 @@ static NSString *mp4Url = @"https://www.runoob.com/try/demo_source/movie.mp4";
         
         _player = [AVPlayer playerWithPlayerItem:item];
         
-        AVPlayerLayer * layer = [AVPlayerLayer playerLayerWithPlayer:_player];
+        AVPlayerLayer *layer = [AVPlayerLayer playerLayerWithPlayer:_player];
         
         CGFloat playerW = SCREEN_WIDTH * 0.8;
         CGFloat playerH = playerW * 9 / 16;

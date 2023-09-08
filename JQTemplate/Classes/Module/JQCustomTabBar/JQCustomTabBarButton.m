@@ -1,13 +1,13 @@
 //
-//  JQTabBarButton.m
+//  JQCustomTabBarButton.m
 //  JQTemplate
 //
 //  Created by JackieQu on 2023/6/8.
 //
 
-#import "JQTabBarButton.h"
+#import "JQCustomTabBarButton.h"
 
-@implementation JQTabBarButton
+@implementation JQCustomTabBarButton
 
 - (void)setItem:(JQTabBarItemModel *)item {
     _item = item;
@@ -19,6 +19,7 @@
         self.layer.borderColor = [UIColor orangeColor].CGColor;
         self.clipsToBounds = YES;
     }
+    
     [self setTitle:_item.title forState:UIControlStateNormal];
     [self setTitleColor:[UIColor lightGrayColor] forState:UIControlStateNormal];
     [self setTitleColor:[UIColor orangeColor] forState:UIControlStateSelected];

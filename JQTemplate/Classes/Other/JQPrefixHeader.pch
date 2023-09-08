@@ -20,4 +20,6 @@
 #import "JQAPIConfig.h"
 #import "JQHUDHelper.h"
 
+#import <Masonry/Masonry.h>
+
 #endif /* JQPrefixHeader_pch */
