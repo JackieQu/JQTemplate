@@ -85,6 +85,8 @@
 		2861B7352A297C1200A55275 /* JQCustomHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B7342A297C1200A55275 /* JQCustomHUD.m */; };
 		2861B7382A29CD9100A55275 /* JQPopUpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B7372A29CD9100A55275 /* JQPopUpView.m */; };
 		2861B73B2A29E26600A55275 /* JQDemoViewControllerD8.m in Sources */ = {isa = PBXBuildFile; fileRef = 2861B73A2A29E26600A55275 /* JQDemoViewControllerD8.m */; };
+		2873EAB22AAAEA4C00D78A02 /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 2873EAB12AAAEA4C00D78A02 /* NSObject+Swizzle.m */; };
+		2873EABD2AB0487D00D78A02 /* JQFundTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2873EABC2AB0487D00D78A02 /* JQFundTableViewController.m */; };
 		287A59272A3069210015C58F /* JQCustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A59262A3069210015C58F /* JQCustomTabBar.m */; };
 		287A592B2A306C820015C58F /* JQTabBar.plist in Resources */ = {isa = PBXBuildFile; fileRef = 287A592A2A306C820015C58F /* JQTabBar.plist */; };
 		287A592E2A3075F40015C58F /* JQBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 287A592D2A3075F40015C58F /* JQBaseModel.m */; };
@@ -401,7 +403,11 @@
 		2861B7372A29CD9100A55275 /* JQPopUpView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQPopUpView.m; sourceTree = "<group>"; };
 		2861B7392A29E26600A55275 /* JQDemoViewControllerD8.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQDemoViewControllerD8.h; sourceTree = "<group>"; };
 		2861B73A2A29E26600A55275 /* JQDemoViewControllerD8.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQDemoViewControllerD8.m; sourceTree = "<group>"; };
-		2861B73C2A29E33D00A55275 /* JQModalDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQModalDelegate.h; sourceTree = "<group>"; };
+		2861B73C2A29E33D00A55275 /* JQCallbackDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCallbackDelegate.h; sourceTree = "<group>"; };
+		2873EAB02AAAEA4C00D78A02 /* NSObject+Swizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		2873EAB12AAAEA4C00D78A02 /* NSObject+Swizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		2873EABB2AB0487D00D78A02 /* JQFundTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQFundTableViewController.h; sourceTree = "<group>"; };
+		2873EABC2AB0487D00D78A02 /* JQFundTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQFundTableViewController.m; sourceTree = "<group>"; };
 		287A59252A3069210015C58F /* JQCustomTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JQCustomTabBar.h; sourceTree = "<group>"; };
 		287A59262A3069210015C58F /* JQCustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JQCustomTabBar.m; sourceTree = "<group>"; };
 		287A592A2A306C820015C58F /* JQTabBar.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = JQTabBar.plist; sourceTree = "<group>"; };
@@ -1248,6 +1254,8 @@
 			children = (
 				28F5DF102A25900200ECB80B /* JQHomeViewController.h */,
 				28F5DF112A25900200ECB80B /* JQHomeViewController.m */,
+				2873EABB2AB0487D00D78A02 /* JQFundTableViewController.h */,
+				2873EABC2AB0487D00D78A02 /* JQFundTableViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -1313,6 +1321,8 @@
 		28F5DEDE2A25834700ECB80B /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				2873EAB02AAAEA4C00D78A02 /* NSObject+Swizzle.h */,
+				2873EAB12AAAEA4C00D78A02 /* NSObject+Swizzle.m */,
 				28F5DEF82A2589E200ECB80B /* UIView+Frame.h */,
 				28F5DEF92A2589E200ECB80B /* UIView+Frame.m */,
 				28F5DEFB2A258A0E00ECB80B /* UIColor+Random.h */,
@@ -1337,7 +1347,7 @@
 				28C2F4862A4834000079E678 /* NSString+TimeFormat.m */,
 				28DB78C32A36E724001D2D07 /* UIPanGestureRecognizer+Direction.h */,
 				28DB78C42A36E724001D2D07 /* UIPanGestureRecognizer+Direction.m */,
-				2861B73C2A29E33D00A55275 /* JQModalDelegate.h */,
+				2861B73C2A29E33D00A55275 /* JQCallbackDelegate.h */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -1863,6 +1873,7 @@
 				280717632AA16EE90081FA4F /* JQBookModel+CoreDataClass.m in Sources */,
 				280717652AA16EE90081FA4F /* JQReaderModel+CoreDataClass.m in Sources */,
 				28D710062AA59F61007C3E79 /* NSObject+AssociatedObject.m in Sources */,
+				2873EAB22AAAEA4C00D78A02 /* NSObject+Swizzle.m in Sources */,
 				28F5DEFA2A2589E200ECB80B /* UIView+Frame.m in Sources */,
 				28F5DEFD2A258A0E00ECB80B /* UIColor+Random.m in Sources */,
 				28F5DF002A258A5600ECB80B /* UIColor+Hex.m in Sources */,
@@ -1979,6 +1990,7 @@
 				282FB9462A8F38F600EB3F45 /* JQHTTPManager.m in Sources */,
 				28B2506B2A932F5D00456DDD /* MJExtensionConfig.m in Sources */,
 				288321582AA1AA37004F7817 /* JQAudioManager.m in Sources */,
+				2873EABD2AB0487D00D78A02 /* JQFundTableViewController.m in Sources */,
 				28B2505C2A930BB700456DDD /* JQElmShopModel.m in Sources */,
 				28B2505F2A930BF200456DDD /* JQElmSupportModel.m in Sources */,
 				28B250622A930C3300456DDD /* JQElmShopCell.m in Sources */,

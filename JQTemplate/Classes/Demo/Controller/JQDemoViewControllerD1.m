@@ -7,8 +7,6 @@
 
 #import "JQDemoViewControllerD1.h"
 
-#define RGBA(r,g,b,a) [UIColor colorWithRed:(r)/255.f green:(g)/255.f blue:(b)/255.f alpha:(a)]
-
 @interface JQDemoViewControllerD1 ()
 
 @property (nonatomic, strong) UIView *testView;
@@ -22,7 +20,7 @@
 - (UIView *)testView {
     
     if (!_testView) {
-        _testView = [[UIView alloc] initWithFrame:CGRectMake(0, STATUS_NAV_HEIGHT, 50, 50)];
+        _testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 50, 50)];
         _testView.backgroundColor = [UIColor orangeColor];
     }
     return _testView;
@@ -130,7 +128,7 @@
     if (frame.origin.x < 0 || frame.origin.x + frame.size.width > SCREEN_WIDTH) {
         moveX *= -1;
     }
-    if (frame.origin.y < STATUS_NAV_HEIGHT || frame.origin.y + frame.size.height > SCREEN_HEIGHT) {
+    if (frame.origin.y < 0 || frame.origin.y + frame.size.height > SCREEN_HEIGHT - STATUS_NAV_HEIGHT) {
         moveY *= -1;
     }
     

@@ -10,24 +10,33 @@
 
 @implementation JQHUDHelper
 
-+ (void)showInfoMessage:(NSString *)message {
++ (void)load {
     
-    [SVProgressHUD showInfoWithStatus:message];
-}
-
-+ (void)showErrorMessage:(NSString *)message {
- 
-    [SVProgressHUD showErrorWithStatus:message];
-}
-
-+ (void)showSuccessMessage:(NSString *)message {
-    
-    [SVProgressHUD showSuccessWithStatus:message];
+//    [SVProgressHUD setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.3]];
 }
 
 + (void)showProgressMessage:(NSString *)message {
     
+    [SVProgressHUD setContainerView:[UIApplication sharedApplication].windows.firstObject];
     [SVProgressHUD showWithStatus:message];
+}
+
++ (void)showInfoMessage:(NSString *)message {
+    
+    [SVProgressHUD setContainerView:[UIApplication sharedApplication].windows.firstObject];
+    [SVProgressHUD showInfoWithStatus:message];
+}
+
++ (void)showSuccessMessage:(NSString *)message {
+    
+    [SVProgressHUD setContainerView:[UIApplication sharedApplication].windows.firstObject];
+    [SVProgressHUD showSuccessWithStatus:message];
+}
+
++ (void)showErrorMessage:(NSString *)message {
+ 
+    [SVProgressHUD setContainerView:[UIApplication sharedApplication].windows.firstObject];
+    [SVProgressHUD showErrorWithStatus:message];
 }
 
 + (void)dismissHUD {

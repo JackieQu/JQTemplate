@@ -32,8 +32,8 @@
 //    JQBaseViewController *vc = (JQBaseViewController *)navVC.topViewController;
 //    vc.title = @"TEST";
     
-    if ([self.modalDelegate respondsToSelector:@selector(passObject:)]) {
-        [self.modalDelegate passObject:@"TEST"];
+    if ([self.callbackDelegate respondsToSelector:@selector(callbackObject:)]) {
+        [self.callbackDelegate callbackObject:@"TEST"];
     }
     
     [self dismissViewControllerAnimated:YES completion:nil];

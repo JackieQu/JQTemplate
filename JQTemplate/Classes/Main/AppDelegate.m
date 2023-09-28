@@ -12,7 +12,7 @@
 #import <UserNotifications/UserNotifications.h>
 #import <AVFoundation/AVFoundation.h>
 
-extern CFAbsoluteTime startTime;
+extern CFAbsoluteTime StartTime;
 
 @interface AppDelegate () <UNUserNotificationCenterDelegate>
 
@@ -56,8 +56,8 @@ extern CFAbsoluteTime startTime;
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    double launchTime = (CFAbsoluteTimeGetCurrent() - startTime);
-    JQLog(@"startTime: %f",launchTime);
+    double launchTime = CFAbsoluteTimeGetCurrent() - StartTime;
+    JQLog(@"launchTime: %f", launchTime);
     
     return YES;
 }

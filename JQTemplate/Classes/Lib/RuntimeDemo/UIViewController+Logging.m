@@ -17,32 +17,13 @@
     
 //    static dispatch_once_t onceToken;
 //    dispatch_once(&onceToken, ^{
-//
-//        // 获取原始和交换的 sel
-//        SEL originalSel = @selector(viewWillAppear:);
-//
-//        SEL swizzledSel = @selector(my_ViewWillAppear:);
-//
-//        Method originalMethod = class_getInstanceMethod(self, originalSel);
-//
-//        Method swizzledMethod = class_getInstanceMethod(self, swizzledSel);
-//
-//        // method_getImplementation 获取 IMP 指针
-//        BOOL success = class_addMethod(self, originalSel, method_getImplementation(swizzledMethod), method_getTypeEncoding(swizzledMethod));
-//
-//        if (success) {
-//            // 若添加方法成功，则交换 IMP 指针
-//            class_replaceMethod(self, swizzledSel, method_getImplementation(originalMethod), method_getTypeEncoding(originalMethod));
-//        } else {
-//            // 若添加方法失败，则直接交换 method 的 IMP 指针
-//            method_exchangeImplementations(originalMethod, swizzledMethod);
-//        }
+//        SwizzleMethod([self class], @selector(viewWillAppear:), @selector(my_viewWillAppear:));
 //    });
 }
 
-- (void)my_ViewWillAppear:(BOOL)animated {
+- (void)my_viewWillAppear:(BOOL)animated {
 
-    [self my_ViewWillAppear:animated];
+    [self my_viewWillAppear:animated];
     
     NSLog(@"%s,%@",__FUNCTION__,[self class]);
 }

@@ -16,16 +16,8 @@
 }
 
 + (NSArray *)loadWeiboData {
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"weibo" ofType:@"plist"];
-    NSArray *dataList = [NSArray arrayWithContentsOfFile:path];
-    NSMutableArray *weiboList = [NSMutableArray array];
-    for (NSDictionary *dict in dataList) {
-        JQWeiboModel *weibo = [[JQWeiboModel alloc] init];
-        [weibo setValuesForKeysWithDictionary:dict];
-        [weiboList addObject:weibo];
-    }
-    return weiboList;
+
+    return [JQWeiboModel modelArrayWithPath:@"weibo"];
 }
 
 @end

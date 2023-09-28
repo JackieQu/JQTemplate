@@ -13,6 +13,7 @@
 
 #import "JQMacro.h"
 
+#import "NSObject+Swizzle.h"
 #import "UIView+Frame.h"
 #import "UIColor+Random.h"
 #import "UIColor+Hex.h"

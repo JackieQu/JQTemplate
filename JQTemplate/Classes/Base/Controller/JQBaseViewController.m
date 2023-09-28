@@ -77,7 +77,7 @@
 }
 
 - (void)dealloc {
-    
+
     JQLogFunction;
 }
 
@@ -86,8 +86,6 @@
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     [super touchesBegan:touches withEvent:event];
     
-//    JQBaseViewController *vc = [[JQBaseViewController alloc] init];
-//    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)touchesMoved:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

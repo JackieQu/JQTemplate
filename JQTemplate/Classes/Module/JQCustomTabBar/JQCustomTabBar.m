@@ -30,7 +30,7 @@
 - (UIView *)markLineView {
     
     if (!_markLineView) {
-        _markLineView = [[UIView alloc] initWithFrame:CGRectMake(0, -ADAPT_VALUE(2), ADAPT_VALUE(24), ADAPT_VALUE(2))];
+        _markLineView = [[UIView alloc] initWithFrame:CGRectMake(0, -ADAPT_VALUE(2), ADAPT_VALUE(12), ADAPT_VALUE(2))];
         _markLineView.backgroundColor = [UIColor orangeColor];
         _markLineView.centerX = self.selectedBtn.centerX;
     }
@@ -102,9 +102,9 @@
     if (self.tabBarModel.isMarked) {
         UIDeviceOrientation orientation = [[UIDevice currentDevice] orientation];
         if (orientation == UIDeviceOrientationPortrait || orientation == UIDeviceOrientationPortraitUpsideDown) {
-            self.markLineView.frame = CGRectMake(0, -ADAPT_VALUE(2), ADAPT_VALUE(24), ADAPT_VALUE(2));
+            self.markLineView.frame = CGRectMake(0, -ADAPT_VALUE(2), ADAPT_VALUE(12), ADAPT_VALUE(2));
         } else if (orientation == UIDeviceOrientationLandscapeLeft || orientation == UIDeviceOrientationLandscapeRight) {
-            self.markLineView.frame = CGRectMake(0, -ADAPT_VALUE_HORIZONTAL(2), ADAPT_VALUE_HORIZONTAL(24), ADAPT_VALUE_HORIZONTAL(2));
+            self.markLineView.frame = CGRectMake(0, -ADAPT_VALUE_HORIZONTAL(2), ADAPT_VALUE_HORIZONTAL(12), ADAPT_VALUE_HORIZONTAL(2));
         }
         self.markLineView.centerX = self.selectedBtn.centerX;
     }
@@ -118,7 +118,7 @@
     
     BOOL isSpecial  = sender.tag == kSpecialTag;
     BOOL isMarked   = self.tabBarModel.isMarked && !isSpecial;
-    BOOL isAnimated = self.tabBarModel.isAnimated; // && !isSpecial;
+    BOOL isAnimated = self.tabBarModel.isAnimated;
  
     if (![sender isEqual:self.selectedBtn] && !isSpecial) {
         self.selectedBtn.selected = NO;
@@ -137,7 +137,7 @@
         } completion:^(BOOL finished) {
             sender.transform = CGAffineTransformIdentity;
             if (isMarked) {
-                self.markLineView.width = ADAPT_VALUE(24);
+                self.markLineView.width = ADAPT_VALUE(12);
                 self.markLineView.centerX = sender.centerX;
             }
             [self handleAction:sender];

@@ -7,7 +7,7 @@
 
 #import "UIColor+Hex.h"
 
-CGFloat getColorComponent(NSString *colorStr, NSUInteger loc, NSUInteger len) {
+CGFloat ColorComponent(NSString *colorStr, NSUInteger loc, NSUInteger len) {
     
     NSString *subStr = [colorStr substringWithRange:NSMakeRange(loc, len)];
     NSString *hexStr = len == 2 ? subStr : [subStr stringByAppendingString:subStr];
@@ -42,27 +42,27 @@ CGFloat getColorComponent(NSString *colorStr, NSUInteger loc, NSUInteger len) {
     switch ([colorStr length]) {
         case 3: // #RGB
             a = 1.0f;
-            r = getColorComponent(colorStr, 0, 1);
-            g = getColorComponent(colorStr, 1, 1);
-            b = getColorComponent(colorStr, 2, 1);
+            r = ColorComponent(colorStr, 0, 1);
+            g = ColorComponent(colorStr, 1, 1);
+            b = ColorComponent(colorStr, 2, 1);
             break;
         case 4: // #ARGB
-            a = getColorComponent(colorStr, 0, 1);
-            r = getColorComponent(colorStr, 1, 1);
-            g = getColorComponent(colorStr, 2, 1);
-            b = getColorComponent(colorStr, 3, 1);
+            a = ColorComponent(colorStr, 0, 1);
+            r = ColorComponent(colorStr, 1, 1);
+            g = ColorComponent(colorStr, 2, 1);
+            b = ColorComponent(colorStr, 3, 1);
             break;
         case 6: // #RRGGBB
             a = 1.0f;
-            r = getColorComponent(colorStr, 0, 2);
-            g = getColorComponent(colorStr, 2, 2);
-            b = getColorComponent(colorStr, 4, 2);
+            r = ColorComponent(colorStr, 0, 2);
+            g = ColorComponent(colorStr, 2, 2);
+            b = ColorComponent(colorStr, 4, 2);
             break;
         case 8: // #AARRGGBB
-            a = getColorComponent(colorStr, 0, 2);
-            r = getColorComponent(colorStr, 2, 2);
-            g = getColorComponent(colorStr, 4, 2);
-            b = getColorComponent(colorStr, 6, 2);
+            a = ColorComponent(colorStr, 0, 2);
+            r = ColorComponent(colorStr, 2, 2);
+            g = ColorComponent(colorStr, 4, 2);
+            b = ColorComponent(colorStr, 6, 2);
             break;
         default:
             return nil;

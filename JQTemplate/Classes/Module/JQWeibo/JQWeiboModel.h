@@ -5,11 +5,11 @@
 //  Created by JackieQu on 2023/6/25.
 //
 
-#import <Foundation/Foundation.h>
+#import "JQBaseModel.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface JQWeiboModel : NSObject
+@interface JQWeiboModel : JQBaseModel
 
 @property (nonatomic, copy) NSString *icon;
 

@@ -6,13 +6,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "JQModalDelegate.h"
+#import "JQCallbackDelegate.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 @interface JQBaseViewController : UIViewController
 
-@property (nonatomic, weak) id<JQModalDelegate> modalDelegate;
+@property (nonatomic, weak) id<JQCallbackDelegate> callbackDelegate;
 
 - (void)initUI;
 

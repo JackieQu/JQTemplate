@@ -9,9 +9,9 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol JQModalDelegate <NSObject>
+@protocol JQCallbackDelegate <NSObject>
 
-- (void)passObject:(NSObject *)object;
+- (void)callbackObject:(NSObject *)object;
 
 @end
 

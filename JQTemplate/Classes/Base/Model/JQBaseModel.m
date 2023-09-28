@@ -42,15 +42,13 @@
     JQBaseModel *model = [self modelWithDictionary:dict];
     return model;
 }
-
+  
 + (NSArray *)modelArrayWithPath:(NSString *)path {
     
     path = [[NSBundle mainBundle] pathForResource:path ofType:@"plist"];
     NSArray *arr = [NSArray arrayWithContentsOfFile:path];
     NSMutableArray *dataList = [NSMutableArray array];
     for (NSDictionary *dict in arr) {
-//        JQBaseModel *model = [[self alloc] init];
-//        [model setValuesForKeysWithDictionary:dict];
         JQBaseModel *model = [self modelWithDictionary:dict];
         [dataList addObject:model];
     }

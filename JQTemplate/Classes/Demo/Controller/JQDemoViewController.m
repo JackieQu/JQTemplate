@@ -6,12 +6,12 @@
 //
 
 #import "JQDemoViewController.h"
-#import "JQModalDelegate.h"
 #import "JQDemoTableModel.h"
+#import "JQCallbackDelegate.h"
 
-static NSString *kCellID    = @"identifier";
+static NSString *kCellID = @"identifier";
 
-@interface JQDemoViewController () <UITableViewDataSource, UITableViewDelegate, JQModalDelegate>
+@interface JQDemoViewController () <UITableViewDataSource, UITableViewDelegate, JQCallbackDelegate>
 
 @property (nonatomic, strong) UITableView *tableView;
 
@@ -24,8 +24,7 @@ static NSString *kCellID    = @"identifier";
 - (UITableView *)tableView {
     
     if (!_tableView) {
-        CGRect frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAV_HEIGHT - TAB_BAR_HEIGHT);
-        _tableView = [[UITableView alloc] initWithFrame:frame style:UITableViewStylePlain];
+        _tableView = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
         _tableView.dataSource = self;
         _tableView.delegate = self;
     }
@@ -35,31 +34,46 @@ static NSString *kCellID    = @"identifier";
 - (NSArray *)dataList {
     
     if (!_dataList) {
-        _dataList = [JQDemoTableModel tableModel].sections;
+        _dataList = [NSArray array];
     }
     return _dataList;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+
 }
 
 - (void)viewWillLayoutSubviews {
     [super viewWillLayoutSubviews];
     
-    self.tableView.frame = CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - STATUS_NAV_HEIGHT - TAB_BAR_HEIGHT);
+    [self.tableView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(self.view.mas_top).with.offset(0);
+        make.left.equalTo(self.view.mas_left).with.offset(0);
+        make.bottom.equalTo(self.view.mas_bottom).with.offset(0);
+        make.right.equalTo(self.view.mas_right).with.offset(0);
+    }];
 }
 
 - (void)initUI {
     [super initUI];
     
     [self.view addSubview:self.tableView];
+}
+
+- (void)loadData {
     
-//    NSInteger lastSection = self.dataList.count - 1;
-//    NSInteger lastRow = self.dataList[lastSection].rows.count - 1;
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:lastSection];
-//    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    self.dataList = [JQDemoTableModel tableModel].sections;
+    [self.tableView reloadData];
+//    [self scrollToLastCell];
+}
+
+- (void)scrollToLastCell {
+    
+    NSInteger lastSection = self.dataList.count - 1;
+    NSInteger lastRow = self.dataList[lastSection].rows.count - 1;
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastRow inSection:lastSection];
+    [self.tableView scrollToRowAtIndexPath:indexPath atScrollPosition:UITableViewScrollPositionBottom animated:YES];
 }
 
 #pragma mark - UITableViewDataSource Methods
@@ -76,7 +90,6 @@ static NSString *kCellID    = @"identifier";
     if (!cell) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:kCellID];
     }
-    
     NSArray<JQDemoRowModel *> *rows = self.dataList[indexPath.section].rows;
     JQDemoRowModel *item = rows[indexPath.row];
     cell.textLabel.text = item.title;
@@ -84,6 +97,7 @@ static NSString *kCellID    = @"identifier";
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    
     return self.dataList.count;
 }
 
@@ -107,11 +121,16 @@ static NSString *kCellID    = @"identifier";
     NSArray<JQDemoRowModel *> *rows = self.dataList[indexPath.section].rows;
     JQDemoRowModel *item = rows[indexPath.row];
     Class cls = NSClassFromString(item.className);
+    if (!cls) {
+        NSString *bundleKey = [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleExecutableKey];
+        NSString *vcName = [NSString stringWithFormat:@"%@.%@", bundleKey, item.className];
+        cls = NSClassFromString(vcName);
+    }
     if (cls) {
         JQBaseViewController *vc = [[cls alloc] init];
         vc.title = item.title;
+        vc.callbackDelegate = self;
         if (item.flag) {
-            vc.modalDelegate = self;
             vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
             [self presentViewController:vc animated:YES completion:^{
                 JQLog(@"%@", self.presentedViewController);
@@ -120,31 +139,14 @@ static NSString *kCellID    = @"identifier";
         } else {
             [self.navigationController pushViewController:vc animated:YES];
         }
-        
-    } else {
-        
-        NSString *bundleKey = [[NSBundle mainBundle] infoDictionary][(NSString *)kCFBundleExecutableKey];
-        NSString *vcName = [NSString stringWithFormat:@"%@.%@", bundleKey, item.className];
-        Class swiftCls = NSClassFromString(vcName);
-        if (swiftCls) {
-            JQBaseViewController *vc = [[swiftCls alloc] init];
-            vc.title = item.title;
-            if (item.flag) {
-                vc.modalDelegate = self;
-                vc.modalTransitionStyle = UIModalTransitionStyleFlipHorizontal;
-                [self presentViewController:vc animated:YES completion:nil];
-            } else {
-                [self.navigationController pushViewController:vc animated:YES];
-            }
-        }
     }
     
     [tableView setUserInteractionEnabled:YES];
 }
 
-#pragma mark - JQModalDelegate Methods
+#pragma mark - JQCallbackDelegate Methods
 
-- (void)passObject:(NSObject *)object {
+- (void)callbackObject:(NSObject *)object {
   
     self.title = [NSString stringWithFormat:@"%@", object];
 }

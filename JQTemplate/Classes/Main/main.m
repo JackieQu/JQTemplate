@@ -8,10 +8,10 @@
 #import <UIKit/UIKit.h>
 #import "AppDelegate.h"
 
-CFAbsoluteTime startTime;
+CFAbsoluteTime StartTime;
 
 int main(int argc, char * argv[]) {
-    startTime = CFAbsoluteTimeGetCurrent();
+    StartTime = CFAbsoluteTimeGetCurrent();
     NSString *appDelegateClassName;
     @autoreleasepool {
         // Setup code that might create autoreleased objects goes here.
